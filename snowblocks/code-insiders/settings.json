@@ -1,0 +1,220 @@
+{
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": true
+  },
+  "editor.cursorBlinking": "smooth",
+  "editor.fontFamily": "'Operator Mono Lig', 'Source Code Variable'",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 12,
+  "editor.fontWeight": "normal",
+  "editor.formatOnSave": true,
+  "editor.lineHeight": 24,
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.quickSuggestions": {
+    "other": true,
+    "comments": true,
+    "strings": true
+  },
+  "editor.renderIndentGuides": false,
+  "editor.renderWhitespace": "boundary",
+  "editor.rulers": [
+    100,
+    120
+  ],
+  "editor.scrollBeyondLastLine": false,
+  "editor.snippetSuggestions": "top",
+  "editor.tabSize": 2,
+  "editor.wordWrap": "off",
+  "editor.minimap.showSlider": "always",
+  "workbench.colorCustomizations": {
+    "activityBarBadge.background": "#616161",
+    "list.activeSelectionForeground": "#616161",
+    "list.inactiveSelectionForeground": "#616161",
+    "list.highlightForeground": "#616161",
+    "scrollbarSlider.activeBackground": "#61616150",
+    "editorSuggestWidget.highlightForeground": "#616161",
+    "textLink.foreground": "#616161",
+    "progressBar.background": "#616161",
+    "pickerGroup.foreground": "#616161",
+    "tab.activeBorder": "#616161",
+    "notificationLink.foreground": "#616161"
+  },
+  "workbench.colorTheme": "Material Theme Ocean",
+  "workbench.iconTheme": "eq-material-theme-icons",
+  "workbench.sideBar.location": "right",
+  "window.menuBarVisibility": "toggle",
+  "files.associations": {
+    "bspwmrc": "shellscript",
+    "sxhkdrc": "shellscript",
+    "*.pug": "jade",
+    "*.conkyrc": "lua",
+    "*.xmobarrc": "haskell",
+    ".Xresources": "shellscript"
+  },
+  "files.exclude": {
+    "**/.git": false,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": false
+  },
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "explorer.decorations.badges": false,
+  "explorer.decorations.colors": true,
+  "terminal.external.linuxExec": "urxvt",
+  "update.channel": "default",
+  "html.format.contentUnformatted": "pre,code,style,textarea",
+  "html.format.extraLiners": "",
+  "html.format.wrapLineLength": 0,
+  "php.validate.run": "onType",
+  "javascript.format.insertSpaceAfterConstructor": true,
+  "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": true,
+  "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": true,
+  "javascript.format.insertSpaceBeforeFunctionParenthesis": true,
+  "javascript.referencesCodeLens.enabled": true,
+  "typescript.autoImportSuggestions.enabled": false,
+  "typescript.format.insertSpaceAfterConstructor": true,
+  "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": true,
+  "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": true,
+  "typescript.format.insertSpaceBeforeFunctionParenthesis": true,
+  "typescript.implementationsCodeLens.enabled": true,
+  "typescript.referencesCodeLens.enabled": true,
+  "typescript.tsc.autoDetect": "watch",
+  "extensions.autoUpdate": true,
+  "git.autofetch": true,
+  "git.confirmSync": false,
+  "git.enableCommitSigning": true,
+  "git.enableSmartCommit": true,
+  "azure.resourceFilter": [
+    "1058e020-f627-455f-ad47-64c8e6f99abf/375098e1-715e-41c8-b623-a5ff11033edc"
+  ],
+  "C_Cpp.clang_format_path": "/usr/bin/clang-format",
+  "C_Cpp.clang_format_style": "Chromium",
+  "checkstyle.autocheck": true,
+  "checkstyle.configurationFile": "google_checks",
+  "checkstyle.version": "8.8",
+  "cSpell.enabledLanguageIds": [
+    "handlebars",
+    "json",
+    "latex",
+    "markdown",
+    "plaintext",
+    "restructuredtext",
+    "text",
+    "yml"
+  ],
+  "docker.attachShellCommand.linuxContainer": "/bin/zsh",
+  "eslint.packageManager": "yarn",
+  "eslint.validate": [
+    "html",
+    "javascript",
+    "javascriptreact"
+  ],
+  "filesize.use24HourFormat": false,
+  "FSharp.codeOutline": false,
+  "FSharp.fsiFilePath": "/usr/bin/fsharpi",
+  "FSharp.logLanguageServiceRequests": "both",
+  "FSharp.logLanguageServiceRequestsOutputWindowLevel": "DEBUG",
+  "FSharp.monoPath": "/usr/bin/mono",
+  "gitlens.advanced.messages": {
+    "suppressCommitHasNoPreviousCommitWarning": false,
+    "suppressCommitNotFoundWarning": false,
+    "suppressFileNotUnderSourceControlWarning": false,
+    "suppressGitVersionWarning": false,
+    "suppressLineUncommittedWarning": false,
+    "suppressNoRepositoryWarning": false,
+    "suppressResultsExplorerNotice": true,
+    "suppressShowKeyBindingsNotice": true,
+    "suppressUpdateNotice": false,
+    "suppressWelcomeNotice": true
+  },
+  "gitlens.codeLens.scopes": [
+    "document",
+    "containers",
+    "blocks"
+  ],
+  "gitlens.keymap": "alternate",
+  "java.completion.importOrder": [
+    "extra",
+    "java",
+    "javax",
+    "com",
+    "org"
+  ],
+  "java.home": "/usr/lib/jvm/java-8-openjdk",
+  "java.implementationsCodeLens.enabled": true,
+  "java.referencesCodeLens.enabled": true,
+  "java.saveActions.organizeImports": true,
+  "jupyter.appendResults": false,
+  "latex-workshop.chktex.enabled": true,
+  "latex-workshop.latex.clean.enabled": true,
+  "latex-workshop.latex.outputDir": "../",
+  "latex-workshop.latex.tools": [
+    {
+      "name": "latexmk",
+      "command": "latexmk",
+      "args": [
+        "-f",
+        "-cd",
+        "-pdf",
+        "-file-line-error",
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-outdir=../",
+        "-xelatex",
+        "%DOC%"
+      ]
+    },
+    {
+      "name": "pdflatex",
+      "command": "pdflatex",
+      "args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "%DOC%"
+      ]
+    },
+    {
+      "name": "bibtex",
+      "command": "bibtex",
+      "args": [
+        "%DOCFILE%"
+      ]
+    }
+  ],
+  "latex-workshop.view.pdf.viewer": "tab",
+  "npm.packageManager": "yarn",
+  "path-intellisense.showHiddenFiles": true,
+  "prettier.bracketSpacing": true,
+  "prettier.disableLanguages": [
+    "typescript",
+    "typescriptreact"
+  ],
+  "prettier.eslintIntegration": true,
+  "prettier.printWidth": 120,
+  "prettier.requireConfig": true,
+  "prettier.singleQuote": true,
+  "prettier.stylelintIntegration": true,
+  "materialTheme.cache.workbench.settings": {
+    "accent": "Graphite"
+  },
+  "rust-client.updateOnStartup": true,
+  "sync.autoDownload": false,
+  "sync.autoUpload": false,
+  "sync.askGistName": false,
+  "sync.forceDownload": false,
+  "sync.gist": "a2d589678ad127b1351ec7f8f0019298",
+  "sync.host": "",
+  "sync.lastDownload": "",
+  "sync.lastUpload": "2018-05-09T01:01:02.243Z",
+  "sync.pathPrefix": "",
+  "sync.quietSync": true,
+  "sync.removeExtensions": true,
+  "sync.syncExtensions": true,
+  "tslint.packageManager": "yarn",
+  "tslint.validateWithDefaultConfig": true
+}

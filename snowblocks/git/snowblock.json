@@ -1,0 +1,12 @@
+[
+  {
+    "defaults": {
+      "force": true
+    }
+  },
+  {
+    "link": {
+      "~/.gitconfig": {}
+    }
+  }
+]

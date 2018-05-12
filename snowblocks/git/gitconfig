@@ -1,0 +1,8 @@
+[user]
+	name = eadwu
+	email = fangkazuto@gmail.com
+	signingkey = 607B7DD576094FB8
+[core]
+	editor = vim
+[commit]
+	gpgsign = true

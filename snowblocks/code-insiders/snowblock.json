@@ -1,0 +1,20 @@
+[
+  {
+    "clean": [
+      "~/.config/Code - Insiders"
+    ]
+  },
+  {
+    "defaults": {
+      "force": true
+    }
+  },
+  {
+    "link": {
+      "~/.config/Code - Insiders/User/keybindings.json": {
+        "create": true
+      },
+      "~/.config/Code - Insiders/User/settings.json": {}
+    }
+  }
+]

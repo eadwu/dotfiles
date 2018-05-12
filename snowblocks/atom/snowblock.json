@@ -1,0 +1,23 @@
+[
+  {
+    "clean": [
+      "~/.atom"
+    ]
+  },
+  {
+    "defaults": {
+      "force": true
+    }
+  },
+  {
+    "link": {
+      "~/.atom/config.cson": {
+        "create": true
+      },
+      "~/.atom/init.coffee": {},
+      "~/.atom/keymap.cson": {},
+      "~/.atom/snippets.cson": {},
+      "~/.atom/styles.less": {}
+    }
+  }
+]
