@@ -5,14 +5,11 @@
     ]
   },
   {
-    "defaults": {
-      "create": true,
-      "force": true
-    }
-  },
-  {
     "link": {
-      "~/.ncmpcpp/config": {}
+      "~/.ncmpcpp/config": {
+        "create": true,
+        "force": true
+      }
     }
   }
 ]

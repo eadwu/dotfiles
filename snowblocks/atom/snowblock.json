@@ -5,18 +5,23 @@
     ]
   },
   {
-    "defaults": {
-      "create": true,
-      "force": true
-    }
-  },
-  {
     "link": {
-      "~/.atom/config.cson": {},
-      "~/.atom/init.coffee": {},
-      "~/.atom/keymap.cson": {},
-      "~/.atom/snippets.cson": {},
-      "~/.atom/styles.less": {}
+      "~/.atom/config.cson": {
+        "create": true,
+        "force": true
+      },
+      "~/.atom/init.coffee": {
+        "force": true
+      },
+      "~/.atom/keymap.cson": {
+        "force": true
+      },
+      "~/.atom/snippets.cson": {
+        "force": true
+      },
+      "~/.atom/styles.less": {
+        "force": true
+      }
     }
   }
 ]

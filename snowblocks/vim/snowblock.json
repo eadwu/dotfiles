@@ -5,14 +5,10 @@
     ]
   },
   {
-    "defaults": {
-      "force": true
-    }
-  },
-  {
     "link": {
       "~/.vimrc": {
-        "path": ".vimrc"
+        "path": ".vimrc",
+        "force": true
       }
     }
   },

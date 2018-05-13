@@ -1,13 +1,9 @@
 [
   {
-    "defaults": {
-      "force": true
-    }
-  },
-  {
     "link": {
       "~/.zshrc": {
-        "path": ".zshrc"
+        "path": ".zshrc",
+        "force": true
       }
     }
   }

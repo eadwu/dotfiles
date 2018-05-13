@@ -1,13 +1,9 @@
 [
   {
-    "defaults": {
-      "force": true
-    }
-  },
-  {
     "link": {
       "~/.Xresources": {
-        "path": ".Xresources"
+        "path": ".Xresources",
+        "force": true
       }
     }
   }

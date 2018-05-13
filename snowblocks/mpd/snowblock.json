@@ -5,14 +5,11 @@
     ]
   },
   {
-    "defaults": {
-      "create": true,
-      "force": true
-    }
-  },
-  {
     "link": {
-      "~/.config/mpd/mpd.conf": {}
+      "~/.config/mpd/mpd.conf": {
+        "create": true,
+        "force": true
+      }
     }
   },
   {

@@ -1,13 +1,9 @@
 [
   {
-    "defaults": {
-      "create": true,
-      "force": true
-    }
-  },
-  {
     "link": {
-      "~/.config/compton.conf": {}
+      "~/.config/compton.conf": {
+        "force": true
+      }
     }
   }
 ]
