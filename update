@@ -1,0 +1,5 @@
+#!/usr/bin/env sh
+pacman -Qen | awk '{print $1}' > other/pacman.txt
+pacman -Qem | awk '{print $1}' > other/yaourt.txt
+code-insiders --list-extensions > other/code.txt
+code-insiders --list-extensions > other/code-minimal.txt
