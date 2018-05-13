@@ -1,0 +1,30 @@
+[
+  {
+    "link": {
+      "/usr/local/bin/i3color": {
+        "create": true,
+        "force": true
+      },
+      "/usr/share/xessions/bspwm.desktop": {
+        "create": true,
+        "force": true
+      }
+    }
+  },
+  {
+    "shell": [
+      [
+        "curl -sLS 'https://drive.google.com/uc?authuser=0&id=0B6XZPTC_NRR3ZlBLR0czYU91ZVU&export=download' -o /usr/share/pixmaps/lock-overlay.png",
+        "Downloading lock overlay"
+      ],
+      [
+        "curl -sLS 'https://drive.google.com/uc?authuser=0&id=0B6XZPTC_NRR3empPakFUQTdMRDQ&export=download' -o /usr/share/pixmaps/arch-monochrome.png",
+        "Downloading Arch logo"
+      ],
+      [
+        "curl -sLS 'https://content-na.drive.amazonaws.com/cdproxy/templink/fpZwfphNKEcf-onA21XPAjzLjFrX7L-o45VNWs1CfTweJxFPc?download=true' -o /usr/share/pixmaps/lightdm/PIA03654.jpg",
+        "Downloading hubble image PIA03654"
+      ]
+    ]
+  }
+]
