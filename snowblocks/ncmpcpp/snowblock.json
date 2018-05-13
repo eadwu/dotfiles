@@ -1,0 +1,18 @@
+[
+  {
+    "clean": [
+      "~/.ncmpcpp"
+    ]
+  },
+  {
+    "defaults": {
+      "create": true,
+      "force": true
+    }
+  },
+  {
+    "link": {
+      "~/.ncmpcpp/config": {}
+    }
+  }
+]

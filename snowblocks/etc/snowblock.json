@@ -1,0 +1,24 @@
+[
+  {
+    "defaults": {
+      "create": true,
+      "force": true
+    }
+  },
+  {
+    "link": {
+      "/etc/dhcpcd.conf": {},
+      "/etc/oblogout.conf": {},
+      "/etc/resolv.conf": {},
+      "/etc/lightdm/lightdm-webkit2-greeter.conf": {},
+      "/etc/lightdm/lightdm.conf": {},
+      "/etc/NetworkManager/NetworkManager.conf": {},
+      "/etc/pulse/client.conf": {},
+      "/etc/pulse/default.pa": {},
+      "/etc/sysctl.d/30-max-user-instances.conf": {},
+      "/etc/sysctl.d/40-max-user-watches.conf": {},
+      "/etc/systemd/system/i3color.service": {},
+      "/etc/systemd/logind.conf": {}
+    }
+  }
+]

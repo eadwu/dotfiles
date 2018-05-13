@@ -1,0 +1,21 @@
+[
+  {
+    "clean": [
+      "~/.config/gtk-3.0"
+    ]
+  },
+  {
+    "defaults": {
+      "create": true,
+      "force": true
+    }
+  },
+  {
+    "link": {
+      "~/.gtkrc-2.0": {
+        "path": ".gtkrc-2.0"
+      },
+      "~/.config/gtk-3.0/settings.ini": {}
+    }
+  }
+]

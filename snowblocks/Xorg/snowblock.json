@@ -1,0 +1,14 @@
+[
+  {
+    "defaults": {
+      "force": true
+    }
+  },
+  {
+    "link": {
+      "~/.Xresources": {
+        "path": ".Xresources"
+      }
+    }
+  }
+]

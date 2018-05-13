@@ -1,0 +1,26 @@
+[
+  {
+    "clean": [
+      "~/.config/mpd"
+    ]
+  },
+  {
+    "defaults": {
+      "create": true,
+      "force": true
+    }
+  },
+  {
+    "link": {
+      "~/.config/mpd/mpd.conf": {}
+    }
+  },
+  {
+    "shell": [
+      [
+        "mkdir -p ~/.config/mpd/playlists",
+        "Create ~/.config/mpd/playlists directory"
+      ]
+    ]
+  }
+]
