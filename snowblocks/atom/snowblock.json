@@ -6,14 +6,13 @@
   },
   {
     "defaults": {
+      "create": true,
       "force": true
     }
   },
   {
     "link": {
-      "~/.atom/config.cson": {
-        "create": true
-      },
+      "~/.atom/config.cson": {},
       "~/.atom/init.coffee": {},
       "~/.atom/keymap.cson": {},
       "~/.atom/snippets.cson": {},

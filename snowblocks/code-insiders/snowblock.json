@@ -6,14 +6,13 @@
   },
   {
     "defaults": {
+      "create": true,
       "force": true
     }
   },
   {
     "link": {
-      "~/.config/Code - Insiders/User/keybindings.json": {
-        "create": true
-      },
+      "~/.config/Code - Insiders/User/keybindings.json": {},
       "~/.config/Code - Insiders/User/settings.json": {}
     }
   }
