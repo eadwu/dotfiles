@@ -1,0 +1,39 @@
+[
+  {
+    "clean": [
+      "~/.bspwm"
+    ]
+  },
+  {
+    "link": {
+      "~/.bspwm/bin/kbd_backlight": {
+        "create": true,
+        "force": true
+      },
+      "~/.bspwm/bin/mon_backlight": {
+        "force": true
+      },
+      "~/.bspwm/bspwmrc": {
+        "force": true
+      },
+      "~/.bspwm/cc": {
+        "force": true
+      },
+      "~/.bspwm/config.ini": {
+        "force": true
+      },
+      "~/.bspwm/github.token": {
+        "force": true
+      },
+      "~/.bspwm/java_nonreparenting_wm_hack": {
+        "force": true
+      },
+      "~/.bspwm/sxhkdrc": {
+        "force": true
+      },
+      "~/.bspwm/weather_icons": {
+        "force": true
+      }
+    }
+  }
+]
