@@ -6,7 +6,7 @@
     <a href="https://github.com/eadwu/dotfiles/releases/latest">
       <img src="https://img.shields.io/github/release/eadwu/dotfiles.svg" />
     </a>
-    <a href="https://github.com/arcticicestudio/snowsaw/releases/tag/v0.1.1">
+    <a href="https://github.com/arcticicestudio/snowsaw/tree/develop">
       <img src="https://img.shields.io/badge/snowsaw-prerelease-88C0D0.svg" />
     </a>
     <a href="https://www.archlinux.org">
