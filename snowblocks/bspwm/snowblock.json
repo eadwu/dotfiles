@@ -13,6 +13,16 @@
       "~/.bspwm/bin/mon_backlight": {
         "force": true
       },
+      "~/.bspwm/gmail/credentials.json": {
+        "create": true,
+        "force": true,
+        "relative": true,
+        "path": "gmail/credentials.json"
+      },
+      "~/.bspwm/gmail/launch.py": {
+        "force": true,
+        "path": "gmail/launch.py"
+      },
       "~/.bspwm/bspwmrc": {
         "force": true
       },
