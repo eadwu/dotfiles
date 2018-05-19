@@ -13,7 +13,6 @@ blender
 bluez
 bluez-libs
 bluez-utils
-bookworm
 broadcom-wl-dkms
 bspwm
 bzip2
@@ -127,6 +126,7 @@ openssh
 openvpn
 p7zip
 pacman
+pacutils
 pass
 patch
 pciutils
@@ -150,6 +150,7 @@ pulseaudio-alsa
 pulseaudio-bluetooth
 pwgen
 pycharm-community-edition
+python-beautifulsoup4
 python-fonttools
 python-google-api-python-client
 python-matplotlib

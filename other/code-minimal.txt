@@ -1,6 +1,5 @@
 Equinusocio.vsc-material-theme
 Ionide.Ionide-FAKE
-Ionide.Ionide-fsharp
 Ionide.Ionide-Paket
 christian-kohler.path-intellisense
 dbaeumer.vscode-eslint
@@ -9,6 +8,7 @@ eamodio.gitlens
 eg2.tslint
 esbenp.prettier-vscode
 formulahendry.auto-rename-tag
+Ionide.Ionide-fsharp
 justusadam.language-haskell
 mgmcdermott.vscode-language-babel
 mkxml.vscode-filesize
