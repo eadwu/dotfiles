@@ -13,6 +13,7 @@
   "atom-package-deps":
     ignored: [
       "linter-clang"
+      "linter-eslint"
     ]
   "autocomplete-plus":
     backspaceTriggersAutocomplete: true
@@ -26,11 +27,11 @@
       "atom-ternjs"
       "linter-glsl"
       "linter-clang"
-      "linter-eslint"
       "linter-xmllint"
       "linter-jsonlint"
       "linter-stylelint"
       "linter-moonscript"
+      "linter-eslint"
     ]
     telemetryConsent: "limited"
     themes: [
