@@ -10,12 +10,6 @@
       "/etc/resolv.conf": {
         "force": true
       },
-      "/etc/lightdm/lightdm-webkit2-greeter.conf": {
-        "force": true
-      },
-      "/etc/lightdm/lightdm.conf": {
-        "force": true
-      },
       "/etc/NetworkManager/NetworkManager.conf": {
         "force": true
       },
@@ -40,5 +34,13 @@
         "force": true
       }
     }
+  },
+  {
+    "shell": [
+      [
+        "install -Dm 0644 lightdm.conf lightdm-webkit2-greeter.conf /etc/lightdm",
+        "Installing lightdm configuration"
+      ]
+    ]
   }
 ]
