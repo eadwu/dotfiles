@@ -14,6 +14,10 @@
   {
     "shell": [
       [
+        "cp -r adeos-oblogout/adeos-cores /usr/share/themes",
+        "Installing adeos-cores theme"
+      ],
+      [
         "curl -sLS 'https://drive.google.com/uc?authuser=0&id=0B6XZPTC_NRR3ZlBLR0czYU91ZVU&export=download' -o /usr/share/pixmaps/lock-overlay.png",
         "Downloading lock overlay"
       ],
