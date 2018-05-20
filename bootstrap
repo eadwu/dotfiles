@@ -10,5 +10,4 @@ SNOWBLOCKSDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/$SNOWBLOCKS_BASE_DI
 SNOWROOTDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/$SNOWROOT_BASE_DIR_NAME"
 
 "${SNOWSAW_DIR}/${SNOWSAW_BIN}" -s "${SNOWBLOCKSDIR}" "${@}"
-[ "$UID" -eq 0 ] || exec sudo "$0" "$@"
-"${SNOWSAW_DIR}/${SNOWSAW_BIN}" -s "${SNOWROOTDIR}" "${@}"
+sudo "${SNOWSAW_DIR}/${SNOWSAW_BIN}" -s "${SNOWROOTDIR}" "${@}"
