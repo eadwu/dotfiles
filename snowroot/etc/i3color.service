@@ -3,7 +3,7 @@ Description=i3lock with suspend/sleep
 Before=sleep.target
 
 [Service]
-User=dreamforce
+User=nirvana
 Type=forking
 Environment=DISPLAY=:0
 ExecStart=/usr/bin/env i3color
