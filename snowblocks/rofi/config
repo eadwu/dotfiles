@@ -1,0 +1,14 @@
+rofi.modi: drun,run,window,ssh
+rofi.width: 455
+rofi.lines: 30
+rofi.columns: 1
+rofi.bw: 0
+rofi.location: 8
+
+rofi.padding: 28
+rofi.show-icons: true
+rofi.separator-style: none
+rofi.hide-scrollbar: true
+
+rofi.font: Ubuntu Mono 12
+rofi.theme: ~/.config/rofi/theme.rasi

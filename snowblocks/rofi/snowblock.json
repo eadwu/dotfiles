@@ -1,0 +1,18 @@
+[
+  {
+    "clean": [
+      "~/.config/rofi"
+    ]
+  },
+  {
+    "link": {
+      "~/.config/rofi/config": {
+        "create": true,
+        "force": true
+      },
+      "~/.config/rofi/theme.rasi": {
+        "force": true
+      }
+    }
+  }
+]
