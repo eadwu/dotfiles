@@ -37,10 +37,12 @@
     "progressBar.background": "#616161",
     "pickerGroup.foreground": "#616161",
     "tab.activeBorder": "#616161",
-    "notificationLink.foreground": "#616161"
+    "notificationLink.foreground": "#616161",
+    "editor.findWidgetResizeBorder": "#616161",
+    "editorWidget.border": "#616161"
   },
   "workbench.colorTheme": "Material Theme Ocean",
-  "workbench.iconTheme": "eq-material-theme-icons",
+  "workbench.iconTheme": "eq-material-theme-icons-ocean",
   "workbench.sideBar.location": "right",
   "window.menuBarVisibility": "toggle",
   "files.associations": {
@@ -93,9 +95,6 @@
   ],
   "C_Cpp.clang_format_path": "/usr/bin/clang-format",
   "C_Cpp.clang_format_style": "Chromium",
-  "checkstyle.autocheck": true,
-  "checkstyle.configurationFile": "google_checks",
-  "checkstyle.version": "8.8",
   "docker.attachShellCommand.linuxContainer": "/bin/zsh",
   "eslint.packageManager": "yarn",
   "eslint.validate": [
@@ -126,7 +125,7 @@
     "containers",
     "blocks"
   ],
-  "gitlens.historyExplorer.enabled": false,
+  "gitlens.historyExplorer.enabled": true,
   "gitlens.keymap": "alternate",
   "java.completion.importOrder": [
     "extra",
@@ -178,6 +177,7 @@
     }
   ],
   "latex-workshop.view.pdf.viewer": "tab",
+  "materialTheme.accent": "Graphite",
   "npm.packageManager": "yarn",
   "path-intellisense.showHiddenFiles": true,
   "prettier.bracketSpacing": true,
@@ -190,9 +190,6 @@
   "prettier.requireConfig": true,
   "prettier.singleQuote": true,
   "prettier.stylelintIntegration": true,
-  "materialTheme.cache.workbench.settings": {
-    "accent": "Graphite"
-  },
   "rust-client.updateOnStartup": true,
   "sync.autoDownload": false,
   "sync.autoUpload": false,
@@ -201,7 +198,7 @@
   "sync.gist": "a2d589678ad127b1351ec7f8f0019298",
   "sync.host": "",
   "sync.lastDownload": "",
-  "sync.lastUpload": "2018-05-09T01:01:02.243Z",
+  "sync.lastUpload": "2018-06-02T16:51:33.489Z",
   "sync.pathPrefix": "",
   "sync.quietSync": true,
   "sync.removeExtensions": true,

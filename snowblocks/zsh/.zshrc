@@ -1,6 +1,6 @@
 # Pseudo Aliases
 function docker-build () {
-  docker build -t $1 -f $1/Dockerfile .
+  docker build -t "${1}" -f "${1}"/Dockerfile .
 }
 
 function docker-clean () {
@@ -10,18 +10,21 @@ function docker-clean () {
 }
 
 function docker-push-image () {
-  docker tag $1 ${DOCKER_ID_USER}/$1
-  docker push ${DOCKER_ID_USER}/$1
+  docker tag "${1}" "${DOCKER_ID_USER}"/"${1}"
+  docker push "${DOCKER_ID_USER}"/"${1}"
 }
 
 function download-audio () {
-  youtube-dl --extract-audio --audio-format mp3 $1
+  youtube-dl --extract-audio --audio-format mp3 "${1}"
 }
 
-function system-upgrade {
-  yaourt -Rcns visual-studio-code-insiders
-  yaourt -Syu --aur
-  yaourt -S visual-studio-code-insiders
+function ext-install () {
+  extensions=($(cat "${1}" | grep -Po '^.*$'))
+
+  for extension in "${extensions[@]}"
+  do
+    code-insiders --install-extension ${extension} "${@:2}"
+  done
 }
 
 # VISUAL

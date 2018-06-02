@@ -26,7 +26,7 @@
         "Downloading Arch logo"
       ],
       [
-        "curl -sLS 'https://content-na.drive.amazonaws.com/cdproxy/templink/fpZwfphNKEcf-onA21XPAjzLjFrX7L-o45VNWs1CfTweJxFPc?download=true' -o /usr/share/pixmaps/lightdm/PIA03654.jpg",
+        "curl -sLS 'https://content-na.drive.amazonaws.com/cdproxy/templink/OwDhFBUlWVCUHlAE0aZpZZHMKGjnF7Tw6wGHydqNL8YeJxFPc?download=true' -o /usr/share/pixmaps/lightdm/PIA03654.jpg",
         "Downloading hubble image PIA03654"
       ]
     ]

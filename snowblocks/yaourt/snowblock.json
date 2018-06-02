@@ -1,0 +1,10 @@
+[
+  {
+    "link": {
+      "~/.yaourtrc": {
+        "path": ".yaourtrc",
+        "force": true
+      }
+    }
+  }
+]

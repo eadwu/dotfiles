@@ -44,8 +44,8 @@ alt + z
 #
 
 # quit bspwm normally
-alt + shift + e
-  bspc quit
+# alt + shift + e
+  # bspc quit
 
 # close and kill
 alt + {_,shift + }q
