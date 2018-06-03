@@ -1,22 +1,7 @@
 [
   {
     "link": {
-      "/etc/dhcpcd.conf": {
-        "force": true
-      },
       "/etc/oblogout.conf": {
-        "force": true
-      },
-      "/etc/resolv.conf": {
-        "force": true
-      },
-      "/etc/NetworkManager/NetworkManager.conf": {
-        "force": true
-      },
-      "/etc/pulse/client.conf": {
-        "force": true
-      },
-      "/etc/pulse/default.pa": {
         "force": true
       },
       "/etc/sysctl.d/30-max-user-instances.conf": {
@@ -29,18 +14,7 @@
       },
       "/etc/systemd/system/i3color.service": {
         "force": true
-      },
-      "/etc/systemd/logind.conf": {
-        "force": true
       }
     }
-  },
-  {
-    "shell": [
-      [
-        "install -Dm 0644 lightdm.conf lightdm-webkit2-greeter.conf /etc/lightdm",
-        "Installing lightdm configuration"
-      ]
-    ]
   }
 ]

@@ -4,7 +4,7 @@
 
 # power off menu
 XF86PowerOff
-  oblogout_blur
+  oblogout
 
 # volume
 XF86AudioMute
@@ -24,8 +24,8 @@ alt + XF86Audio{LowerVolume,RaiseVolume}
   sudo ~/.bspwm/bin/kbd_backlight {1,5} {-,+}
 
 # reload bspwm
-alt + Escape
-  killall sxhkd compton polybar redshift || true && ~/.bspwm/bspwmrc
+# alt + Escape
+  # killall sxhkd compton polybar redshift || true && ~/.bspwm/bspwmrc
 
 # make sxhkd reload its configuration files:
 alt + shift + r

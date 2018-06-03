@@ -1,9 +1,0 @@
-[
-  {
-    "link": {
-      "~/.config/compton.conf": {
-        "force": true
-      }
-    }
-  }
-]

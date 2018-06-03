@@ -1,9 +1,6 @@
-#!/usr/bin/env bash
+#!/usr/bin/env sh
 
 # USAGE:
-#   su root && \
-#     echo "${USER} ALL=(ALL) NOPASSWD: ${PATH}/bin/kbd_backlight" >> /etc/sudoers.d/grant-client-overrides && \
-#     exit && \
 #   sudo ${PATH}/bin/kbd_backlight tick {-|+}
 
 kl_smc=/sys/class/leds/smc::kbd_backlight

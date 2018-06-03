@@ -1,7 +1,7 @@
 [
   {
     "link": {
-      "~/.config/vivaldi-snapshot/Default/Bookmarks": {
+      "~/.config/vivaldi/Default/Bookmarks": {
         "create": true,
         "force": true
       }

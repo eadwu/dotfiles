@@ -16,4 +16,4 @@ param=(--verifcolor=FFFFFF00 \
 
 ffmpeg -y -s 1440x900 -probesize 10MB -f x11grab -i ${DISPLAY} -vframes 1 -vf "gblur=sigma=16" "${image}"
 convert "${image}" /usr/share/pixmaps/lock-overlay.png -gravity center -composite "${image}"
-i3lock "${param[@]}" -i "${image}"
+i3lock-color "${param[@]}" -i "${image}"

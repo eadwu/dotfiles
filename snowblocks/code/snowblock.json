@@ -1,0 +1,18 @@
+[
+  {
+    "clean": [
+      "~/.config/Code"
+    ]
+  },
+  {
+    "link": {
+      "~/.config/Code/User/keybindings.json": {
+        "create": true,
+        "force": true
+      },
+      "~/.config/Code/User/settings.json": {
+        "force": true
+      }
+    }
+  }
+]
