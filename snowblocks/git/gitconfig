@@ -1,7 +1,7 @@
 [user]
 	name = Edmund Wu
 	email = fangkazuto@gmail.com
-	signingkey = C9B8D73E458747C0
+	signingkey = 36B3A59B9F0AA985
 [core]
 	editor = vim
 [commit]
