@@ -1,18 +1,7 @@
 [
   {
     "link": {
-      "/etc/oblogout.conf": {
-        "force": true
-      },
-      "/etc/sysctl.d/30-max-user-instances.conf": {
-        "create": true,
-        "force": true
-      },
-      "/etc/sysctl.d/40-max-user-watches.conf": {
-        "create": true,
-        "force": true
-      },
-      "/etc/systemd/system/i3color.service": {
+      "/etc/nixos/configuration.nix": {
         "force": true
       }
     }

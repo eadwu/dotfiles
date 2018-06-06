@@ -4,6 +4,3 @@
 [submodule "snowblocks/bspwm/gmail"]
 	path = snowblocks/bspwm/gmail
 	url = git@github.com:vyachkonovalov/polybar-gmail.git
-[submodule "snowroot/usr/adeos-oblogout"]
-	path = snowroot/usr/adeos-oblogout
-	url = git@github.com:bruhensant/Adeos-Oblogout.git
