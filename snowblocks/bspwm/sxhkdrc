@@ -27,6 +27,10 @@ alt + XF86Audio{LowerVolume,RaiseVolume}
 # alt + Escape
   # killall sxhkd compton polybar redshift || true && ~/.bspwm/bspwmrc
 
+# reload polybar
+alt + shift + Escape
+  polybar-msg cmd restart
+
 # make sxhkd reload its configuration files:
 alt + shift + r
   pkill -USR1 -x sxhkd

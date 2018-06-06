@@ -36,5 +36,5 @@ bspc config focus_follows_pointer true
 bspc config presel_feedback_color \#aaaaaa
 
 bash ~/.bspwm/java_nonreparenting_wm_hack
-polybar stat -c ~/.bspwm/config.ini &
-polybar workspace -c ~/.bspwm/config.ini &
+polybar stat -r -c ~/.bspwm/config.ini &
+polybar workspace -r -c ~/.bspwm/config.ini &
