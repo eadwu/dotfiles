@@ -1,6 +1,6 @@
 ! URXVT
 ! Configuration
-URxvt.font: xft:Source Code Variable:pixelsize=13,style=regular:antialias=true
+URxvt.font: xft:Anonymous Pro:pixelsize=13,style=regular:antialias=true
 URxvt.scrollBar: false
 ! Scheme
 *foreground: #e7e6e5

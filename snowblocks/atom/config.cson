@@ -42,7 +42,7 @@
   docblockr:
     lower_case_primitives: true
   editor:
-    fontFamily: "Source Code Variable, Operator Mono Lig"
+    fontFamily: "Anonymous Pro, Operator Mono Lig, Source Code Pro"
     fontSize: 12
     showInvisibles: true
   "exception-reporting":

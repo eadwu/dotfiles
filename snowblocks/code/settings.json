@@ -3,7 +3,7 @@
     "source.organizeImports": true
   },
   "editor.cursorBlinking": "smooth",
-  "editor.fontFamily": "'Operator Mono Lig', 'Source Code Variable'",
+  "editor.fontFamily": "'Anonymous Pro', 'Operator Mono Lig', 'Source Code Pro'",
   "editor.fontLigatures": true,
   "editor.fontSize": 12,
   "editor.fontWeight": "normal",
