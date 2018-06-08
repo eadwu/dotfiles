@@ -4,9 +4,10 @@ let
   uuid = "d43adf5e-b229-4884-a291-e62a6c697d81";
   hostname = "nixos";
   user = "yin";
-  password = "yang";
+  passwordFile = "/etc/nixos/passwords/${user}";
 
   HOME = "/home/${user}";
+  DOCKER_ID_USER = "tianxian";
 in {
   imports =
     [
@@ -55,10 +56,14 @@ in {
     systemPackages = with pkgs; [
       # Core
       ntp
+      openssl
 
       # Environment
       nitrogen
-      polybar
+      (pkgs.polybar.override {
+        githubSupport = true;
+        mpdSupport = true;
+      })
       xfce.thunar
       xfce.xfce4-notifyd
       xfce.xfce4-screenshooter
@@ -69,13 +74,318 @@ in {
 
       # Other
       ## Applications
-      ark
+      (pkgs.ark.override {
+        unfreeEnableUnrar = true;
+      })
       discord
       gimp
       gnome3.pomodoro
       rxvt_unicode
       vivaldi
-      vscode-with-extensions
+      (pkgs.vscode-with-extensions.override {
+        vscodeExtensions = with pkgs.vscode-extensions; [
+          bbenoist.Nix
+          ms-vscode.cpptools
+          ms-python.python
+        ]
+
+        ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
+          {
+            name = "auto-rename-tag";
+            publisher = "formulahendry";
+            version = "0.0.15";
+            sha256 = "f1550037d78bd74844cb2876c21fb287323c53d5b56e638285377fef903fedc1";
+          }
+        ]
+        ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
+          {
+            name = "azure-account";
+            publisher = "ms-vscode";
+            version = "0.4.0";
+            sha256 = "877662c2701a445e97a59fbea0d56d51bb7f94fcf54e547952925c3d95719ec0";
+          }
+        ]
+        ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
+          {
+            name = "cmake";
+            publisher = "twxs";
+            version = "0.0.17";
+            sha256 = "0858af6b500efe81e9b336e977b94bb43cdbbf5622e79c903903cffe40931f86";
+          }
+        ]
+        ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
+          {
+            name = "code-settings-sync";
+            publisher = "Shan";
+            version = "2.9.2";
+            sha256 = "48acfc7814d75d6e7f5010728f1f13055ad7afc5aaf9d579dc5cd2439d3c2753";
+          }
+        ]
+        ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
+          {
+            name = "csharp";
+            publisher = "ms-vscode";
+            version = "1.15.2";
+            sha256 = "8e596639c1b7bfe7714164a5ab1e6e8025497851917d6db5586eb79a77e73e1e";
+          }
+        ]
+        ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
+          {
+            name = "debugger-for-chrome";
+            publisher = "msjsdiag";
+            version = "4.5.0";
+            sha256 = "beedb3183ce91e4b828f6019b546aa8855deb0ebe200f1d8d341ee05012e30e3";
+          }
+        ]
+        ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
+          {
+            name = "githistory";
+            publisher = "donjayamanne";
+            version = "0.4.1";
+            sha256 = "9fc8d0b6bae67a880efbe77fbbbd05c71400de857650afa20c014ec2d3eeb263";
+          }
+        ]
+        ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
+          {
+            name = "gitlens";
+            publisher = "eamodio";
+            version = "8.3.3";
+            sha256 = "2ac60be573e2cddb764be76ab12c86ccfb7fa378dc066ee1001c6d70e0e3bc56";
+          }
+        ]
+        ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
+          {
+            name = "Ionide-FAKE";
+            publisher = "Ionide";
+            version = "1.2.3";
+            sha256 = "49e896f331d6c1a39cf8e9512368f174864585ee9e4af6f59031acda58b74f46";
+          }
+        ]
+        ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
+          {
+            name = "Ionide-fsharp";
+            publisher = "Ionide";
+            version = "3.22.0";
+            sha256 = "e5dddcbcb897e5d5d82c9d2bbed8b85163144fb7612d4835ed1dcc5ce56371b7";
+          }
+        ]
+        ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
+          {
+            name = "Ionide-Paket";
+            publisher = "Ionide";
+            version = "1.11.1";
+            sha256 = "3be4a94beb5aad4de8fe628b1e1233afb62d4d14d32557035daa2bb16e645fc5";
+          }
+        ]
+        ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
+          {
+            name = "java";
+            publisher = "redhat";
+            version = "0.26.0";
+            sha256 = "79e601d0e470d7700eaa81c754475718c995a9755256d14738f176eb910a46c3";
+          }
+        ]
+        ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
+          {
+            name = "jupyter";
+            publisher = "donjayamanne";
+            version = "1.1.4";
+            sha256 = "9e11714580dde1a65e7ab1479d67b7d976c5c8a541ef7ee4403d356d2e828d0a";
+          }
+        ]
+        ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
+          {
+            name = "language-haskell";
+            publisher = "justusadam";
+            version = "2.5.0";
+            sha256 = "639987da2d55d524bc7e7e307e19593c2fd687ca4bc28f6852cdf4c231925882";
+          }
+        ]
+        ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
+          {
+            name = "latex-workshop";
+            publisher = "James-Yu";
+            version = "5.5.0";
+            sha256 = "fed2250d547f04445eaacacd67bc3deac68a1bf5eed6f763062dd9095c546ecd";
+          }
+        ]
+        ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
+          {
+            name = "nord-wave";
+            publisher = "dnlytras";
+            version = "0.3.4";
+            sha256 = "e01d5425b950d3c23b517b964bc44ec33ae2c947be48522c929742803cac3aac";
+          }
+        ]
+        ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
+          {
+            name = "path-intellisense";
+            publisher = "christian-kohler";
+            version = "1.4.2";
+            sha256 = "248f3d5e785f2e9c032bd5c700c4a782738d1b47fec9c187686152cb4c424b44";
+          }
+        ]
+        ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
+          {
+            name = "prettier-vscode";
+            publisher = "esbenp";
+            version = "1.3.1";
+            sha256 = "340c7af652710fef9bfc9e13a69fd969a5f21b1e70ae56e224623a8c5a7f34da";
+          }
+        ]
+        ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
+          {
+            name = "Ruby";
+            publisher = "rebornix";
+            version = "0.18.0";
+            sha256 = "567959e717b7fd9d8ec0eef39a0214eeb3c47b7ce16cc1d2cc586cde05e18dc0";
+          }
+        ]
+        ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
+          {
+            name = "rust";
+            publisher = "rust-lang";
+            version = "0.4.4";
+            sha256 = "6da4fc501fb18d26a626ed315a076fae890bc98d73336727de121686341742b7";
+          }
+        ]
+        ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
+          {
+            name = "solargraph";
+            publisher = "castwide";
+            version = "0.17.4";
+            sha256 = "3f28c7d8280a59a1670a41ba0687ad94d0442e3ebefb5c8632e5a8c1eefeca61";
+          }
+        ]
+        ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
+          {
+            name = "stylelint";
+            publisher = "shinnn";
+            version = "0.36.3";
+            sha256 = "19ac7904f22e4f615f0a1d054463d05c9d5d0d1e532f2464a4ef1c31f36dfd4c";
+          }
+        ]
+        ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
+          {
+            name = "tslint";
+            publisher = "eg2";
+            version = "1.0.30";
+            sha256 = "0be8e8c0952787672bbc194b70e72dd0dcdc0033ba90a5a6b769a778af937a8f";
+          }
+        ]
+        ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
+          {
+            name = "vs-keybindings";
+            publisher = "ms-vscode";
+            version = "0.2.0";
+            sha256 = "4831b78db2a59ad9e61b2a54c5aa33ad4468b68f60351a942e9a0ea718dedd9c";
+          }
+        ]
+        ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
+          {
+            name = "vsc-material-theme";
+            publisher = "Equinusocio";
+            version = "2.1.0";
+            sha256 = "e15a6439a03b459faca0fdaaa047895236da4dfd48f04681ef33fcf4627e1ee6";
+          }
+        ]
+        ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
+          {
+            name = "vscode-code-outline";
+            publisher = "patrys";
+            version = "0.2.1";
+            sha256 = "7ce047120791242f3274c904f0d751988072e9accb455a3e9dab230a449a1227";
+          }
+        ]
+        ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
+          {
+            name = "vscode-docker";
+            publisher = "PeterJausovec";
+            version = "0.0.27";
+            sha256 = "f1bfd484dcde832b78d059d5b84e2e805d850af85af106b8e9a5cc4f6ed1d585";
+          }
+        ]
+        ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
+          {
+            name = "vscode-eslint";
+            publisher = "dbaeumer";
+            version = "1.4.10";
+            sha256 = "86a5149f84c326ba6538223722e3f0e6d13b861e4171dfa599963af5b3b6b48a";
+          }
+        ]
+        ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
+          {
+            name = "vscode-filesize";
+            publisher = "mkxml";
+            version = "2.1.0";
+            sha256 = "37fa0276205a22dcaaa2ff5e52db6e147f8c7c41eaaadced64a43c7f7b0dd63f";
+          }
+        ]
+        ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
+          {
+            name = "vscode-java-debug";
+            publisher = "vscjava";
+            version = "0.9.0";
+            sha256 = "61e1cf349151e5240e7a3e6ea7dd2bb28857b01fae49bdfdcce8becb55a86b02";
+          }
+        ]
+        ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
+          {
+            name = "vscode-java-pack";
+            publisher = "vscjava";
+            version = "0.3.0";
+            sha256 = "f88aa98eca7bbf4db95ff8af31959a1c7194345f6ffd483e55b531c90feaed73";
+          }
+        ]
+        ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
+          {
+            name = "vscode-java-test";
+            publisher = "vscjava";
+            version = "0.6.1";
+            sha256 = "9f184e05af8cc6cf90851d8c1d882be5bbf96816cf3ac7e0605afcee7372389e";
+          }
+        ]
+        ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
+          {
+            name = "vscode-language-babel";
+            publisher = "mgmcdermott";
+            version = "0.0.14";
+            sha256 = "25dc5742743b537a1478aa8629f931667ff5038f30804837623f57a1119f3c4d";
+          }
+        ]
+        ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
+          {
+            name = "vscode-maven";
+            publisher = "vscjava";
+            version = "0.8.0";
+            sha256 = "6e5249e1b7080366fc29cc308be0aca0c16b0c43c92e0cb993ba73efaa204c3a";
+          }
+        ]
+        ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
+          {
+            name = "vscode-todo-highlight";
+            publisher = "wayou";
+            version = "0.5.12";
+            sha256 = "672f29dfb38cf29bfe19e438569b2e3d1dccea029b2dbabf13522a0a08a8c565";
+          }
+        # ]
+        # ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
+        #   {
+        #     name = "vscode-wakatime";
+        #     publisher = "WakaTime";
+        #     version = "1.2.2";
+        #     sha256 = "1cf4a4a3e0c35f293124e5613c29cfec850f67c0c43cec2ce1d8cc2e83aa217f";
+        #   }
+        # ]
+        # ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
+        #   {
+        #     name = "vsliveshare";
+        #     publisher = "ms-vsliveshare";
+        #     version = "0.3.262";
+        #     sha256 = "78c35f07cdb3a182c25076b2d683d181daf0fdbc09e7f03dfff1bcbc31901b26";
+        #   }
+        ];
+      })
       xfce.mousepad
       ### VSCode
       #### latex-workshop
@@ -86,7 +396,11 @@ in {
       feh
       libarchive
       mpd
-      ncmpcpp
+      (pkgs.ncmpcpp.override {
+        clockSupport = true;
+        outputsSupport = true;
+        visualizerSupport = true;
+      })
       pass
       pipes
       pwgen
@@ -116,6 +430,10 @@ in {
         autopep8
         pylint
       ]))
+      rustup
+      sass
+      ### Build Tools
+      cmake
       ## Misc
       bfg-repo-cleaner
       docker
@@ -125,6 +443,7 @@ in {
       imagemagick7
       mono
       oblogout
+      powertop
       stack
       texlive.combined.scheme-full
       watchman
@@ -147,7 +466,7 @@ in {
 
     variables = {
       # General
-      DOCKER_ID_USER = "tianxian";
+      DOCKER_ID_USER = DOCKER_ID_USER;
       EDITOR = "vim";
       VISUAL = "vim";
     };
@@ -370,322 +689,6 @@ in {
   nixpkgs = {
     config = {
       allowUnfree = true;
-
-      packageOverrides = pkgs: {
-        ncmpcpp = pkgs.ncmpcpp.override {
-          visualizerSupport = true;
-        };
-
-        polybar = pkgs.polybar.override {
-          githubSupport = true;
-          mpdSupport = true;
-        };
-
-        vscode-with-extensions = pkgs.vscode-with-extensions.override {
-          vscodeExtensions = with pkgs.vscode-extensions; [
-            bbenoist.Nix
-            ms-vscode.cpptools
-            ms-python.python
-          ]
-
-          ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
-            {
-              name = "auto-rename-tag";
-              publisher = "formulahendry";
-              version = "0.0.15";
-              sha256 = "f1550037d78bd74844cb2876c21fb287323c53d5b56e638285377fef903fedc1";
-            }
-          ]
-          ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
-            {
-              name = "azure-account";
-              publisher = "ms-vscode";
-              version = "0.4.0";
-              sha256 = "877662c2701a445e97a59fbea0d56d51bb7f94fcf54e547952925c3d95719ec0";
-            }
-          ]
-          ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
-            {
-              name = "cmake";
-              publisher = "twxs";
-              version = "0.0.17";
-              sha256 = "0858af6b500efe81e9b336e977b94bb43cdbbf5622e79c903903cffe40931f86";
-            }
-          ]
-          ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
-            {
-              name = "code-settings-sync";
-              publisher = "Shan";
-              version = "2.9.2";
-              sha256 = "48acfc7814d75d6e7f5010728f1f13055ad7afc5aaf9d579dc5cd2439d3c2753";
-            }
-          ]
-          ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
-            {
-              name = "csharp";
-              publisher = "ms-vscode";
-              version = "1.15.2";
-              sha256 = "8e596639c1b7bfe7714164a5ab1e6e8025497851917d6db5586eb79a77e73e1e";
-            }
-          ]
-          ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
-            {
-              name = "debugger-for-chrome";
-              publisher = "msjsdiag";
-              version = "4.5.0";
-              sha256 = "beedb3183ce91e4b828f6019b546aa8855deb0ebe200f1d8d341ee05012e30e3";
-            }
-          ]
-          ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
-            {
-              name = "githistory";
-              publisher = "donjayamanne";
-              version = "0.4.1";
-              sha256 = "9fc8d0b6bae67a880efbe77fbbbd05c71400de857650afa20c014ec2d3eeb263";
-            }
-          ]
-          ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
-            {
-              name = "gitlens";
-              publisher = "eamodio";
-              version = "8.3.3";
-              sha256 = "2ac60be573e2cddb764be76ab12c86ccfb7fa378dc066ee1001c6d70e0e3bc56";
-            }
-          ]
-          ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
-            {
-              name = "Ionide-FAKE";
-              publisher = "Ionide";
-              version = "1.2.3";
-              sha256 = "49e896f331d6c1a39cf8e9512368f174864585ee9e4af6f59031acda58b74f46";
-            }
-          ]
-          ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
-            {
-              name = "Ionide-fsharp";
-              publisher = "Ionide";
-              version = "3.21.0";
-              sha256 = "e05ed7818d58f348d9131b2702f02cfdea01f48c15f4414b29b4418393707dd7";
-            }
-          ]
-          ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
-            {
-              name = "Ionide-Paket";
-              publisher = "Ionide";
-              version = "1.11.1";
-              sha256 = "3be4a94beb5aad4de8fe628b1e1233afb62d4d14d32557035daa2bb16e645fc5";
-            }
-          ]
-          ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
-            {
-              name = "java";
-              publisher = "redhat";
-              version = "0.26.0";
-              sha256 = "79e601d0e470d7700eaa81c754475718c995a9755256d14738f176eb910a46c3";
-            }
-          ]
-          ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
-            {
-              name = "jupyter";
-              publisher = "donjayamanne";
-              version = "1.1.4";
-              sha256 = "9e11714580dde1a65e7ab1479d67b7d976c5c8a541ef7ee4403d356d2e828d0a";
-            }
-          ]
-          ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
-            {
-              name = "language-haskell";
-              publisher = "justusadam";
-              version = "2.5.0";
-              sha256 = "639987da2d55d524bc7e7e307e19593c2fd687ca4bc28f6852cdf4c231925882";
-            }
-          ]
-          ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
-            {
-              name = "latex-workshop";
-              publisher = "James-Yu";
-              version = "5.5.0";
-              sha256 = "fed2250d547f04445eaacacd67bc3deac68a1bf5eed6f763062dd9095c546ecd";
-            }
-          ]
-          ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
-            {
-              name = "nord-wave";
-              publisher = "dnlytras";
-              version = "0.3.4";
-              sha256 = "e01d5425b950d3c23b517b964bc44ec33ae2c947be48522c929742803cac3aac";
-            }
-          ]
-          ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
-            {
-              name = "path-intellisense";
-              publisher = "christian-kohler";
-              version = "1.4.2";
-              sha256 = "248f3d5e785f2e9c032bd5c700c4a782738d1b47fec9c187686152cb4c424b44";
-            }
-          ]
-          ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
-            {
-              name = "prettier-vscode";
-              publisher = "esbenp";
-              version = "1.3.1";
-              sha256 = "340c7af652710fef9bfc9e13a69fd969a5f21b1e70ae56e224623a8c5a7f34da";
-            }
-          ]
-          ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
-            {
-              name = "Ruby";
-              publisher = "rebornix";
-              version = "0.18.0";
-              sha256 = "567959e717b7fd9d8ec0eef39a0214eeb3c47b7ce16cc1d2cc586cde05e18dc0";
-            }
-          ]
-          ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
-            {
-              name = "rust";
-              publisher = "rust-lang";
-              version = "0.4.4";
-              sha256 = "6da4fc501fb18d26a626ed315a076fae890bc98d73336727de121686341742b7";
-            }
-          ]
-          ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
-            {
-              name = "solargraph";
-              publisher = "castwide";
-              version = "0.17.4";
-              sha256 = "3f28c7d8280a59a1670a41ba0687ad94d0442e3ebefb5c8632e5a8c1eefeca61";
-            }
-          ]
-          ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
-            {
-              name = "stylelint";
-              publisher = "shinnn";
-              version = "0.36.3";
-              sha256 = "19ac7904f22e4f615f0a1d054463d05c9d5d0d1e532f2464a4ef1c31f36dfd4c";
-            }
-          ]
-          ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
-            {
-              name = "tslint";
-              publisher = "eg2";
-              version = "1.0.30";
-              sha256 = "0be8e8c0952787672bbc194b70e72dd0dcdc0033ba90a5a6b769a778af937a8f";
-            }
-          ]
-          ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
-            {
-              name = "vs-keybindings";
-              publisher = "ms-vscode";
-              version = "0.2.0";
-              sha256 = "4831b78db2a59ad9e61b2a54c5aa33ad4468b68f60351a942e9a0ea718dedd9c";
-            }
-          ]
-          ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
-            {
-              name = "vsc-material-theme";
-              publisher = "Equinusocio";
-              version = "2.1.0";
-              sha256 = "e15a6439a03b459faca0fdaaa047895236da4dfd48f04681ef33fcf4627e1ee6";
-            }
-          ]
-          ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
-            {
-              name = "vscode-code-outline";
-              publisher = "patrys";
-              version = "0.2.1";
-              sha256 = "7ce047120791242f3274c904f0d751988072e9accb455a3e9dab230a449a1227";
-            }
-          ]
-          ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
-            {
-              name = "vscode-docker";
-              publisher = "PeterJausovec";
-              version = "0.0.27";
-              sha256 = "f1bfd484dcde832b78d059d5b84e2e805d850af85af106b8e9a5cc4f6ed1d585";
-            }
-          ]
-          ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
-            {
-              name = "vscode-eslint";
-              publisher = "dbaeumer";
-              version = "1.4.10";
-              sha256 = "86a5149f84c326ba6538223722e3f0e6d13b861e4171dfa599963af5b3b6b48a";
-            }
-          ]
-          ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
-            {
-              name = "vscode-filesize";
-              publisher = "mkxml";
-              version = "2.1.0";
-              sha256 = "37fa0276205a22dcaaa2ff5e52db6e147f8c7c41eaaadced64a43c7f7b0dd63f";
-            }
-          ]
-          ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
-            {
-              name = "vscode-java-debug";
-              publisher = "vscjava";
-              version = "0.9.0";
-              sha256 = "61e1cf349151e5240e7a3e6ea7dd2bb28857b01fae49bdfdcce8becb55a86b02";
-            }
-          ]
-          ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
-            {
-              name = "vscode-java-pack";
-              publisher = "vscjava";
-              version = "0.3.0";
-              sha256 = "f88aa98eca7bbf4db95ff8af31959a1c7194345f6ffd483e55b531c90feaed73";
-            }
-          ]
-          ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
-            {
-              name = "vscode-java-test";
-              publisher = "vscjava";
-              version = "0.6.1";
-              sha256 = "9f184e05af8cc6cf90851d8c1d882be5bbf96816cf3ac7e0605afcee7372389e";
-            }
-          ]
-          ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
-            {
-              name = "vscode-language-babel";
-              publisher = "mgmcdermott";
-              version = "0.0.14";
-              sha256 = "25dc5742743b537a1478aa8629f931667ff5038f30804837623f57a1119f3c4d";
-            }
-          ]
-          ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
-            {
-              name = "vscode-maven";
-              publisher = "vscjava";
-              version = "0.8.0";
-              sha256 = "6e5249e1b7080366fc29cc308be0aca0c16b0c43c92e0cb993ba73efaa204c3a";
-            }
-          ]
-          ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
-            {
-              name = "vscode-todo-highlight";
-              publisher = "wayou";
-              version = "0.5.12";
-              sha256 = "672f29dfb38cf29bfe19e438569b2e3d1dccea029b2dbabf13522a0a08a8c565";
-            }
-          # ]
-          # ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
-          #   {
-          #     name = "vscode-wakatime";
-          #     publisher = "WakaTime";
-          #     version = "1.2.2";
-          #     sha256 = "1cf4a4a3e0c35f293124e5613c29cfec850f67c0c43cec2ce1d8cc2e83aa217f";
-          #   }
-          # ]
-          # ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
-          #   {
-          #     name = "vsliveshare";
-          #     publisher = "ms-vsliveshare";
-          #     version = "0.3.262";
-          #     sha256 = "78c35f07cdb3a182c25076b2d683d181daf0fdbc09e7f03dfff1bcbc31901b26";
-          #   }
-          ];
-        };
-      };
     };
   };
 
@@ -714,9 +717,20 @@ in {
 
     zsh = {
       enable = true;
+      interactiveShellInit = ''
+        function nix-clean () {
+          nix-env --delete-generations old
+          nix-store --gc --print-dead
+          nix-collect-garbage -d
+        }
+      '';
       promptInit = ''
         autoload -U promptinit && promptinit && prompt pure
       '';
+      shellAliases = {
+        "download-audio" = "youtube-dl --extract-audio --audio-format mp3";
+        "pass-hash" = ''openssl passwd -1 -salt "$(od -vAn -N4 -tu4 < /dev/urandom)"'';
+      };
     };
   };
 
@@ -724,7 +738,7 @@ in {
     sudo = {
       extraRules = [
         {
-          users = [ "${user}" ];
+          users = [ user ];
           commands = [
             {
               command = "${HOME}/.bspwm/bin/kbd_backlight";
@@ -741,6 +755,10 @@ in {
   };
 
   services = {
+    acpid = {
+      enable = true;
+    };
+
     avahi = {
       enable = true;
       nssmdns = true;
@@ -877,12 +895,34 @@ in {
     };
 
     mpd = {
-      dataDir = "${HOME}/.config/mpd";
+      enable = true;
+      extraConfig = ''
+        input {
+          plugin "curl"
+        }
+
+        audio_output {
+          type "pulse"
+          name "pulse audio"
+        }
+
+        audio_output {
+          type "pulse"
+          name "Local Music Player Daemon"
+          server "127.0.0.1"
+        }
+
+        audio_output {
+          type "fifo"
+          name "my_fifo"
+          path "/tmp/mpd.fifo"
+          format "44100:16:2"
+        }
+      '';
       musicDirectory = "${HOME}/Music";
-      startWhenNeeded = true;
 
       network = {
-        listAddress = "127.0.0.1";
+        listenAddress = "127.0.0.1";
         port = 6600;
       };
     };
@@ -905,6 +945,10 @@ in {
     };
 
     tlp = {
+      enable = true;
+    };
+
+    udisks2 = {
       enable = true;
     };
 
@@ -979,7 +1023,7 @@ in {
         ];
         group = "users";
         home = "${HOME}";
-        password = "${password}";
+        passwordFile = "${passwordFile}";
         uid = 1000;
         useDefaultShell = true;
       };
@@ -995,6 +1039,62 @@ in {
 
     nixos = {
       stateVersion = "18.09";
+    };
+  };
+
+  systemd = {
+    services = {
+      i3color = {
+        before = [
+          "systemd-suspend.service"
+          "systemd-hibernate.target"
+        ];
+        description = "i3lock with suspend/sleep";
+        enable = true;
+        environment = {
+          DISPLAY = ":0";
+        };
+        serviceConfig = {
+          Type = "forking";
+          User = user;
+        };
+        script = ''
+          image="$(mktemp).png"
+
+          ${pkgs.ffmpeg}/bin/ffmpeg -y -s 1440x900 -probesize 10MB -f x11grab -i $DISPLAY -vframes 1 -vf "gblur=sigma=16" "$image"
+          ${pkgs.imagemagick}/bin/convert "$image" "$HOME/.local/share/pixmaps/lock-overlay.png" -gravity center -composite "$image"
+          ${pkgs.i3lock-color}/bin/i3lock-color -i "$image" \
+            --verifcolor=FFFFFF00 \
+            --wrongcolor=FFFFFF00 \
+            --layoutcolor=FFFFFF00 \
+            --insidecolor=FADDC500 \
+            --ringcolor=FAFAFA00 \
+            --linecolor=2D283E00 \
+            --keyhlcolor=FABB5CAA \
+            --ringvercolor=FADD5CAA \
+            --separatorcolor=22222200 \
+            --insidevercolor=FADD5C00 \
+            --ringwrongcolor=F13459AA \
+            --insidewrongcolor=F1345900
+        '';
+        wantedBy = [
+          "suspend.target"
+          "hibernate.target"
+        ];
+      };
+
+      powertop = {
+        description = "Powertop tunings";
+        enable = false;
+        path = pkgs.powertop;
+        serviceConfig = {
+          ExecStart = "${pkgs.powertop}/bin/powertop --auto-tune";
+          Type = "oneshot";
+        };
+        wantedBy = [
+          "multi-user.target"
+        ];
+      };
     };
   };
 }
