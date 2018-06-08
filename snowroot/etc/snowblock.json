@@ -3,6 +3,10 @@
     "link": {
       "/etc/nixos/configuration.nix": {
         "force": true
+      },
+      "/etc/nixos/passwords/yin": {
+        "create": true,
+        "force": true
       }
     }
   }
