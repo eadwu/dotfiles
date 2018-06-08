@@ -1,7 +1,16 @@
 [
   {
+    "clean": [
+      "~/git"
+    ]
+  },
+  {
     "link": {
       "~/.gitconfig": {
+        "force": true
+      },
+      "~/git/hooks/query-watchman": {
+        "create": true,
         "force": true
       }
     }

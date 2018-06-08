@@ -1,8 +1,11 @@
 [user]
-	name = Edmund Wu
-	email = fangkazuto@gmail.com
-	signingkey = 36B3A59B9F0AA985
+  name = Edmund Wu
+  email = fangkazuto@gmail.com
+  signingkey = 36B3A59B9F0AA985
 [core]
-	editor = vim
+  editor = vim
+  fsmonitor = .git/hooks/query-watchman
 [commit]
-	gpgsign = true
+  gpgsign = true
+[init]
+  templatedir = ~/git
