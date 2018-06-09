@@ -743,6 +743,7 @@ in {
     services = {
       i3color = {
         before = [
+          "sleep.target"
           "systemd-suspend.service"
           "systemd-hibernate.target"
         ];
@@ -775,6 +776,7 @@ in {
             --insidewrongcolor=F1345900
         '';
         wantedBy = [
+          "sleep.target"
           "suspend.target"
           "hibernate.target"
         ];
