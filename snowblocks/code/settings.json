@@ -93,6 +93,7 @@
   ],
   "C_Cpp.clang_format_path": "/usr/bin/clang-format",
   "C_Cpp.clang_format_style": "Chromium",
+  "cmake.cmakePath": "/run/current-system/sw/bin/cmake",
   "docker.attachShellCommand.linuxContainer": "/bin/zsh",
   "eslint.packageManager": "yarn",
   "eslint.validate": [
@@ -102,10 +103,10 @@
   ],
   "filesize.use24HourFormat": false,
   "FSharp.codeOutline": false,
-  "FSharp.fsiFilePath": "/usr/bin/fsharpi",
+  "FSharp.fsiFilePath": "/run/current-system/sw/bin/fsharpi",
   "FSharp.logLanguageServiceRequests": "both",
   "FSharp.logLanguageServiceRequestsOutputWindowLevel": "DEBUG",
-  "FSharp.monoPath": "/usr/bin/mono",
+  "FSharp.monoPath": "/run/current-system/sw/bin/mono",
   "gitlens.advanced.messages": {
     "suppressCommitHasNoPreviousCommitWarning": false,
     "suppressCommitNotFoundWarning": false,
@@ -138,6 +139,7 @@
   "java.saveActions.organizeImports": true,
   "jupyter.appendResults": false,
   "latex-workshop.chktex.enabled": true,
+  "latex-workshop.chktex.path": "/run/current-system/sw/bin/chktex",
   "latex-workshop.latex.clean.enabled": true,
   "latex-workshop.latex.outputDir": "../",
   "latex-workshop.latex.tools": [
@@ -174,6 +176,9 @@
       ]
     }
   ],
+  "latex-workshop.latexindent.path": "/run/current-system/sw/bin/latexindent",
+  "latex-workshop.synctex.path": "/run/current-system/sw/bin/synctex",
+  "latex-workshop.texcount.path": "/run/current-system/sw/bin/texcount",
   "latex-workshop.view.pdf.viewer": "tab",
   "materialTheme.accent": "Graphite",
   "npm.packageManager": "yarn",
@@ -188,6 +193,10 @@
   "prettier.requireConfig": true,
   "prettier.singleQuote": true,
   "prettier.stylelintIntegration": true,
+  "python.linting.pep8Path": "/run/current-system/sw/bin/autopep8",
+  "python.linting.pylintPath": "/run/current-system/sw/bin/pylint",
+  "python.pythonPath": "/run/current-system/sw/bin/python3",
+  "rust-client.rustupPath": "/run/current-system/sw/bin/rustup",
   "rust-client.updateOnStartup": true,
   "sync.autoDownload": false,
   "sync.autoUpload": false,
