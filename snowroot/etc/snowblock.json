@@ -1,10 +1,19 @@
 [
   {
+    "clean": [
+      "/etc/nixos"
+    ]
+  },
+  {
     "link": {
       "/etc/nixos/configuration.nix": {
         "force": true
       },
       "/etc/nixos/passwords/yin": {
+        "create": true,
+        "force": true
+      },
+      "/etc/nixos/pkgs/vscode-with-extensions.nix": {
         "create": true,
         "force": true
       }

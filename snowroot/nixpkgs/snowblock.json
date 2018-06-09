@@ -1,0 +1,15 @@
+[
+  {
+    "clean": [
+      "~/.config/nixpkgs"
+    ]
+  },
+  {
+    "link": {
+      "~/.config/nixpkgs/config.nix": {
+        "create": true,
+        "force": true
+      }
+    }
+  }
+]
