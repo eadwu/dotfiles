@@ -27,16 +27,12 @@
         "Downloading vim-plug"
       ],
       [
-        "curl -sLS https://raw.githubusercontent.com/arcticicestudio/nord-vim/develop/autoload/airline/themes/nord.vim -o ~/.vim/autoload/airline/themes/nord.vim",
-        "Downloading Nord airline theme"
+        "curl -sLS https://raw.githubusercontent.com/dylanaraps/wal.vim/master/autoload/airline/themes/wal.vim -o ~/.vim/autoload/airline/themes/wal.vim",
+        "Downloading Wal airline theme"
       ],
       [
-        "curl -sLS https://raw.githubusercontent.com/w0ng/vim-hybrid/master/colors/hybrid.vim -o ~/.vim/colors/hybrid.vim",
-        "Downloading Hybrid color scheme"
-      ],
-      [
-        "curl -sLS https://raw.githubusercontent.com/arcticicestudio/nord-vim/develop/colors/nord.vim -o ~/.vim/colors/nord.vim",
-        "Downloading Nord color scheme"
+        "curl -sLS https://raw.githubusercontent.com/dylanaraps/wal.vim/master/colors/wal.vim -o ~/.vim/colors/wal.vim",
+        "Downloading Wal color scheme"
       ]
     ]
   }

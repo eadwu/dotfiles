@@ -14,7 +14,7 @@ set timeoutlen=1000
 set ttimeoutlen=0
 " plugin settings
 let g:nord_italic_comments = 1
-" let g:airline_theme='nord'
+" let g:airline_theme='wal'
 let g:javascript_plugin_jsdoc = 1
 
-colorscheme hybrid
+colorscheme wal
