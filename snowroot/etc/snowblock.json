@@ -6,15 +6,93 @@
   },
   {
     "link": {
+      "/etc/nixos/boot.nix": {
+        "force": true
+      },
+      "/etc/nixos/common.nix": {
+        "force": true
+      },
       "/etc/nixos/configuration.nix": {
+        "force": true
+      },
+      "/etc/nixos/environment.nix": {
+        "force": true
+      },
+      "/etc/nixos/fonts.nix": {
+        "force": true
+      },
+      "/etc/nixos/general.nix": {
+        "force": true
+      },
+      "/etc/nixos/hardware.nix": {
+        "force": true
+      },
+      "/etc/nixos/hardware/pulseaudio.nix": {
+        "create": true,
+        "force": true
+      },
+      "/etc/nixos/hardware/pulseaudio/default.pa.nix": {
+        "create": true,
+        "force": true
+      },
+      "/etc/nixos/laptop.nix": {
+        "force": true
+      },
+      "/etc/nixos/networking.nix": {
+        "force": true
+      },
+      "/etc/nixos/overlay/pkgs/ark.nix": {
+        "force": true
+      },
+      "/etc/nixos/overlay/pkgs/ncmpcpp.nix": {
+        "force": true
+      },
+      "/etc/nixos/overlay/pkgs/polybar.nix": {
+        "force": true
+      },
+      "/etc/nixos/overlay/pkgs/vscode-with-extensions.nix": {
         "force": true
       },
       "/etc/nixos/passwords/yin": {
         "create": true,
         "force": true
       },
-      "/etc/nixos/pkgs/vscode-with-extensions.nix": {
+      "/etc/nixos/programs.nix": {
+        "force": true
+      },
+      "/etc/nixos/services.nix": {
+        "force": true
+      },
+      "/etc/nixos/services/compton.nix": {
         "create": true,
+        "force": true
+      },
+      "/etc/nixos/services/mpd.nix": {
+        "create": true,
+        "force": true
+      },
+      "/etc/nixos/services/compton/compton.conf.nix": {
+        "create": true,
+        "force": true
+      },
+      "/etc/nixos/services/logind/logind.conf.nix": {
+        "create": true,
+        "force": true
+      },
+      "/etc/nixos/services/mpd/mpd.conf.nix": {
+        "create": true,
+        "force": true
+      },
+      "/etc/nixos/settings.nix": {
+        "force": true
+      },
+      "/etc/nixos/system.nix": {
+        "force": true
+      },
+      "/etc/nixos/systemd.nix": {
+        "force": true
+      },
+      "/etc/nixos/users.nix": {
         "force": true
       }
     }
