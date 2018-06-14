@@ -4,7 +4,7 @@
 
 # power off menu
 XF86PowerOff
-  oblogout
+  scrot /tmp/screenshot.png && oblogout
 
 # volume
 XF86AudioMute
