@@ -19,6 +19,6 @@ function ext-sha256 () {
   # 3 = version
   curl "https://$1.gallery.vsassets.io/_apis/public/gallery/publisher/$1/extension/$2/$3/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage" -o tmp.vsix
 
-  printf "%s" $(sha256sum tmp.vsix)
+  sha256sum tmp.vsix | awk '{print $1}'
   rm -f tmp.vsix
 }
