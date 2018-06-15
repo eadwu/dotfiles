@@ -19,11 +19,11 @@
         "Create ~/.zsh directory"
       ],
       [
-        "curl -sLS https://raw.githubusercontent.com/sindresorhus/pure/master/pure.zsh -o ~/.zsh/prompt_pure_setup",
+        "wget https://raw.githubusercontent.com/sindresorhus/pure/master/pure.zsh -O ~/.zsh/prompt_pure_setup",
         "Downloading ~/.zsh/prompt_pure_setup"
       ],
       [
-        "curl -sLS https://raw.githubusercontent.com/sindresorhus/pure/master/async.zsh -o ~/.zsh/async",
+        "wget https://raw.githubusercontent.com/sindresorhus/pure/master/async.zsh -O ~/.zsh/async",
         "Downloading ~/.zsh/async"
       ]
     ]

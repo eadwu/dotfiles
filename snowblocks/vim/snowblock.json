@@ -23,15 +23,15 @@
         "Create ~/.vim/colors directory"
       ],
       [
-        "curl -sLS https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim -o ~/.vim/autoload/plug.vim",
+        "wget https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim -O ~/.vim/autoload/plug.vim",
         "Downloading vim-plug"
       ],
       [
-        "curl -sLS https://raw.githubusercontent.com/dylanaraps/wal.vim/master/autoload/airline/themes/wal.vim -o ~/.vim/autoload/airline/themes/wal.vim",
+        "wget https://raw.githubusercontent.com/dylanaraps/wal.vim/master/autoload/airline/themes/wal.vim -O ~/.vim/autoload/airline/themes/wal.vim",
         "Downloading Wal airline theme"
       ],
       [
-        "curl -sLS https://raw.githubusercontent.com/dylanaraps/wal.vim/master/colors/wal.vim -o ~/.vim/colors/wal.vim",
+        "wget https://raw.githubusercontent.com/dylanaraps/wal.vim/master/colors/wal.vim -O ~/.vim/colors/wal.vim",
         "Downloading Wal color scheme"
       ]
     ]
