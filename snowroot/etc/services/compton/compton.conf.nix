@@ -20,6 +20,7 @@
   blur-background = true;
   blur-background-fixed = false;
   blur-background-exclude = [
+    "window_type = 'dock'",
     "window_type = 'desktop'"
   ];
 

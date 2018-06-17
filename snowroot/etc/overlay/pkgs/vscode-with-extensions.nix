@@ -34,13 +34,13 @@ self: super:
         version = "2.9.2";
         sha256 = "48acfc7814d75d6e7f5010728f1f13055ad7afc5aaf9d579dc5cd2439d3c2753";
       }
-    ] ++ super.vscode-utils.extensionsFromVscodeMarketplace [
-      {
-        name = "csharp";
-        publisher = "ms-vscode";
-        version = "1.15.2";
-        sha256 = "8e596639c1b7bfe7714164a5ab1e6e8025497851917d6db5586eb79a77e73e1e";
-      }
+    # ] ++ super.vscode-utils.extensionsFromVscodeMarketplace [
+    #   {
+    #     name = "csharp";
+    #     publisher = "ms-vscode";
+    #     version = "1.15.2";
+    #     sha256 = "8e596639c1b7bfe7714164a5ab1e6e8025497851917d6db5586eb79a77e73e1e";
+    #   }
     ] ++ super.vscode-utils.extensionsFromVscodeMarketplace [
       {
         name = "debugger-for-chrome";
@@ -152,6 +152,13 @@ self: super:
         publisher = "rust-lang";
         version = "0.4.4";
         sha256 = "6da4fc501fb18d26a626ed315a076fae890bc98d73336727de121686341742b7";
+      }
+    ] ++ super.vscode-utils.extensionsFromVscodeMarketplace [
+      {
+        name = "shader";
+        publisher = "slevesque";
+        version = "1.1.3";
+        sha256 = "3e463af6664ef25c5969e031ceccf43bcef352ba20af4559f61f892e70142498";
       }
     ] ++ super.vscode-utils.extensionsFromVscodeMarketplace [
       {

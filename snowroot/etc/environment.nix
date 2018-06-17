@@ -28,12 +28,14 @@ in with settings; {
       xfce.xfce4-screenshooter
       xfce.xfce4-taskmanager
       ## Theme
-      deepin.deepin-gtk-theme
+      gnome3.adwaita-icon-theme
+      gtk-engine-murrine
       papirus-icon-theme
 
       # Other
       ## Applications
       ark
+      blender
       discord
       gimp
       gnome3.pomodoro
@@ -42,13 +44,13 @@ in with settings; {
       vscode-with-extensions
       xfce.mousepad
       ### VSCode
-      xorg.libxkbfile
       #### latex-workshop
       perlPackages.YAMLTiny
       perlPackages.FileHomeDir
       perlPackages.UnicodeLineBreak
       ## Console
       feh
+      htop
       libarchive
       pass
       pipes
@@ -88,22 +90,29 @@ in with settings; {
       bfg-repo-cleaner
       docker
       ffmpeg
+      glava
       gnupg
-      google-musicmanager
+      # google-musicmanager
+      # haskellPackages.update-nix-fetchgit
       i3lock-color
       imagemagick7
+      intel-gpu-tools
       mono
+      mpv
       oblogout
       powertop
+      rclone
       scrot
       stack
       texlive.combined.scheme-full
       watchman
       xclip
       xorg.xsetroot
+      xwinwrap
       yarn
 
       # Debug / Utils
+      libva-utils
       lsof
       nix-prefetch-scripts
       pciutils

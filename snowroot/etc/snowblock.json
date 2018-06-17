@@ -24,15 +24,14 @@
       "/etc/nixos/general.nix": {
         "force": true
       },
+      "/etc/nixos/hardware": {
+        "create": true,
+        "force": true
+      },
       "/etc/nixos/hardware.nix": {
         "force": true
       },
-      "/etc/nixos/hardware/pulseaudio.nix": {
-        "create": true,
-        "force": true
-      },
-      "/etc/nixos/hardware/pulseaudio/default.pa.nix": {
-        "create": true,
+      "/etc/nixos/intel.nix": {
         "force": true
       },
       "/etc/nixos/laptop.nix": {
@@ -41,16 +40,8 @@
       "/etc/nixos/networking.nix": {
         "force": true
       },
-      "/etc/nixos/overlay/pkgs/ark.nix": {
-        "force": true
-      },
-      "/etc/nixos/overlay/pkgs/ncmpcpp.nix": {
-        "force": true
-      },
-      "/etc/nixos/overlay/pkgs/polybar.nix": {
-        "force": true
-      },
-      "/etc/nixos/overlay/pkgs/vscode-with-extensions.nix": {
+      "/etc/nixos/overlay": {
+        "create": true,
         "force": true
       },
       "/etc/nixos/passwords/yin": {
@@ -60,27 +51,11 @@
       "/etc/nixos/programs.nix": {
         "force": true
       },
+      "/etc/nixos/services": {
+        "create": true,
+        "force": true
+      },
       "/etc/nixos/services.nix": {
-        "force": true
-      },
-      "/etc/nixos/services/compton.nix": {
-        "create": true,
-        "force": true
-      },
-      "/etc/nixos/services/mpd.nix": {
-        "create": true,
-        "force": true
-      },
-      "/etc/nixos/services/compton/compton.conf.nix": {
-        "create": true,
-        "force": true
-      },
-      "/etc/nixos/services/logind/logind.conf.nix": {
-        "create": true,
-        "force": true
-      },
-      "/etc/nixos/services/mpd/mpd.conf.nix": {
-        "create": true,
         "force": true
       },
       "/etc/nixos/settings.nix": {

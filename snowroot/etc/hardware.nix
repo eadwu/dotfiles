@@ -16,5 +16,9 @@
         updateMicrocode = true;
       };
     };
+
+    opengl = {
+      enable = true;
+    };
   };
 }

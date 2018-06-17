@@ -1,6 +1,8 @@
 { config, pkgs, ... }:
 
-{
+let
+  settings = import /etc/nixos/settings.nix;
+in with settings; {
   programs = {
     oblogout = {
       enable = true;
@@ -15,7 +17,7 @@
       logout = "L";
       lock = "";
       hibernate = "H";
-      clogout = "bspc quit 1"; # TODO: conditional based on display manager
+      clogout = "bspc quit 1"; #TODO: If comparison on package exist pkill -KILL -u $USER
       clock = "";
       cswitchuser = "";
     };
@@ -25,7 +27,10 @@
       interactiveShellInit = ''
         function nix-clean () {
           nix-env --delete-generations old
-          nix-store --gc --print-dead
+          nix-store --gc
+          nix-channel --update
+          nix-env -u --always
+          for link in /nix/var/nix/gcroots/auto/*; do rm $(readlink "$link"); done
           nix-collect-garbage -d
         }
       '';
@@ -34,7 +39,9 @@
       '';
       shellAliases = {
         "download-audio" = "youtube-dl --extract-audio --audio-format mp3";
+        "nixos-rebuild-local" = "nixos-rebuild -I nixpkgs=${HOME}/Downloads/nixpkgs";
         "pass-hash" = ''openssl passwd -1 -salt "$(od -vAn -N4 -tu4 < /dev/urandom)"'';
+        "sensors" = "nix-shell -p lm_sensors --run sensors";
       };
     };
   };
