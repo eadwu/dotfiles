@@ -1,0 +1,14 @@
+[
+  {
+    "clean": [
+      "~/.config/glava"
+    ],
+    "link": {
+      "~/.config/glava": {
+        "create": true,
+        "force": true,
+        "path": "."
+      }
+    }
+  }
+]
