@@ -1,12 +1,12 @@
 [
   {
     "clean": [
-      "~/.config/rofi"
+      "~/.config/mpv"
     ]
   },
   {
     "link": {
-      "~/.config/rofi": {
+      "~/.config/mpv": {
         "create": true,
         "force": true,
         "path": "."

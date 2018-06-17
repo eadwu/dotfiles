@@ -15,8 +15,8 @@
   {
     "shell": [
       [
-        "if [ ! -d \"${HOME}/.zsh\" ]; then mkdir \"${HOME}/.zsh\"; fi",
-        "Create ~/.zsh directory"
+        "mkdir -p ~/.zsh",
+        "Create ~/.zsh"
       ],
       [
         "wget https://raw.githubusercontent.com/sindresorhus/pure/master/pure.zsh -O ~/.zsh/prompt_pure_setup",

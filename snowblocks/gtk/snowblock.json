@@ -1,7 +1,8 @@
 [
   {
     "clean": [
-      "~/.config/gtk-3.0"
+      "~/.config/gtk-3.0",
+      "~/.themes"
     ]
   },
   {
@@ -15,5 +16,17 @@
         "force": true
       }
     }
+  },
+  {
+    "shell": [
+      [
+        "mkdir -p ~/.themes",
+        "Generate ~/.themes"
+      ],
+      [
+        "wget -qO- https://github.com/addy-dclxvi/gtk-theme-collections/archive/master.tar.gz | tar vxz --directory=$HOME/.themes --strip-components=1 gtk-theme-collections-master/Fantome",
+        "Download Fantome GTK theme"
+      ]
+    ]
   }
 ]

@@ -6,41 +6,19 @@
   },
   {
     "link": {
-      "~/.bspwm/bin/kbd_backlight": {
-        "create": true,
-        "force": true
-      },
-      "~/.bspwm/bin/mon_backlight": {
-        "force": true
-      },
-      "~/.bspwm/gmail/credentials.json": {
+      "~/.bspwm": {
         "create": true,
         "force": true,
-        "relative": true,
-        "path": "gmail/credentials.json"
-      },
-      "~/.bspwm/gmail/launch.py": {
-        "force": true,
-        "path": "gmail/launch.py"
-      },
-      "~/.bspwm/bspwmrc": {
-        "force": true
-      },
-      "~/.bspwm/config.ini": {
-        "force": true
-      },
-      "~/.bspwm/github.token": {
-        "force": true
-      },
-      "~/.bspwm/java_nonreparenting_wm_hack": {
-        "force": true
-      },
-      "~/.bspwm/sxhkdrc": {
-        "force": true
-      },
-      "~/.bspwm/weather_icons": {
-        "force": true
+        "path": "."
       }
     }
+  },
+  {
+    "shell": [
+      [
+        "sudo chmod +x ~/.bspwm/{bspwmrc,external_rules,java_nonreparenting_wm_hack,bin/kbd_backlight,bin/mon_backlight}",
+        "Adjust file permissions"
+      ]
+    ]
   }
 ]
