@@ -42,6 +42,7 @@ in with settings; {
         "nixos-rebuild-local" = "nixos-rebuild -I nixpkgs=${HOME}/Downloads/nixpkgs";
         "pass-hash" = ''openssl passwd -1 -salt "$(od -vAn -N4 -tu4 < /dev/urandom)"'';
         "sensors" = "nix-shell -p lm_sensors --run sensors";
+        "xprop" = "nix-shell -p xorg.xprop --run xprop";
       };
     };
   };

@@ -116,7 +116,6 @@ in with settings; {
       lsof
       nix-prefetch-scripts
       pciutils
-      xorg.xprop
     ];
 
     variables = {
