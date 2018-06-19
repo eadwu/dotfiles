@@ -9,5 +9,16 @@ SNOWROOT_BASE_DIR_NAME="snowroot"
 SNOWBLOCKSDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/$SNOWBLOCKS_BASE_DIR_NAME"
 SNOWROOTDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/$SNOWROOT_BASE_DIR_NAME"
 
-"${SNOWSAW_DIR}/${SNOWSAW_BIN}" -s "${SNOWBLOCKSDIR}" "${@}"
-sudo "${SNOWSAW_DIR}/${SNOWSAW_BIN}" -s "${SNOWROOTDIR}" "${@}"
+case "$1" in
+  "root")
+    sudo "${SNOWSAW_DIR}/${SNOWSAW_BIN}" -s "${SNOWROOTDIR}" "${@:2}"
+    ;;
+  "user")
+    "${SNOWSAW_DIR}/${SNOWSAW_BIN}" -s "${SNOWBLOCKSDIR}" "${@:2}"
+    ;;
+  *)
+    "${SNOWSAW_DIR}/${SNOWSAW_BIN}" -s "${SNOWBLOCKSDIR}" "${@:2}"
+    sudo "${SNOWSAW_DIR}/${SNOWSAW_BIN}" -s "${SNOWROOTDIR}" "${@:2}"
+    ;;
+esac
+
