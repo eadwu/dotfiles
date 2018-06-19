@@ -205,11 +205,11 @@
   "sync.gist": "a2d589678ad127b1351ec7f8f0019298",
   "sync.host": "",
   "sync.lastDownload": "",
-  "sync.lastUpload": "2018-06-02T16:51:33.489Z",
+  "sync.lastUpload": "2018-06-18T01:47:07.306Z",
   "sync.pathPrefix": "",
   "sync.quietSync": true,
   "sync.removeExtensions": true,
-  "sync.syncExtensions": true,
+  "sync.syncExtensions": false,
   "tslint.packageManager": "yarn",
   "tslint.validateWithDefaultConfig": true
 }
