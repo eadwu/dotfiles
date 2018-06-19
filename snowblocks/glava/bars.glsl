@@ -4,11 +4,9 @@
 #define C_LINE 0
 
 /* width (in pixels) of each bar */
-// #define BAR_WIDTH 4
-#define BAR_WIDTH 2
+#define BAR_WIDTH 4
 /* width (in pixels) of each bar gap */
-// #define BAR_GAP 2
-#define BAR_GAP 1
+#define BAR_GAP 2
 /* outline color */
 #define BAR_OUTLINE #262626
 /* outline width (in pixels, set to 0 to disable outline drawing) */
