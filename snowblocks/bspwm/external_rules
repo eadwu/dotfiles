@@ -4,10 +4,12 @@ wid=$1
 class=$2
 instance=$3
 
-# Use `nix-shell` instead of installing dependency, just because
 if [[ "$instance" == GLava ]]; then
-  # Keep above xwinwrap
-  nix-shell -p xdo --pure --run "xdo above -t "$(xdo id -N Bspwm -n root | sort | head -n 1)" $wid"
+  # Keep above xwinwrap (root window)
+  # xdo above -t "$(xdo id -n root | sort | head -n 1)" $wid
   # Actually let's just put on top of everything
-  nix-shell -p xdo --pure --run "xdo raise $wid"
+  xdo raise $wid
+else
+  # Lower everything else
+  xdo below -t "$(xdo id -a GLava)" $wid
 fi
