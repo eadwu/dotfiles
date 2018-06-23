@@ -16,7 +16,7 @@
   {
     "shell": [
       [
-        "sudo chmod +x ~/.bspwm/{bspwmrc,external_rules,java_nonreparenting_wm_hack,bin/kbd_backlight,bin/mon_backlight}",
+        "sudo chmod +x ~/.bspwm/{bspwmrc,external_rules}",
         "Adjust file permissions"
       ]
     ]

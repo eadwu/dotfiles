@@ -17,11 +17,11 @@ alt + XF86Audio{LowerVolume,RaiseVolume}
 
 # monitor brightness
 {_,alt +}XF86MonBrightness{Down,Up}
-  sudo ~/.bspwm/bin/mon_backlight {1,5} {-,+}
+  sudo mon_backlight {1,5} {-,+}
 
 # keyboard brightness
 {_,alt +}XF86KbdBrightness{Down,Up}
-  sudo ~/.bspwm/bin/kbd_backlight {1,5} {-,+}
+  sudo kbd_backlight {1,5} {-,+}
 
 # reload bspwm
 # alt + Escape
