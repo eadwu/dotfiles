@@ -13,7 +13,7 @@ function docker-push-image () {
   docker push "${DOCKER_ID_USER}/$1"
 }
 
-function ext-sha256 () {
+function ext256 () {
   # 1 = publisher
   # 2 = extension
   # 3 = version
