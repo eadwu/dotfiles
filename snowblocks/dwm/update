@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+diff -ura /dev/null config.h > config.h.diff
+
+sed -i 's/\(config\.h\)/b\/\1/' config.h.diff
+sed -i 's/\/dev\/null/a\/config\.h/' config.h.diff
+
+diff -ura <(curl -sSL 'https://git.suckless.org/dwm/plain/config.mk?h=6.1') config.mk > config.mk.diff
+
+sed -i 's/\(config\.mk\)/b\/\1/' config.mk.diff
+sed -ri 's/\/dev\/fd\/[0-9]+/a\/config.mk/' config.mk.diff

@@ -1,0 +1,16 @@
+[
+  {
+    "clean": [
+      "~/.dwm"
+    ]
+  },
+  {
+    "link": {
+      "~/.dwm": {
+        "create": true,
+        "force": true,
+        "path": "."
+      }
+    }
+  }
+]
