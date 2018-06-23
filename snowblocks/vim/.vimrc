@@ -17,4 +17,4 @@ let g:nord_italic_comments = 1
 " let g:airline_theme='wal'
 let g:javascript_plugin_jsdoc = 1
 
-colorscheme wal
+colorscheme faded_material
