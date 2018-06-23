@@ -7,27 +7,40 @@ in with settings; {
     [
       /etc/nixos/common.nix
       /etc/nixos/hardware-configuration.nix
+      /etc/nixos/dwm.nix
     ];
 
-  security.sudo.extraRules = [
-    {
-      users = [
-        user
-      ];
-      commands = [
+  security = {
+    sudo = {
+      extraRules = [
         {
-          command = "${HOME}/.bspwm/bin/kbd_backlight";
-          options = [
-            "NOPASSWD"
+          users = [
+            user
+          ];
+          commands = [
+            {
+              command = "${HOME}/bin/kbd_backlight";
+              options = [
+                "NOPASSWD"
+              ];
+            }
+            {
+              command = "${HOME}/bin/mon_backlight";
+              options = [
+                "NOPASSWD"
+              ];
+            }
           ];
         }
-        {
-          command = "${HOME}/.bspwm/bin/mon_backlight";
-          options = [
-            "NOPASSWD"
-          ];
-        }
       ];
-    }
-  ];
+    };
+  };
+
+  services = {
+    xserver = {
+      windowManager = {
+        default = "dwm";
+      };
+    };
+  };
 }

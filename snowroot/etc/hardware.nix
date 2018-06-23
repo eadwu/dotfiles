@@ -11,12 +11,6 @@
       enable = true;
     };
 
-    cpu = {
-      intel = {
-        updateMicrocode = true;
-      };
-    };
-
     opengl = {
       enable = true;
     };

@@ -8,9 +8,10 @@
     fonts = with pkgs; [
       anonymousPro
       font-awesome_5
+      ibm-plex
       liberation_ttf
       noto-fonts-cjk
-      source-code-pro
+      siji
       ubuntu_font_family
       unifont
     ];

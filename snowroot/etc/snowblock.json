@@ -9,10 +9,16 @@
       "/etc/nixos/boot.nix": {
         "force": true
       },
+      "/etc/nixos/bspwm.nix": {
+        "force": true
+      },
       "/etc/nixos/common.nix": {
         "force": true
       },
       "/etc/nixos/configuration.nix": {
+        "force": true
+      },
+      "/etc/nixos/dwm.nix": {
         "force": true
       },
       "/etc/nixos/environment.nix": {
@@ -31,9 +37,6 @@
       "/etc/nixos/hardware.nix": {
         "force": true
       },
-      "/etc/nixos/intel.nix": {
-        "force": true
-      },
       "/etc/nixos/laptop.nix": {
         "force": true
       },
@@ -41,6 +44,10 @@
         "force": true
       },
       "/etc/nixos/overlay": {
+        "create": true,
+        "force": true
+      },
+      "/etc/nixos/other": {
         "create": true,
         "force": true
       },

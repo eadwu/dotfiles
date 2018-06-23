@@ -22,7 +22,6 @@ in with settings; {
 
       # Environment
       nitrogen
-      polybar
       xfce.thunar
       xfce.xfce4-notifyd
       xfce.xfce4-screenshooter
@@ -65,6 +64,9 @@ in with settings; {
       zip
       ### Applications
       vim
+      ### Version Control
+      gitlab
+      gitAndTools.hub
       ## Languages / SDKs
       fsharp
       git
@@ -88,6 +90,8 @@ in with settings; {
       cmake
       ## Misc
       bfg-repo-cleaner
+      clang
+      clang-tools
       docker
       ffmpeg
       glava
@@ -100,7 +104,6 @@ in with settings; {
       mono
       mpv
       oblogout
-      powertop
       rclone
       scrot
       stack

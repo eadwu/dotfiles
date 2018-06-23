@@ -6,6 +6,7 @@ self: super:
       bbenoist.Nix
       ms-vscode.cpptools
       ms-python.python
+      WakaTime.vscode-wakatime
     ] ++ super.vscode-utils.extensionsFromVscodeMarketplace [
       {
         name = "auto-rename-tag";
@@ -19,6 +20,13 @@ self: super:
         publisher = "ms-vscode";
         version = "0.4.0";
         sha256 = "877662c2701a445e97a59fbea0d56d51bb7f94fcf54e547952925c3d95719ec0";
+      }
+    ] ++ super.vscode-utils.extensionsFromVscodeMarketplace [
+      {
+        name = "better-comments";
+        publisher = "aaron-bond";
+        version = "1.2.6";
+        sha256 = "268223666f2314bf32ad9a0236c93db3342fd870bc68396517052c53679bf48b";
       }
     ] ++ super.vscode-utils.extensionsFromVscodeMarketplace [
       {
@@ -110,13 +118,6 @@ self: super:
         publisher = "James-Yu";
         version = "5.5.0";
         sha256 = "fed2250d547f04445eaacacd67bc3deac68a1bf5eed6f763062dd9095c546ecd";
-      }
-    ] ++ super.vscode-utils.extensionsFromVscodeMarketplace [
-      {
-        name = "nord-wave";
-        publisher = "dnlytras";
-        version = "0.3.4";
-        sha256 = "e01d5425b950d3c23b517b964bc44ec33ae2c947be48522c929742803cac3aac";
       }
     ] ++ super.vscode-utils.extensionsFromVscodeMarketplace [
       {
@@ -251,20 +252,6 @@ self: super:
         version = "0.8.0";
         sha256 = "6e5249e1b7080366fc29cc308be0aca0c16b0c43c92e0cb993ba73efaa204c3a";
       }
-    ] ++ super.vscode-utils.extensionsFromVscodeMarketplace [
-      {
-        name = "vscode-todo-highlight";
-        publisher = "wayou";
-        version = "0.5.12";
-        sha256 = "672f29dfb38cf29bfe19e438569b2e3d1dccea029b2dbabf13522a0a08a8c565";
-      }
-    # ] ++ super.vscode-utils.extensionsFromVscodeMarketplace [
-    #   {
-    #     name = "vscode-wakatime";
-    #     publisher = "WakaTime";
-    #     version = "1.2.2";
-    #     sha256 = "1cf4a4a3e0c35f293124e5613c29cfec850f67c0c43cec2ce1d8cc2e83aa217f";
-    #   }
     # ] ++ super.vscode-utils.extensionsFromVscodeMarketplace [
     #   {
     #     name = "vsliveshare";

@@ -17,7 +17,7 @@ in with settings; {
       logout = "L";
       lock = "";
       hibernate = "H";
-      clogout = "bspc quit 1"; #TODO: If comparison on package exist pkill -KILL -u $USER
+      clogout = "pkill -KILL -u $USER";
       clock = "";
       cswitchuser = "";
     };

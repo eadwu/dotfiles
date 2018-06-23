@@ -4,8 +4,8 @@
   imports =
     [
       /etc/nixos/general.nix
-      /etc/nixos/intel.nix
       /etc/nixos/laptop.nix
+      /etc/nixos/other/intel
     ];
 
   nix = {

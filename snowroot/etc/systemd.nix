@@ -45,19 +45,6 @@ in with settings; {
           "hibernate.target"
         ];
       };
-
-      powertop = {
-        description = "Powertop tunings";
-        enable = false;
-        path = pkgs.powertop;
-        serviceConfig = {
-          ExecStart = "${pkgs.powertop}/bin/powertop --auto-tune";
-          Type = "oneshot";
-        };
-        wantedBy = [
-          "multi-user.target"
-        ];
-      };
     };
   };
 }

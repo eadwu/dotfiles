@@ -1,8 +1,6 @@
 { config, pkgs, ... }:
 
-let
-  settings = import /etc/nixos/settings.nix;
-in with settings; {
+{
   imports =
     [
       /etc/nixos/services/compton.nix
@@ -92,19 +90,6 @@ in with settings; {
         enable = true;
         middleEmulation = true;
         tapping = false;
-      };
-
-      windowManager = {
-        default = "bspwm";
-
-        bspwm = {
-          configFile = "${HOME}/.bspwm/bspwmrc";
-          enable = true;
-
-          sxhkd = {
-            configFile = "${HOME}/.bspwm/sxhkdrc";
-          };
-        };
       };
     };
   };
