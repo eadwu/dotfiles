@@ -42,7 +42,7 @@
   docblockr:
     lower_case_primitives: true
   editor:
-    fontFamily: "Anonymous Pro, Operator Mono Lig, Source Code Pro"
+    fontFamily: "IBM Plex Mono, Anonymous Pro"
     fontSize: 12
     showInvisibles: true
   "exception-reporting":
