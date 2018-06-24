@@ -8,9 +8,9 @@ in {
     mpdSupport = true;
   }).overrideAttrs (oldAttrs: rec {
     src = fetchgit {
-      url = "https://github.com/jaagr/polybar";
-      rev = "d1d307d5005a7acce47693a8179e5390fa9bc1c7";
-      sha256 = "0slpmns2rv9c6dai306gnzphdjsvg7ciw0i242iwz11bchjqjcj0";
+      url = https://github.com/jaagr/polybar;
+      rev = "028b1413ef9490cdcb21348ea0ca704828ef538e";
+      sha256 = "01mqwnlq7d9c503c5cnc19hl7hvk03fmih1wis7zljxdiz5hb82d";
     };
   });
 }
