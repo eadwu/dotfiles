@@ -1,9 +1,13 @@
 [
   {
     "link": {
+      "~/.xprofile": {
+        "force": true,
+        "path": ".xprofile"
+      },
       "~/.Xresources": {
-        "path": ".Xresources",
-        "force": true
+        "force": true,
+        "path": ".Xresources"
       }
     }
   }
