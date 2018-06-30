@@ -69,6 +69,7 @@ in with settings; {
       gitAndTools.hub
       ## Languages / SDKs
       fsharp
+      gcc
       git
       nodejs
       openjdk10
@@ -90,8 +91,9 @@ in with settings; {
       cmake
       ## Misc
       bfg-repo-cleaner
-      clang
-      clang-tools
+      # clang
+      # clang-tools
+      # llvmPackages.clang-unwrapped
       docker
       ffmpeg
       glava
@@ -100,7 +102,6 @@ in with settings; {
       # haskellPackages.update-nix-fetchgit
       i3lock-color
       imagemagick7
-      intel-gpu-tools
       mono
       mpv
       oblogout

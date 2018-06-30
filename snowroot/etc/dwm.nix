@@ -3,7 +3,8 @@
 {
   environment = {
     systemPackages = with pkgs; [
-      st
+      dmenu
+      dwmstatus
     ];
   };
 

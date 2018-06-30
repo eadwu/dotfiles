@@ -11,7 +11,6 @@
       ibm-plex
       liberation_ttf
       noto-fonts-cjk
-      siji
       ubuntu_font_family
       unifont
     ];
