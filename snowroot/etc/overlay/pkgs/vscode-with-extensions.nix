@@ -193,8 +193,8 @@ self: super:
       {
         name = "vsc-material-theme";
         publisher = "Equinusocio";
-        version = "2.1.0";
-        sha256 = "e15a6439a03b459faca0fdaaa047895236da4dfd48f04681ef33fcf4627e1ee6";
+        version = "2.2.0";
+        sha256 = "f3cb38671843cda76244f49510af7af6bfaec2633090255d22c02e52397f8709";
       }
     ] ++ super.vscode-utils.extensionsFromVscodeMarketplace [
       {
