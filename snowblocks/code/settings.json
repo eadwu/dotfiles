@@ -3,7 +3,7 @@
     "source.organizeImports": true
   },
   "editor.cursorBlinking": "smooth",
-  "editor.fontFamily": "'Anonymous Pro', 'Operator Mono Lig', 'Source Code Pro'",
+  "editor.fontFamily": "'IBM Plex Mono', 'Anonymous Pro'",
   "editor.fontLigatures": true,
   "editor.fontSize": 16,
   "editor.fontWeight": "normal",
@@ -39,8 +39,8 @@
     "notificationLink.foreground": "#616161",
     "editorWidget.border": "#616161"
   },
-  "workbench.colorTheme": "Material Theme Ocean",
-  "workbench.iconTheme": "eq-material-theme-icons-ocean",
+  "workbench.colorTheme": "Material Theme Darker",
+  "workbench.iconTheme": "eq-material-theme-icons-darker",
   "workbench.sideBar.location": "right",
   "window.menuBarVisibility": "toggle",
   "files.associations": {
@@ -91,8 +91,9 @@
   "azure.resourceFilter": [
     "1058e020-f627-455f-ad47-64c8e6f99abf/375098e1-715e-41c8-b623-a5ff11033edc"
   ],
-  "C_Cpp.clang_format_path": "/usr/bin/clang-format",
-  "C_Cpp.clang_format_style": "Chromium",
+  "C_Cpp.clang_format_path": "/run/current-system/sw/bin/clang-format",
+  "C_Cpp.clang_format_fallbackStyle": "LLVM",
+  "C_Cpp.formatting": "Disabled",
   "cmake.cmakePath": "/run/current-system/sw/bin/cmake",
   "docker.attachShellCommand.linuxContainer": "/bin/zsh",
   "eslint.packageManager": "yarn",
