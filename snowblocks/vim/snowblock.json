@@ -31,10 +31,6 @@
         "Downloading Wal airline theme"
       ],
       [
-        "wget https://raw.githubusercontent.com/dylanaraps/wal.vim/master/colors/wal.vim -O ~/.vim/colors/wal.vim",
-        "Downloading Wal color scheme"
-      ],
-      [
         "wget https://gitlab.com/ddwy/configs/raw/master/.vim/colors/faded_material.vim -O ~/.vim/colors/faded_material.vim",
         "Downloading Faded Material color scheme"
       ]
