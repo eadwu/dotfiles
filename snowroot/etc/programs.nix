@@ -35,7 +35,7 @@ in with settings; {
         }
       '';
       promptInit = ''
-        autoload -U promptinit && promptinit && prompt pure
+        autoload -U promptinit && promptinit && prompt spaceship
       '';
       shellAliases = {
         "download-audio" = "youtube-dl --extract-audio --audio-format mp3";

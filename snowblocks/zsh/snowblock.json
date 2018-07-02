@@ -19,12 +19,12 @@
         "Create ~/.zsh"
       ],
       [
-        "wget https://raw.githubusercontent.com/sindresorhus/pure/master/pure.zsh -O ~/.zsh/prompt_pure_setup",
-        "Downloading ~/.zsh/prompt_pure_setup"
+        "wget -qO- https://github.com/denysdovhan/spaceship-prompt/archive/master.tar.gz | tar vxz --directory=$HOME/.zsh --strip-components=1 spaceship-prompt-master/spaceship.zsh spaceship-prompt-master/lib spaceship-prompt-master/sections",
+        "Downloading zsh theme 'spaceship'"
       ],
       [
-        "wget https://raw.githubusercontent.com/sindresorhus/pure/master/async.zsh -O ~/.zsh/async",
-        "Downloading ~/.zsh/async"
+        "mv ~/.zsh/spaceship.zsh ~/.zsh/prompt_spaceship_setup",
+        "Rename file: ~/.zsh/spaceship.zsh -> ~/.zsh/prompt_spaceship_setup"
       ]
     ]
   }
