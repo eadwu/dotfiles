@@ -1,9 +1,3 @@
-! URXVT
-! Configuration
-URxvt.depth: 32
-URxvt.font: xft:IBM Plex Mono:pixelsize=16,style=regular:antialias=true
-URxvt.internalBorder: 20
-URxvt.scrollBar: false
 ! Scheme
 *foreground: #d9c5c8
 *background: #0c0e14

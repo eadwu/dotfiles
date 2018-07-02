@@ -38,7 +38,7 @@ in with settings; {
       discord
       gimp
       gnome3.pomodoro
-      rxvt_unicode
+      st
       vivaldi
       vscode-with-extensions
       xfce.mousepad
@@ -105,6 +105,7 @@ in with settings; {
       mono
       mpv
       oblogout
+      pscircle
       rclone
       scrot
       stack
