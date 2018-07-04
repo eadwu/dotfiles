@@ -9,26 +9,6 @@
     "key": "alt+z",
     "command": "-editor.action.toggleWordWrap"
   },
-  {
-    "key": "ctrl+alt+c",
-    "command": "workbench.action.terminal.copySelection",
-    "when": "terminalFocus && terminalTextSelected"
-  },
-  {
-    "key": "ctrl+shift+c",
-    "command": "-workbench.action.terminal.copySelection",
-    "when": "terminalFocus && terminalTextSelected"
-  },
-  {
-    "key": "ctrl+alt+v",
-    "command": "workbench.action.terminal.paste",
-    "when": "terminalFocus"
-  },
-  {
-    "key": "ctrl+shift+v",
-    "command": "-workbench.action.terminal.paste",
-    "when": "terminalFocus"
-  },
   // DISABLING
   {
     "key": "space",
