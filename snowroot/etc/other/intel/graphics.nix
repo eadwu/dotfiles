@@ -10,8 +10,15 @@
   hardware = {
     opengl = {
       extraPackages = with pkgs; [
-        libGL
-        vaapiIntel
+        # vaapiIntel
+      ];
+    };
+  };
+
+  services = {
+    xserver = {
+      videoDrivers = [
+        "modesetting"
       ];
     };
   };

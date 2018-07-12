@@ -1,6 +1,8 @@
 self: super:
 
-{
+let
+  inherit (super) fetchurl;
+in {
   vscode-with-extensions = super.vscode-with-extensions.override {
     vscodeExtensions = with super.vscode-extensions; [
       bbenoist.Nix
@@ -81,8 +83,8 @@ self: super:
       {
         name = "Ionide-fsharp";
         publisher = "Ionide";
-        version = "3.22.0";
-        sha256 = "e5dddcbcb897e5d5d82c9d2bbed8b85163144fb7612d4835ed1dcc5ce56371b7";
+        version = "3.22.3";
+        sha256 = "61ce28a3c41f8274e2d3ece8b147ba0da7b844772ee5f805309b87ed90079a59";
       }
     ] ++ super.vscode-utils.extensionsFromVscodeMarketplace [
       {
@@ -256,8 +258,8 @@ self: super:
     #   {
     #     name = "vsliveshare";
     #     publisher = "ms-vsliveshare";
-    #     version = "0.3.262";
-    #     sha256 = "78c35f07cdb3a182c25076b2d683d181daf0fdbc09e7f03dfff1bcbc31901b26";
+    #     version = "0.3.379";
+    #     sha256 = "d5f2e9f60d62b9b545ddc55fd08ecc7f79eaef00c84d6e44ee2bd3a0e6f9d198";
     #   }
     ];
   };

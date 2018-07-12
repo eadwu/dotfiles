@@ -13,6 +13,9 @@
 
     opengl = {
       enable = true;
+      extraPackages = with pkgs; [
+        # libGL
+      ];
     };
   };
 }

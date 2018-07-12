@@ -40,6 +40,10 @@
       "/etc/nixos/laptop.nix": {
         "force": true
       },
+      "/etc/nixos/machines": {
+        "create": true,
+        "force": true
+      },
       "/etc/nixos/networking.nix": {
         "force": true
       },

@@ -37,11 +37,15 @@ in with settings; {
       blender
       discord
       gimp
+      gnome3.gnome-disk-utility
       gnome3.pomodoro
       st
       vivaldi
       vscode-with-extensions
+      winusb
       xfce.mousepad
+      ### Disk
+      gptfdisk
       ### VSCode
       #### latex-workshop
       perlPackages.YAMLTiny

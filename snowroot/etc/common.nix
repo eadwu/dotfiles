@@ -1,12 +1,48 @@
 { config, pkgs, ... }:
 
-{
+let
+  settings = import /etc/nixos/settings.nix;
+in with settings; {
   imports =
     [
+      /etc/nixos/dwm.nix
       /etc/nixos/general.nix
       /etc/nixos/laptop.nix
-      /etc/nixos/other/intel
     ];
+
+  security = {
+    sudo = {
+      extraRules = [
+        {
+          users = [
+            user
+          ];
+          commands = [
+            {
+              command = "${HOME}/bin/kbd_backlight";
+              options = [
+                "NOPASSWD"
+              ];
+            }
+            {
+              command = "${HOME}/bin/mon_backlight";
+              options = [
+                "NOPASSWD"
+              ];
+            }
+          ];
+        }
+      ];
+    };
+  };
+
+  services = {
+    xserver = {
+      windowManager = {
+        default = "dwm";
+      };
+    };
+  };
 
   nix = {
     binaryCaches = [

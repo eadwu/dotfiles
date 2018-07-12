@@ -20,7 +20,6 @@
       options = [
         "noatime"
         "nodiratime"
-        "discard"
       ];
     };
   };
