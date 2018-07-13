@@ -93,6 +93,10 @@
         middleEmulation = true;
         tapping = false;
       };
+
+      synaptics = {
+        enable = false;
+      };
     };
   };
 }

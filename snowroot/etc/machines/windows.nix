@@ -15,6 +15,12 @@
     opengl = {
       driSupport32Bit = true;
     };
+
+    bumblebee = {
+      driver = "nvidia";
+      enable = true;
+      pmMethod = "bbswitch";
+    };
   };
 
   services = {
