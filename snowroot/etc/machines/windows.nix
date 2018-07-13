@@ -7,8 +7,10 @@
       /etc/nixos/other/nvidia
     ];
 
-  i18n = {
-    consoleFont = "latarcyrheb-sun32";
+  environment = {
+    systemPackages = with pkgs; [
+      glxinfo
+    ];
   };
 
   hardware = {
@@ -18,9 +20,13 @@
 
     bumblebee = {
       driver = "nvidia";
-      enable = true;
+      enable = false;
       pmMethod = "bbswitch";
     };
+  };
+
+  i18n = {
+    consoleFont = "latarcyrheb-sun32";
   };
 
   services = {
