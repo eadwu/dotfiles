@@ -17,6 +17,7 @@ in with settings; {
     systemPackages = with pkgs; [
       # Core
       ntp
+      openssl
       wget
 
       # Environment

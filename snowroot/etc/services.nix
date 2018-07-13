@@ -21,10 +21,6 @@
       enable = true;
     };
 
-    openssh = {
-      enable = true;
-    };
-
     printing = {
       drivers = [
         pkgs.hplip
