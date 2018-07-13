@@ -30,7 +30,7 @@
         DisplaySize 406 228
       '';
 
-      videoDriverrs = [
+      videoDrivers = [
         "nvidia"
         "modesetting"
       ];
