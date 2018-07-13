@@ -7,33 +7,27 @@
       /etc/nixos/other/nividia
     ];
 
-  boot = {
-    kernelParams = [
-      "acpi_rev_override acpi_osi=! acpi_osi='Windows 2009'"
-    ];
+  i18n = {
+    consoleFont = "latarcyrheb-sun32";
+  };
 
-    blacklistedKernelModules = [
-      "nouveau"
-    ];
+  hardware = {
+    opengl = {
+      driSupport32Bit = true;
+    };
+  };
 
-    initrd = {
-      luks = {
-        devices = {
-          cryptkey = {
-            device = "";
-          };
+  services = {
+    xserver = {
+      autorun = true;
+      monitorSection = ''
+        DisplaySize 406 228
+      '';
 
-          cryptroot = {
-            device = "";
-            keyfile = /dev/mapper/cryptkey;
-          };
-
-          cryptswap = {
-            device = "";
-            keyfile = /dev/mapper/cryptkey;
-          };
-        };
-      };
+      videoDriverrs = [
+        "nvidia"
+        "modesetting"
+      ];
     };
   };
 }
