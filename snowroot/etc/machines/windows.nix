@@ -45,9 +45,9 @@
     consoleFont = "latarcyrheb-sun32";
   };
 
-  powerManagement = {
-    cpuFreqGovernor = "powersave";
-  };
+  # powerManagement = {
+  #   cpuFreqGovernor = "powersave";
+  # };
 
   services = {
     xserver = {

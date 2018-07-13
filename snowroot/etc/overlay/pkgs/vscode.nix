@@ -8,7 +8,7 @@ in {
       bbenoist.Nix
       ms-vscode.cpptools
       ms-python.python
-      WakaTime.vscode-wakatime
+      # WakaTime.vscode-wakatime
     ] ++ super.vscode-utils.extensionsFromVscodeMarketplace [
       {
         name = "auto-rename-tag";
