@@ -18,6 +18,9 @@
       "/etc/nixos/configuration.nix": {
         "force": true
       },
+      "/etc/nixos/develop.nix": {
+        "force": true
+      },
       "/etc/nixos/dwm.nix": {
         "force": true
       },
