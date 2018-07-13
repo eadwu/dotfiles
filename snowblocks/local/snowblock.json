@@ -7,8 +7,8 @@
   {
     "shell": [
       [
-        "mkdir -p ~/.local/share/pixmap",
-        "Generate ~/.local/share/pixmap"
+        "mkdir -p ~/.local/share/pixmaps",
+        "Generate ~/.local/share/pixmaps"
       ],
       [
         "wget 'https://drive.google.com/uc?authuser=0&id=0B6XZPTC_NRR3ZlBLR0czYU91ZVU&export=download' -O ~/.local/share/pixmaps/lock-overlay.png",
