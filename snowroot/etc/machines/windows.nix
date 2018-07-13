@@ -4,7 +4,7 @@
   imports =
     [
       /etc/nixos/other/intel
-      /etc/nixos/other/nividia
+      /etc/nixos/other/nvidia
     ];
 
   i18n = {
