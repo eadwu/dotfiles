@@ -12,27 +12,10 @@ in with settings; {
 
   security = {
     sudo = {
-      extraRules = [
-        {
-          users = [
-            user
-          ];
-          commands = [
-            {
-              command = "${HOME}/bin/kbd_backlight";
-              options = [
-                "NOPASSWD"
-              ];
-            }
-            {
-              command = "${HOME}/bin/mon_backlight";
-              options = [
-                "NOPASSWD"
-              ];
-            }
-          ];
-        }
-      ];
+      extraConfig = ''
+        ${user} ALL=(ALL:ALL) NOPASSWD: ${HOME}/bin/kbd_backlight
+        ${user} ALL=(ALL:ALL) NOPASSWD: ${HOME}/bin/mon_backlight
+      '';
     };
   };
 
@@ -47,11 +30,9 @@ in with settings; {
   nix = {
     binaryCaches = [
       "https://cache.nixos.org/"
-      "https://wu.cachix.org"
     ];
     binaryCachePublicKeys = [
       "hydra.nixos.org-1:CNHJZBh9K4tP3EKF6FkkgeVYsS3ohTl+oS0Qa8bezVs="
-      "wu.cachix.org-1:cHow32fFlXna8uBQA6yoo+505O5eImitDtdXu2JYd0Y="
     ];
     buildCores = 0;
     requireSignedBinaryCaches = true;

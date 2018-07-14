@@ -1,14 +1,13 @@
 #!/usr/bin/env sh
 
 # USAGE:
-#   sudo ${PATH}/bin/mon_backlight tick {-|+}
+#   sudo ${PATH}/bin/mon_backlight {-|+}
 
 bl_intel=/sys/class/backlight/intel_backlight
 steps=15
+tick=5
 
-tick=${1}
-
-case $2 in
+case $1 in
   -)
     new=$(( $(cat ${bl_intel}/brightness) - $(cat ${bl_intel}/max_brightness) / ( ${steps} * ${tick} ) ))
     if (( ${new} < 0 )); then

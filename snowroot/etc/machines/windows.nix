@@ -8,36 +8,24 @@
     ];
 
   boot = {
-    blacklistedKernelModules = [
-      "nouveau"
-    ];
-
     kernelParams = [
-      "acpi=force"
       "acpi_rev_override=1"
-      "acpi_osi=!"
-      "acpi_osi='Windows 2009'"
-      "i915.alpha_support=1"
-      "i915.preliminary_hw_support=1"
-      "i915.modeset=1"
+      # i915 kernel power saving
+      "enable_psr=1"
+      "disable_power_well=0"
     ];
   };
 
-  environment = {
-    systemPackages = with pkgs; [
-      glxinfo
-    ];
+  fonts = {
+    fontconfig = {
+      antialias = false;
+      dpi = 240;
+    };
   };
 
   hardware = {
     opengl = {
       driSupport32Bit = true;
-    };
-
-    bumblebee = {
-      driver = "nvidia";
-      enable = false;
-      pmMethod = "bbswitch";
     };
   };
 
@@ -45,20 +33,11 @@
     consoleFont = "latarcyrheb-sun32";
   };
 
-  # powerManagement = {
-  #   cpuFreqGovernor = "powersave";
-  # };
-
   services = {
     xserver = {
       monitorSection = ''
         DisplaySize 406 228
       '';
-
-      videoDrivers = [
-        "nvidia"
-        "modesetting"
-      ];
     };
   };
 }

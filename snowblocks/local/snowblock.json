@@ -13,6 +13,10 @@
       [
         "wget 'https://drive.google.com/uc?authuser=0&id=0B6XZPTC_NRR3ZlBLR0czYU91ZVU&export=download' -O ~/.local/share/pixmaps/lock-overlay.png",
         "Downloading lock overlay"
+      ],
+      [
+        "sh <(curl -L https://gist.github.com/ruario/bec42d156d30affef655/raw/latest-proprietary-media.sh)",
+        "Enabling HTML5 MP4 (H.264/AAC) for Vivaldi"
       ]
     ]
   }

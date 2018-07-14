@@ -2,5 +2,5 @@
 
 xsetroot -cursor_name left_ptr
 # glava &
-dwmstatus &
+polybar -s -c ~/.dwm/config.ini data | while IFS= read -r line; do xsetroot -name "$(printf "%s" "$line" | cut -c 5- | perl -pe 's/\s+%\{.+?\}\s+/ /g')"; done &
 # xwinwrap -fs -ni -ov -- mpv --keepaspect=no --loop --no-audio --no-input-default-bindings -wid WID ~/Desktop/backgrounds/Reimu_灵梦-scaled.mkv &
