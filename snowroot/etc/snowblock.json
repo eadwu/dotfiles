@@ -18,9 +18,6 @@
       "/etc/nixos/configuration.nix": {
         "force": true
       },
-      "/etc/nixos/develop.nix": {
-        "force": true
-      },
       "/etc/nixos/dwm.nix": {
         "force": true
       },
@@ -55,10 +52,6 @@
         "force": true
       },
       "/etc/nixos/other": {
-        "create": true,
-        "force": true
-      },
-      "/etc/nixos/passwords/yin": {
         "create": true,
         "force": true
       },
