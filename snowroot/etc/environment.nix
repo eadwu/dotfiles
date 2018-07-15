@@ -22,10 +22,10 @@ in with settings; {
 
       # Environment
       nitrogen
-      xfce.thunar
-      xfce.xfce4-notifyd
-      xfce.xfce4-screenshooter
-      xfce.xfce4-taskmanager
+      xfceUnstable.thunar
+      xfceUnstable.xfce4-notifyd
+      xfceUnstable.xfce4-screenshooter
+      xfceUnstable.xfce4-taskmanager
       ## Theme
       gnome3.adwaita-icon-theme
       gtk-engine-murrine
