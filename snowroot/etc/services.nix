@@ -91,7 +91,7 @@
         disableWhileTyping = false;
         enable = true;
         middleEmulation = true;
-        tapping = false;
+        tapping = true;
       };
 
       synaptics = {
