@@ -7,8 +7,15 @@ in with settings; {
     [
       /etc/nixos/dwm.nix
       /etc/nixos/general.nix
-      /etc/nixos/laptop.nix
     ];
+
+  powerManagement = {
+    enable = true;
+
+    powertop = {
+      enable = true;
+    };
+  };
 
   security = {
     sudo = {
