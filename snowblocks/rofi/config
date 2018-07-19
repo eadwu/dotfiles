@@ -1,4 +1,4 @@
-rofi.dpi: 204
+rofi.dpi: 0
 rofi.modi: drun,run,window,ssh
 rofi.width: -50
 rofi.lines: 30
@@ -11,5 +11,5 @@ rofi.show-icons: true
 rofi.separator-style: none
 rofi.hide-scrollbar: true
 
-rofi.font: Ubuntu Mono 12
+rofi.font: Ubuntu Mono 10
 rofi.theme: ~/.config/rofi/theme.rasi
