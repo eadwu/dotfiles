@@ -42,10 +42,15 @@
 
     tlp = {
       enable = true;
-    };
+      extraConfig = ''
+        CPU_MIN_PERF_ON_AC=0
+        CPU_MAX_PERF_ON_AC=100
+        CPU_MIN_PERF_ON_BAT=0
+        CPU_MAX_PERF_ON_BAT=30
 
-    udisks2 = {
-      enable = true;
+        CPU_BOOST_ON_AC=1
+        CPU_BOOST_ON_BAT=0
+      '';
     };
 
     xserver = {
@@ -84,14 +89,14 @@
 
       libinput = {
         clickMethod = "buttonareas";
-        disableWhileTyping = false;
         enable = true;
         middleEmulation = true;
         tapping = true;
-      };
-
-      synaptics = {
-        enable = false;
+        additionalOptions = ''
+          Option "AccelSpeed" "1"
+          Option "PalmDetection" "on"
+          Option "TappingButtonMap" "lmr"
+        '';
       };
     };
   };
