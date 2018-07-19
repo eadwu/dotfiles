@@ -13,9 +13,7 @@
 
     opengl = {
       enable = true;
-      extraPackages = with pkgs; [
-        # libGL
-      ];
+      driSupport32Bit = true;
     };
   };
 }

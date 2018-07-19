@@ -16,7 +16,6 @@ in with settings; {
 
     systemPackages = with pkgs; [
       # Core
-      ntp
       openssl
       wget
 
@@ -57,6 +56,7 @@ in with settings; {
       libarchive
       pass
       pipes
+      powerstat
       pwgen
       pywal
       ranger
@@ -103,7 +103,6 @@ in with settings; {
       glava
       gnupg
       # google-musicmanager
-      # haskellPackages.update-nix-fetchgit
       i3lock-color
       imagemagick7
       mono
@@ -120,11 +119,15 @@ in with settings; {
       xwinwrap
       yarn
 
+      # Benchmarks
+      mprime
+      unigine-valley
+
       # Debug / Utils
-      libva-utils
       lsof
       nix-prefetch-scripts
       pciutils
+      usbutils
     ];
 
     variables = {
