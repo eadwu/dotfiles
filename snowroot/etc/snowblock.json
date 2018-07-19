@@ -37,9 +37,6 @@
       "/etc/nixos/hardware.nix": {
         "force": true
       },
-      "/etc/nixos/laptop.nix": {
-        "force": true
-      },
       "/etc/nixos/machines": {
         "create": true,
         "force": true
