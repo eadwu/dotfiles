@@ -9,31 +9,6 @@ in with settings; {
       /etc/nixos/general.nix
     ];
 
-  powerManagement = {
-    enable = true;
-
-    powertop = {
-      enable = true;
-    };
-  };
-
-  security = {
-    sudo = {
-      extraConfig = ''
-        ${user} ALL=(ALL:ALL) NOPASSWD: ${HOME}/bin/kbd_backlight
-        ${user} ALL=(ALL:ALL) NOPASSWD: ${HOME}/bin/mon_backlight
-      '';
-    };
-  };
-
-  services = {
-    xserver = {
-      windowManager = {
-        default = "dwm";
-      };
-    };
-  };
-
   nix = {
     binaryCaches = [
       "https://cache.nixos.org/"
@@ -55,5 +30,22 @@ in with settings; {
     };
 
     overlays = import /etc/nixos/overlay;
+  };
+
+  powerManagement = {
+    enable = true;
+
+    powertop = {
+      enable = true;
+    };
+  };
+
+  security = {
+    sudo = {
+      extraConfig = ''
+        ${user} ALL=(ALL:ALL) NOPASSWD: ${HOME}/bin/kbd_backlight
+        ${user} ALL=(ALL:ALL) NOPASSWD: ${HOME}/bin/mon_backlight
+      '';
+    };
   };
 }

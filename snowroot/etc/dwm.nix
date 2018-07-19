@@ -10,6 +10,8 @@
   services = {
     xserver = {
       windowManager = {
+        default = "dwm";
+
         dwm = {
           enable = true;
         };

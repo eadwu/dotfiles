@@ -21,6 +21,8 @@ in with settings; {
             configFile = "${HOME}/.bspwm/sxhkdrc";
           };
         };
+
+        default = "bspwm";
       };
     };
   };
