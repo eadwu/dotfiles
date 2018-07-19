@@ -4,8 +4,10 @@ Plug 'LnL7/vim-nix'
 Plug 'vim-airline/vim-airline'
 call plug#end()
 " general settings
-set background=dark
 set expandtab
+set relativenumber
+set number
+set background=dark
 set shiftwidth=2
 set softtabstop=2
 set tabstop=2
