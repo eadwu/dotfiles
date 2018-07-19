@@ -1,5 +1,6 @@
+rofi.dpi: 204
 rofi.modi: drun,run,window,ssh
-rofi.width: 455
+rofi.width: -50
 rofi.lines: 30
 rofi.columns: 1
 rofi.bw: 0
