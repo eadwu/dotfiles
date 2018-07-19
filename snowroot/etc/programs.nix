@@ -40,8 +40,9 @@ in with settings; {
       shellAliases = {
         "download-audio" = "youtube-dl --extract-audio --audio-format mp3";
         "nixos-rebuild-local" = "nixos-rebuild -I nixpkgs=${HOME}/Downloads/nixpkgs";
-        "pass-hash" = ''openssl passwd -1 -salt "$(od -vAn -N4 -tu4 < /dev/urandom)"'';
+        "passhash" = ''openssl passwd -1 -salt "$(od -vAn -N4 -tu4 < /dev/urandom)"'';
         "sensors" = "nix-shell -p lm_sensors --run sensors";
+        "vivaldi" = "vivaldi --enable-native-gpu-memory-buffers";
         "xprop" = "nix-shell -p xorg.xprop --run xprop";
       };
     };
