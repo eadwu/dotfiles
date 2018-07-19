@@ -83,8 +83,8 @@ in {
       {
         name = "Ionide-fsharp";
         publisher = "Ionide";
-        version = "3.22.3";
-        sha256 = "61ce28a3c41f8274e2d3ece8b147ba0da7b844772ee5f805309b87ed90079a59";
+        version = "3.22.4";
+        sha256 = "0631170b38aa8add9e2e33c868d7fb0da13413b2241a78f1447743b71e75c6d0";
       }
     ] ++ super.vscode-utils.extensionsFromVscodeMarketplace [
       {
