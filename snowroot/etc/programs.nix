@@ -33,6 +33,10 @@ in with settings; {
           for link in /nix/var/nix/gcroots/auto/*; do rm $(readlink "$link"); done
           nix-collect-garbage -d
         }
+
+        file () { nix-shell -p file --run "file "$@""; }
+        sensors () { nix-shell -p lm_sensors --run "sensors "$@""; }
+        xprop () { nix-shell -p xorg.xprop --run "xprop "$@""; }
       '';
       promptInit = ''
         autoload -U promptinit && promptinit && prompt spaceship
@@ -41,9 +45,7 @@ in with settings; {
         "download-audio" = "youtube-dl --extract-audio --audio-format mp3";
         "nixos-rebuild-local" = "nixos-rebuild -I nixpkgs=${HOME}/Downloads/nixpkgs";
         "passhash" = ''openssl passwd -1 -salt "$(od -vAn -N4 -tu4 < /dev/urandom)"'';
-        "sensors" = "nix-shell -p lm_sensors --run sensors";
         "vivaldi" = "vivaldi --enable-native-gpu-memory-buffers";
-        "xprop" = "nix-shell -p xorg.xprop --run xprop";
       };
     };
   };
