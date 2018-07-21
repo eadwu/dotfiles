@@ -21,23 +21,43 @@ in with settings; {
           User = user;
         };
         script = ''
-          image="$(mktemp).png"
+          image=$(mktemp --suffix=.png)
+          trap 'rm -f "$image"' SIGINT SIGTERM EXIT
 
-          ${pkgs.ffmpeg}/bin/ffmpeg -y -s 1440x900 -probesize 10MB -f x11grab -i $DISPLAY -vframes 1 -vf "gblur=sigma=16" "$image"
-          ${pkgs.imagemagick}/bin/convert "$image" "$HOME/.local/share/pixmaps/lock-overlay.png" -gravity center -composite "$image"
-          ${pkgs.i3lock-color}/bin/i3lock-color -i "$image" \
-            --verifcolor=FFFFFF00 \
-            --wrongcolor=FFFFFF00 \
-            --layoutcolor=FFFFFF00 \
-            --insidecolor=FADDC500 \
-            --ringcolor=FAFAFA00 \
-            --linecolor=2D283E00 \
-            --keyhlcolor=FABB5CAA \
-            --ringvercolor=FADD5CAA \
-            --separatorcolor=22222200 \
-            --insidevercolor=FADD5C00 \
-            --ringwrongcolor=F13459AA \
-            --insidewrongcolor=F1345900
+          ${pkgs.ffmpeg}/bin/ffmpeg -f x11grab -y \
+            -s "$(${pkgs.xorg.xdpyinfo}/bin/xdpyinfo | grep dimensions | ${pkgs.gawk}/bin/gawk '{print $2}')" \
+            -i $DISPLAY \
+            -loglevel quiet -probesize 16MB \
+            -vframes 1 -vf gblur=sigma=8 \
+            "$image"
+
+          ${pkgs.i3lock-color}/bin/i3lock-color \
+            --image="$image" \
+            --insidecolor=282828FF \
+            --insidevercolor=FABD2FFF \
+            --insidewrongcolor=FB4934FF \
+            --ringcolor=282828FF \
+            --ringvercolor=282828FF \
+            --ringwrongcolor=282828FF \
+            --linecolor=EBDBB2FF \
+            --keyhlcolor=EBDBB2FF \
+            --bshlcolor=FB4934FF \
+            --separatorcolor=282828FF \
+            --timecolor=EBDBB2FF \
+            --datecolor=00000000 \
+            --layoutcolor=00000000 \
+            --indpos='x+100:y+720' \
+            --timepos='x+210:y+732' \
+            --timestr='%I:%M %p' \
+            --time-font='IBM Plex Mono' \
+            --force-clock \
+            --refresh-rate=30 \
+            --radius=32 \
+            --ring-width=4 \
+            --veriftext="" \
+            --wrongtext="" \
+            --noinputtext="" \
+            --ignore-empty-password
         '';
         wantedBy = [
           "sleep.target"
