@@ -5,7 +5,7 @@ let
 in with settings; {
   boot = {
     cleanTmpDir = true;
-    kernelPackages = pkgs.linuxPackages_latest;
+    kernelPackages = pkgs.linuxPackages_testing;
 
     kernel = {
       sysctl = {
