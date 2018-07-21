@@ -82,9 +82,9 @@ in with settings; {
         # Dependencies
         ## Bspwm
         ### gmail
-        google_api_python_client
+        # google_api_python_client
         ### weather_icons
-        requests
+        # requests
         ### VSCode Python
         autopep8
         pylint
