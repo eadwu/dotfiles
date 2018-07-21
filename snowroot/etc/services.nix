@@ -17,6 +17,10 @@
       extraConfig = import /etc/nixos/services/logind/logind.conf.nix { };
     };
 
+    ntp = {
+      enable = true;
+    };
+
     printing = {
       drivers = [
         pkgs.hplip

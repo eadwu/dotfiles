@@ -30,10 +30,4 @@ in with settings; {
       ];
     };
   };
-
-  services = {
-    ntp = {
-      enable = true;
-    };
-  };
 }
