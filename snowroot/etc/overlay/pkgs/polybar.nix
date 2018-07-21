@@ -6,6 +6,7 @@ in {
   polybar = (super.polybar.override {
     githubSupport = true;
     mpdSupport = true;
+    pulseSupport = true;
   }).overrideAttrs (oldAttrs: rec {
     src = fetchgit {
       url = https://github.com/jaagr/polybar;
