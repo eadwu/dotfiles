@@ -25,7 +25,7 @@ in with settings; {
     zsh = {
       enable = true;
       interactiveShellInit = ''
-        function nix-clean () {
+        nix-clean () {
           nix-env --delete-generations old
           nix-store --gc
           nix-channel --update
