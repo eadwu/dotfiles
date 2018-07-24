@@ -15,10 +15,7 @@ in {
     };
 
     patches = [
-      (fetchpatch {
-        url = https://github.com/jaagr/polybar/pull/1322.patch;
-        sha256 = "1xvk5qhvg52x1fyqk7dw3f4w4hi595s3sa3qdg493vn2x3zzxfkq";
-      })
+      /etc/nixos/overlay/patches/1322.patch
     ];
   });
 }

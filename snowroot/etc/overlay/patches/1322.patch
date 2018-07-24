@@ -1,0 +1,27 @@
+From 757545f9428d336fbca65f0ce243496027890ad2 Mon Sep 17 00:00:00 2001
+From: NBonaparte <nbonaparte@protonmail.com>
+Date: Tue, 17 Jul 2018 20:37:11 -0700
+Subject: [PATCH] fix(controller): don't draw window if writing to stdout
+
+---
+ src/components/controller.cpp | 7 ++++++-
+ 1 file changed, 6 insertions(+), 1 deletion(-)
+
+diff --git a/src/components/controller.cpp b/src/components/controller.cpp
+index ab33311f..5aa5c3a0 100644
+--- a/src/components/controller.cpp
++++ b/src/components/controller.cpp
+@@ -348,7 +348,12 @@ void controller::read_events() {
+  */
+ void controller::process_eventqueue() {
+   m_log.info("Eventqueue worker (thread-id=%lu)", this_thread::get_id());
+-  m_sig.emit(signals::eventqueue::start{});
++  if (!m_writeback) {
++    m_sig.emit(signals::eventqueue::start{});
++  } else {
++    // bypass the start eventqueue signal
++    m_sig.emit(signals::ui::ready{});
++  }
+ 
+   while (!g_terminate) {
+     event evt{};
