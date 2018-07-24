@@ -14,15 +14,15 @@ in with settings; {
   dwm = super.dwm.overrideAttrs (oldAttrs: rec {
     src = fetchgit {
       url = https://gitlab.com/eadwu/dwm;
-      rev = "6025c25cce2f14ad723a58c8bcb27762bd4d985e";
-      sha256 = "06ci1i8wrpngx5xlh188nn2gcvnpds77mdsgr2dqx3yw0ml213vp";
+      rev = "c6e01987ffe0cffefc076742b56a8b2c8f41bf44";
+      sha256 = "1mfi7kjbawypn6c83kb76i109x7j5a02w2lksbc9qm5yy116g8kl";
     };
   });
   st = super.st.overrideAttrs (oldAttrs: rec {
     src = fetchgit {
       url = https://gitlab.com/eadwu/st;
-      rev = "ee204febe07dfbe65bb2c069a35a9fd70bb3e0c3";
-      sha256 = "1b60rfrn9qhsak44zhs6vc6nxvpvc9bfvk5x8f3ysic2mn260069";
+      rev = "f43aa9382c0cc7a46a6a8d6e4b0c030ad8dce8e1";
+      sha256 = "1bmsvqb4l4ayzandgb9awfr9d9minrgy0wvy6w7jkp7izij0q9jp";
     };
   });
 }
