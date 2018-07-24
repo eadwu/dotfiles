@@ -49,6 +49,17 @@
     };
 
     xserver = {
+      extraConfig = ''
+        Section "InputClass"
+          Identifier "SynPS/2 Synaptics TouchPad"
+          MatchProduct "SynPS/2 Synaptics TouchPad"
+          MatchIsTouchpad "on"
+          MatchOS "Linux"
+          MatchDevicePath "/dev/input/event*"
+          Option "Ignore" "on"
+        EndSection
+      '';
+
       monitorSection = ''
         DisplaySize 406 228
       '';
