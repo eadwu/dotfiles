@@ -63,6 +63,12 @@
       monitorSection = ''
         DisplaySize 406 228
       '';
+
+      libinput = {
+        additionalOptions = ''
+          Option "AccelSpeed" "1"
+        '';
+      };
     };
   };
 }

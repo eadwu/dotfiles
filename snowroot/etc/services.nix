@@ -94,7 +94,6 @@
         middleEmulation = true;
         tapping = true;
         additionalOptions = ''
-          Option "AccelSpeed" "1"
           Option "PalmDetection" "on"
           Option "TappingButtonMap" "lmr"
         '';
