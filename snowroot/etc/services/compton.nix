@@ -32,6 +32,7 @@
         "99:class_g = 'Vivaldi-stable'"
         "85:class_g = 'Code'"
         "85:class_g = 'Code - Insiders'"
+        "85:class_g = 'Emacs'"
         "75:class_g = 'URxvt' && !_NET_WM_STATE@:32a"
         "0:_NET_WM_STATE@:32a *= '_NET_WM_STATE_HIDDEN'"
         "96:_NET_WM_STATE@:32a *= '_NET_WM_STATE_STICKY'"

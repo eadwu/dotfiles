@@ -35,6 +35,7 @@ in with settings; {
       ark
       blender
       discord
+      emacs
       gimp
       gnome3.gnome-disk-utility
       gnome3.pomodoro
@@ -45,6 +46,8 @@ in with settings; {
       xfce.mousepad
       ### Disk
       gptfdisk
+      ### Emacs
+      wakatime
       ### VSCode
       #### latex-workshop
       perlPackages.YAMLTiny
