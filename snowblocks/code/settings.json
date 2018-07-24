@@ -9,6 +9,7 @@
   "editor.fontWeight": "normal",
   "editor.formatOnSave": true,
   "editor.lineHeight": 24,
+  "editor.lineNumbers": "relative",
   "editor.multiCursorModifier": "ctrlCmd",
   "editor.quickSuggestions": {
     "other": true,
@@ -143,7 +144,6 @@
   "latex-workshop.chktex.enabled": true,
   "latex-workshop.chktex.path": "/run/current-system/sw/bin/chktex",
   "latex-workshop.latex.clean.enabled": true,
-  "latex-workshop.latex.outputDir": "../",
   "latex-workshop.latex.tools": [
     {
       "name": "latexmk",
