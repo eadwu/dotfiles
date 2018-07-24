@@ -41,18 +41,12 @@ in with settings; {
       gnome3.pomodoro
       st
       vivaldi
-      vscode-with-extensions
       winusb
       xfce.mousepad
       ### Disk
       gptfdisk
       ### Emacs
       wakatime
-      ### VSCode
-      #### latex-workshop
-      perlPackages.YAMLTiny
-      perlPackages.FileHomeDir
-      perlPackages.UnicodeLineBreak
       ## Console
       feh
       htop
@@ -81,17 +75,7 @@ in with settings; {
       nodejs
       openjdk10
       python
-      (pkgs.python3.withPackages(ps: with ps; [
-        # Dependencies
-        ## Bspwm
-        ### gmail
-        # google_api_python_client
-        ### weather_icons
-        # requests
-        ### VSCode Python
-        autopep8
-        pylint
-      ]))
+      python3
       rustup
       sass
       ### Build Tools
