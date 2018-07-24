@@ -30,12 +30,6 @@
     };
   };
 
-  hardware = {
-    opengl = {
-      driSupport32Bit = true;
-    };
-  };
-
   i18n = {
     consoleFont = "latarcyrheb-sun32";
   };
@@ -50,6 +44,10 @@
   };
 
   services = {
+    fwupd = {
+      enable = true;
+    };
+
     xserver = {
       monitorSection = ''
         DisplaySize 406 228
