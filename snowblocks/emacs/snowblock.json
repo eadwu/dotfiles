@@ -1,0 +1,10 @@
+[
+  {
+    "link": {
+      "~/.emacs": {
+        "force": true,
+        "path": ".emacs"
+      }
+    }
+  }
+]
