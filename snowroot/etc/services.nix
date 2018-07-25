@@ -93,10 +93,6 @@
         enable = true;
         middleEmulation = true;
         tapping = true;
-        additionalOptions = ''
-          Option "PalmDetection" "on"
-          Option "TappingButtonMap" "lmr"
-        '';
       };
     };
   };

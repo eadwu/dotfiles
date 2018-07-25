@@ -30,4 +30,15 @@ in with settings; {
       ];
     };
   };
+
+  services = {
+    xserver = {
+      libinput = {
+        additionalOptions = ''
+          Option "PalmDetection" "on"
+          Option "TappingButtonMap" "lmr"
+        '';
+      };
+    };
+  };
 }
