@@ -3,7 +3,7 @@ self: super:
 let
   inherit (super) fetchurl;
 in {
-  vscode-with-extensions = super.vscode-with-extensions.override {
+  vscode = super.vscode-with-extensions.override {
     vscodeExtensions = with super.vscode-extensions; [
       bbenoist.Nix
       ms-vscode.cpptools
