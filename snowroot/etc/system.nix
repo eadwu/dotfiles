@@ -2,13 +2,11 @@
 
 {
   system = {
-    autoUpgrade = {
-      enable = true;
-      channel = https://nixos.org/channels/nixos-unstable-small;
-    };
+    stateVersion = "18.09";
 
-    nixos = {
-      stateVersion = "18.09";
+    autoUpgrade = {
+      enable = false;
+      channel = https://nixos.org/channels/nixpkgs-unstable;
     };
   };
 }
