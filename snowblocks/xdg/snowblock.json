@@ -1,0 +1,15 @@
+[
+    {
+        "clean": [
+            "~/.icons"
+        ]
+    },
+    {
+        "link": {
+            "~/.icons/default/index.theme": {
+                "create": true,
+                "force": true
+            }
+        }
+    }
+]

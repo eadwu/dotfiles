@@ -71,7 +71,12 @@
 
           greeters = {
             gtk = {
+              clock-format = "%I:%M %p";
               enable = true;
+
+              extraConfig = ''
+                cursor-theme-name = capitaine-cursors
+              '';
 
               iconTheme = {
                 name = "Papirus-Adapta-Nokto";
@@ -79,7 +84,7 @@
               };
 
               theme = {
-                name = "Adapta-Nokto-Eta";
+                name = "Adapta-Nokto";
                 package = pkgs.adapta-gtk-theme;
               };
             };

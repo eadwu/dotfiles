@@ -26,6 +26,7 @@ in with settings; {
       xfceUnstable.xfce4-screenshooter
       xfceUnstable.xfce4-taskmanager
       ## Theme
+      capitaine-cursors
       gnome3.adwaita-icon-theme
       gtk-engine-murrine
       papirus-icon-theme
