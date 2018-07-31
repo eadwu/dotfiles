@@ -11,6 +11,7 @@ in with settings; {
 
   nix = {
     buildCores = 0;
+    package = pkgs.nixUnstable;
     requireSignedBinaryCaches = true;
     useSandbox = true;
 
