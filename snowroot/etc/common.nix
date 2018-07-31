@@ -10,18 +10,29 @@ in with settings; {
     ];
 
   nix = {
-    binaryCaches = [
-      "https://cache.nixos.org/"
-    ];
-    binaryCachePublicKeys = [
-      "hydra.nixos.org-1:CNHJZBh9K4tP3EKF6FkkgeVYsS3ohTl+oS0Qa8bezVs="
-    ];
     buildCores = 0;
     requireSignedBinaryCaches = true;
+    useSandbox = true;
+
+    binaryCaches = [
+      "https://cache.nixos.org/"
+      "https://linux.cachix.org"
+    ];
+
+    binaryCachePublicKeys = [
+      "hydra.nixos.org-1:CNHJZBh9K4tP3EKF6FkkgeVYsS3ohTl+oS0Qa8bezVs="
+      "linux.cachix.org-1:FgNkZq0e26bKnTHgvxT0Tz4bJxIuvbXY62bSyJbPxbc="
+    ];
+
     trustedBinaryCaches = [
       "https://cache.nixos.org/"
+      "https://linux.cachix.org"
     ];
-    useSandbox = true;
+
+    trustedUsers = [
+      user
+      "root"
+    ];
   };
 
   nixpkgs = {
