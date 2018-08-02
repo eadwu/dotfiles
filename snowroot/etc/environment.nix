@@ -83,14 +83,11 @@ in with settings; {
       cmake
       ## Misc
       bfg-repo-cleaner
-      # clang
-      # clang-tools
-      # llvmPackages.clang-unwrapped
+      llvmPackages.clang-unwrapped
       docker
       ffmpeg
       glava
       gnupg
-      # google-musicmanager
       i3lock-color
       imagemagick7
       mono
