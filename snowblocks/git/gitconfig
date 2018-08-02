@@ -3,6 +3,7 @@
   email = fangkazuto@gmail.com
   signingkey = 36B3A59B9F0AA985
 [core]
+  autocrlf = input
   editor = vim
   fsmonitor = .git/hooks/query-watchman
 [commit]
