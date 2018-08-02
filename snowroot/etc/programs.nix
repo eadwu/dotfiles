@@ -25,6 +25,12 @@ in with settings; {
     zsh = {
       enable = true;
       interactiveShellInit = ''
+        bios-upgrade () {
+          fwupdmgr get-devices
+          fwupdmgr get-updates
+          fwupdmgr update
+        }
+
         nix-clean () {
           nix-env --delete-generations old
           nix-store --gc
