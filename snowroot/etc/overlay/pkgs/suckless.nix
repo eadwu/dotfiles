@@ -14,8 +14,8 @@ in with settings; {
   dwm = super.dwm.overrideAttrs (oldAttrs: rec {
     src = fetchgit {
       url = https://gitlab.com/eadwu/dwm;
-      rev = "a74f37a12a12b7f235d86f3617180e92ff02f805";
-      sha256 = "0ir5q4jb2c8wid415n8j0y5gpz0gw7apnrqm3p8r4m497mvqc8ar";
+      rev = "ecfb90a00f3f0be582984942a94ad5fd2f3c0502";
+      sha256 = "1dh8ba16s0a1nfqla18b69nkp32a9gs11gvfhhgmns7qr3gliqyd";
     };
   });
   st = super.st.overrideAttrs (oldAttrs: rec {
