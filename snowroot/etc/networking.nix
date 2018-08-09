@@ -3,12 +3,35 @@
 let
   settings = import /etc/nixos/settings.nix;
 in with settings; {
+  environment = {
+    etc = {
+      "resolv.conf".text = ''
+        search lan1 example.com
+        nameserver 1.1.1.1
+        nameserver 1.0.0.1
+        options edns0
+      '';
+    };
+  };
+
   networking = {
     hostName = hostname;
 
     nameservers = [
-      "2606:4700:4700::1111,2606:4700:4700::1001"
+      # IPv6
+      ## 1.1.1.1
+      "2606:4700:4700::1111"
+      "2606:4700:4700::1001"
+      ## Google Public DNS
+      "2001:4860:4860::8888"
+      "2001:4860:4860::8844"
+      # IPv4
+      ## 1.1.1.1
+      "1.1.1.1"
       "1.0.0.1"
+      ## Google Public DNS
+      "8.8.8.8"
+      "8.8.4.4"
     ];
 
     networkmanager = {
