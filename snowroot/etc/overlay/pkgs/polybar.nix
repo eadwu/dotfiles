@@ -10,8 +10,8 @@ in {
   }).overrideAttrs (oldAttrs: {
     src = fetchgit {
       url = https://github.com/jaagr/polybar;
-      rev = "58e269b2d66195808197ef9176cf25a834728f52";
-      sha256 = "1p47m8qrgq8rs67w19ah3kgghclghqfr150brfk0w84mkx5jxd7h";
+      rev = "b632e7da38cc07c4b7fc6613e6f64d99533e3a81";
+      sha256 = "09bdmmb3mwsb3ijqmqdf1ix4yqjmx26dq4p6dzzvxxsq6gndq7lq";
     };
   });
 }
