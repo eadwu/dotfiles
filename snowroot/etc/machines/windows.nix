@@ -64,6 +64,10 @@
         DisplaySize 406 228
       '';
 
+      screenSection = ''
+        Option "DPI" "240 x 240"
+      '';
+
       libinput = {
         additionalOptions = ''
           Option "AccelSpeed" "1"
