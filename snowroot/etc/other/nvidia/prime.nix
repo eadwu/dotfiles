@@ -18,7 +18,7 @@
   services = {
     xserver = {
       videoDrivers = [
-        "nvidia"
+        "nvidiaBeta"
       ];
     };
   };
