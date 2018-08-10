@@ -26,6 +26,7 @@
   fonts = {
     fontconfig = {
       antialias = false;
+      # calculated: 282.42
       dpi = 240;
     };
   };
@@ -60,6 +61,7 @@
         EndSection
       '';
 
+      # calculated: 293.58336 165.14064
       monitorSection = ''
         DisplaySize 406 228
       '';
