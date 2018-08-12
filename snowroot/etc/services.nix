@@ -71,6 +71,7 @@
 
           greeters = {
             enso = {
+              blur = true;
               enable = true;
             };
 
