@@ -1,24 +1,21 @@
 #!/usr/bin/env sh
 
-# USAGE:
-#   sudo ${PATH}/bin/naps {intel|nvidia|status}
+## NAPS (Not A Prime Select)
 
 nvidiaModules=$(lsmod | grep "nvidia ")
 
 case "$1" in
+  "init")
+    echo "auto" > /sys/bus/pci/devices/0000:01:00.0/power/control
+    ;;
   "intel")
     echo "unloading nvidia drivers"
     modprobe -r $(printf "%s" "$nvidiaModules" | awk '{print $4}') nvidia
-    ;;
-  "nvidia")
-    echo "not a prime-select"
-    # echo "loading nvidia drivers"
-    # modprobe nvidia
     ;;
   "status")
     cat "/sys/bus/pci/devices/0000:"$(lspci -vnn | grep 3D | awk '{print $1}')"/power/runtime_status"
     ;;
   *)
-    [ "$(printf "%s" "$nvidiaModules" | wc -w)" -gt 0 ] && $0 intel || $0 nvidia
+    [ "$(printf "%s" "$nvidiaModules" | wc -w)" -gt 0 ] && $0 intel || $0 status
     ;;
 esac

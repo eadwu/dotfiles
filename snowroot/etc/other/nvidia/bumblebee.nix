@@ -24,24 +24,24 @@ in with settings; {
           };
 
           patchPhase = ''
-            patch -p1 ${./bumblebee.patch}
+            patch -p1 -i ${./bumblebee.patch}
           '';
 
-          preConfigure = ''
-            # Don't use a special group, just reuse wheel.
-            substituteInPlace configure.ac \
-              --replace 'CONF_GID="bumblebee"' 'CONF_GID="wheel"'
+          configureFlags = oldAttrs.configureFlags
+            ++ [
+              "CONF_BRIDGE=virtualgl"
+              "CONF_PRIMUS_LD_PATH=${self.pkgs.primusLib}/lib"
+            ];
 
-            # Apply configuration options
-            substituteInPlace conf/xorg.conf.nvidia \
-              --subst-var nvidiaDeviceOptions
-
-            substituteInPlace conf/xorg.conf.nouveau \
-              --subst-var nouveauDeviceOptions
-
-            ${self.pkgs.autoconf}/bin/autoreconf -fi
-          '';
+          nativeBuildInputs = oldAttrs.nativeBuildInputs
+            ++ [
+              self.pkgs.autoreconfHook
+            ];
         });
+
+        primusLib = super.primusLib.override {
+          nvidia_x11 = config.boot.kernelPackages.nvidia_x11_beta;
+        };
       })
     ];
   };

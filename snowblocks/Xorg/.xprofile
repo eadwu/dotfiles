@@ -1,5 +1,6 @@
 #!/usr/bin/env sh
 
+sudo naps init
 nitrogen --restore
 xsetroot -cursor_name left_ptr
 polybar -s -c ~/.dwm/config.ini data | while IFS= read -r line; do xsetroot -name "$(printf "%s" "$line" | cut -c 5- | perl -pe 's/\s+%\{.+?\}\s+/ /g')"; done &

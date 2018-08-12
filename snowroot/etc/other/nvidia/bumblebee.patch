@@ -84,3 +84,27 @@ index 21b1e35..fb257a8 100644
      //close the end of the pipe that is not ours
      if (bb_status.x_pipe[1] != -1){close(bb_status.x_pipe[1]); bb_status.x_pipe[1] = -1;}
    }
+diff --git a/src/optirun.c b/src/optirun.c
+index a83b31d..810b9bf 100644
+--- a/src/optirun.c
++++ b/src/optirun.c
+@@ -221,7 +221,10 @@ static int run_primus(int argc, char **argv) {
+   free(ldpath_new);
+ 
+   /* set PRIMUS_libGLa */
+-  char *libgl_mesa = "/usr/$LIB/libGL.so.1:/usr/lib/$LIB/libGL.so.1:/usr/$LIB/mesa/libGL.so.1:/usr/lib/$LIB/mesa/libGL.so.1";
++  char *libgl_mesa = malloc(strlen(bb_config.primus_ld_path) + sizeof("/libGL.so.1") + 1);
++
++  memcpy(libgl_mesa, bb_config.primus_ld_path, strlen(bb_config.primus_ld_path));
++  strcpy(libgl_mesa + strlen(bb_config.primus_ld_path), "/libGL.so.1");
+   if (bb_config.ld_path[0]) { /* build new library path for PRIMUS_libGLa */
+     int libgl_size = strlen(bb_config.ld_path) + 1;
+     { /* calculate additional memories for adding "/libGL.so.1" */
+@@ -258,6 +261,7 @@ static int run_primus(int argc, char **argv) {
+ 
+   int exitcode = bb_run_fork(run_args, 0);
+   free(run_args);
++  free(libgl_mesa);
+   return exitcode;
+ }
+ 
