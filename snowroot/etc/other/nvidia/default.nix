@@ -10,6 +10,7 @@
 
   environment = {
     systemPackages = with pkgs; [
+      cudatoolkit
       glxinfo
       vdpauinfo
     ];
