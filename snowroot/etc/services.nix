@@ -70,13 +70,12 @@
           enable = true;
 
           greeters = {
+            enso = {
+              enable = true;
+            };
+
             gtk = {
               clock-format = "%I:%M %p";
-              enable = true;
-
-              extraConfig = ''
-                cursor-theme-name = capitaine-cursors
-              '';
 
               iconTheme = {
                 name = "Papirus-Adapta-Nokto";
