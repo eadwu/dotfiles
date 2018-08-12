@@ -46,10 +46,6 @@ in with settings; {
 
   powerManagement = {
     enable = true;
-
-    powertop = {
-      enable = true;
-    };
   };
 
   security = {

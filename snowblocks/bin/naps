@@ -1,0 +1,24 @@
+#!/usr/bin/env sh
+
+# USAGE:
+#   sudo ${PATH}/bin/naps {intel|nvidia|status}
+
+nvidiaModules=$(lsmod | grep "nvidia ")
+
+case "$1" in
+  "intel")
+    echo "unloading nvidia drivers"
+    modprobe -r $(printf "%s" "$nvidiaModules" | awk '{print $4}') nvidia
+    ;;
+  "nvidia")
+    echo "not a prime-select"
+    # echo "loading nvidia drivers"
+    # modprobe nvidia
+    ;;
+  "status")
+    cat "/sys/bus/pci/devices/0000:"$(lspci -vnn | grep 3D | awk '{print $1}')"/power/runtime_status"
+    ;;
+  *)
+    [ "$(printf "%s" "$nvidiaModules" | wc -w)" -gt 0 ] && $0 intel || $0 nvidia
+    ;;
+esac

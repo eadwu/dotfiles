@@ -16,7 +16,7 @@
   {
     "shell": [
       [
-        "sudo chmod +x ~/bin/{kbd_backlight,mon_backlight}",
+        "sudo chmod +x ~/bin/{naps,kbd_backlight,mon_backlight}",
         "Adjust file permissions"
       ]
     ]
