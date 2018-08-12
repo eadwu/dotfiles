@@ -1,6 +1,8 @@
 { config, pkgs, ... }:
 
-{
+let
+  ucfg = config.services.undervolt;
+in {
   imports =
     [
       /etc/nixos/other/intel
@@ -35,18 +37,15 @@
     consoleFont = "latarcyrheb-sun32";
   };
 
-  powerManagement = {
-    undervolt = {
-      enable = true;
-      core = -100;
-      cache = -100;
-      gpu = -50;
-    };
-  };
-
   services = {
     fwupd = {
       enable = true;
+    };
+
+    undervolt = {
+      enable = true;
+      coreOffset = "-100";
+      gpuOffset = "-50";
     };
 
     xserver = {
@@ -76,6 +75,43 @@
           Option "PalmDetection" "on"
           Option "TappingButtonMap" "lmr"
         '';
+      };
+    };
+  };
+
+  systemd = {
+    services = {
+      undervolt = {
+        enable = false;
+      };
+
+      undervolts = {
+        after = [
+          "suspend.target"
+          "hibernate.target"
+          "hybrid-sleep.target"
+        ];
+        description = "Intel undervolting";
+        serviceConfig = {
+          ExecStart = ''
+            ${pkgs.undervolt}/bin/undervolt \
+              --core ${ucfg.coreOffset} \
+              --cache ${ucfg.coreOffset} \
+              --gpu ${ucfg.gpuOffset}
+          '';
+        };
+        wantedBy = [
+          "suspend.target"
+          "hibernate.target"
+          "hybrid-sleep.target"
+          "multi-user.target"
+        ];
+      };
+    };
+
+    timers = {
+      undervolt = {
+        enable = false;
       };
     };
   };
