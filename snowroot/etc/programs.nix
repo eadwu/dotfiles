@@ -50,6 +50,7 @@ in with settings; {
       '';
       shellAliases = {
         "download-audio" = "youtube-dl --extract-audio --audio-format mp3";
+        "emacs-nox" = "emacs --no-window-system";
         "nixos-rebuild-local" = "nixos-rebuild -I nixpkgs=${HOME}/Downloads/nixpkgs";
         "nixos-generate-iso" = ''nix-build "<nixpkgs/nixos>" -A config.system.build.isoImage -I nixos-config="${HOME}/Downloads/dotfiles/snowroot/etc/iso.nix" -I nixpkgs="${HOME}/Downloads/nixpkgs"'';
         "passhash" = ''openssl passwd -1 -salt "$(od -vAn -N4 -tu4 < /dev/urandom)"'';
