@@ -31,12 +31,6 @@ in with settings; {
     };
   };
 
-  powerManagement = {
-    powertop = {
-      enable = true;
-    };
-  };
-
   services = {
     xserver = {
       libinput = {
