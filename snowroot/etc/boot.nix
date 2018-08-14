@@ -1,11 +1,16 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 let
+  inherit (pkgs) linux_latest linuxPackages_latest linuxPackages_testing;
+
   settings = import /etc/nixos/settings.nix;
+  linux_testing = linuxPackages_testing.kernel;
 in with settings; {
   boot = {
     cleanTmpDir = true;
-    kernelPackages = pkgs.linuxPackages_testing;
+    kernelPackages = if linux_latest.meta.branch == linux_testing.meta.branch
+      then linuxPackages_latest
+      else linuxPackages_testing;
 
     blacklistedKernelModules = [
       # https://wiki.archlinux.org/index.php/Improving_performance#Watchdogs
