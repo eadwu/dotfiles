@@ -1,12 +1,19 @@
 { config, pkgs, ... }:
 
 let
+  inherit (config.boot.kernelPackages) nvidia_x11_beta;
   settings = import /etc/nixos/settings.nix;
 in with settings; {
+  environment = {
+    systemPackages = [
+      nvidia_x11_beta.bin
+    ];
+  };
+
   hardware = {
     bumblebee = {
       enable = true;
-      package = config.boot.kernelPackages.nvidia_x11_beta;
+      package = nvidia_x11_beta;
       pmMethod = "none";
     };
   };
@@ -15,7 +22,7 @@ in with settings; {
     overlays = [
       (self: super: {
         bumblebee = (super.bumblebee.override {
-          nvidia_x11 = config.boot.kernelPackages.nvidia_x11_beta;
+          nvidia_x11 = nvidia_x11_beta;
         }).overrideAttrs (oldAttrs: {
           src = self.pkgs.fetchgit {
             url = https://github.com/Bumblebee-Project/Bumblebee;
@@ -40,7 +47,7 @@ in with settings; {
         });
 
         primusLib = super.primusLib.override {
-          nvidia_x11 = config.boot.kernelPackages.nvidia_x11_beta;
+          nvidia_x11 = nvidia_x11_beta;
         };
       })
     ];
