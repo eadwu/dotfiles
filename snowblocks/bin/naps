@@ -10,7 +10,11 @@ case "$1" in
     ;;
   "intel")
     echo "unloading nvidia drivers"
-    modprobe -r $(printf "%s" "$nvidiaModules" | awk '{print $4}') nvidia
+    modprobe -r nvidia_uvm nvidia_drm nvidia_modeset nvidia
+    ;;
+  "nvidia")
+    echo "loading nvidia drivers"
+    modprobe -a nvidia nvidia_modeset nvidia_drm nvidia_uvm
     ;;
   "status")
     cat "/sys/bus/pci/devices/0000:"$(lspci -vnn | grep 3D | awk '{print $1}')"/power/runtime_status"
