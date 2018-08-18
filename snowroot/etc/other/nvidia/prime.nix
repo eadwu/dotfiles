@@ -1,6 +1,11 @@
 { config, pkgs, ... }:
 
 {
+  imports =
+    [
+      /etc/nixos/other/nvidia/polyfill.nix
+    ];
+
   hardware = {
     nvidia = {
       modesetting = {

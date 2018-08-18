@@ -4,11 +4,10 @@ let
   inherit (config.boot.kernelPackages) nvidia_x11_beta;
   settings = import /etc/nixos/settings.nix;
 in with settings; {
-  environment = {
-    systemPackages = [
-      nvidia_x11_beta.bin
+  imports =
+    [
+      /etc/nixos/other/nvidia/polyfill.nix
     ];
-  };
 
   hardware = {
     bumblebee = {
