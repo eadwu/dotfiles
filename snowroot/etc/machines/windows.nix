@@ -52,7 +52,9 @@ in {
     undervolt = {
       enable = true;
       coreOffset = "-100";
-      gpuOffset = "-50";
+      gpuOffset = "-75";
+      uncoreOffset = ucfg.coreOffset;
+      analogioOffset = ucfg.coreOffset;
     };
 
     xserver = {
@@ -104,7 +106,9 @@ in {
             ${pkgs.undervolt}/bin/undervolt \
               --core ${ucfg.coreOffset} \
               --cache ${ucfg.coreOffset} \
-              --gpu ${ucfg.gpuOffset}
+              --gpu ${ucfg.gpuOffset} \
+              --uncore ${ucfg.uncoreOffset} \
+              --analogio ${ucfg.analogioOffset}
           '';
         };
         wantedBy = [
