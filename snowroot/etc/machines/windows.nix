@@ -37,6 +37,14 @@ in {
     consoleFont = "latarcyrheb-sun32";
   };
 
+  programs = {
+    zsh = {
+      shellAliases = {
+        "google-musicmanager" = "QT_AUTO_SCREEN_SCALE_FACTOR=2 google-musicmanager";
+      };
+    };
+  };
+
   services = {
     fwupd = {
       enable = true;
