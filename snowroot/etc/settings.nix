@@ -1,13 +1,11 @@
 let
-  uuid = "d43adf5e-b229-4884-a291-e62a6c697d81";
   hostname = "nixos";
   user = "yin";
 
-# jp, nl, us
+  # jp, nl, us
   protonRegion = "jp";
   DOCKER_ID_USER = "tianxian";
 in {
-  uuid = uuid;
   hostname = hostname;
   user = user;
   protonRegion = protonRegion;
