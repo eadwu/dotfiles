@@ -9,14 +9,24 @@
   environment = {
     interactiveShellInit = ''
       alias emacs="${pkgs.emacs}/bin/emacs --no-window-system"
+      alias emacs-nox="${pkgs.emacs}/bin/emacs --no-window-system"
+      alias passhash="${pkgs.mkpasswd}/bin/mkpasswd -m sha-512"
     '';
 
     systemPackages = with pkgs; [
+      git
       emacs
+      mkpasswd
     ];
   };
 
   i18n = {
     consoleFont = "latarcyrheb-sun32";
+  };
+
+  nixpkgs = {
+    config = {
+      allowUnfree = true;
+    };
   };
 }
