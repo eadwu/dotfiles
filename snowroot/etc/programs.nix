@@ -26,9 +26,9 @@ in with settings; {
       enable = true;
       interactiveShellInit = ''
         bios-upgrade () {
-          fwupdmgr get-devices
-          fwupdmgr get-updates
-          fwupdmgr update
+          ${pkgs.fwupd}/bin/fwupdmgr get-devices
+          ${pkgs.fwupd}/bin/fwupdmgr get-updates
+          ${pkgs.fwupd}/bin/fwupdmgr update
         }
 
         nix-clean () {
@@ -50,10 +50,10 @@ in with settings; {
       '';
       shellAliases = {
         "download-audio" = "youtube-dl --extract-audio --audio-format mp3";
-        "emacs-nox" = "emacs --no-window-system";
+        "emacs-nox" = "${pkgs.emacs}/bin/emacs --no-window-system";
         "nixos-rebuild-local" = "nixos-rebuild -I nixpkgs=${HOME}/Downloads/nixpkgs";
         "nixos-generate-iso" = ''nix-build "<nixpkgs/nixos>" -A config.system.build.isoImage -I nixos-config="${HOME}/Downloads/dotfiles/snowroot/etc/iso.nix" -I nixpkgs="${HOME}/Downloads/nixpkgs"'';
-        "passhash" = ''openssl passwd -1 -salt "$(od -vAn -N4 -tu4 < /dev/urandom)"'';
+        "passhash" = "${pkgs.mkpasswd}/bin/mkpasswd -m sha-512";
       };
     };
   };
