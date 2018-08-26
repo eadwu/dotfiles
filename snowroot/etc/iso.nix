@@ -28,7 +28,5 @@
     config = {
       allowUnfree = true;
     };
-
-    overlays = import /etc/nixos/overlay;
   };
 }
