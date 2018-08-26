@@ -1,5 +1,4 @@
 [
-  (import /etc/nixos/overlay/pkgs/emacs.nix)
   (import /etc/nixos/overlay/pkgs/polybar.nix)
   (import /etc/nixos/overlay/pkgs/suckless.nix)
   (import /etc/nixos/overlay/pkgs/vscode.nix)
