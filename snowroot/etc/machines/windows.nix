@@ -2,7 +2,8 @@
 
 let
   ucfg = config.services.undervolt;
-in {
+  settings = import /etc/nixos/settings.nix;
+in with settings; {
   imports =
     [
       /etc/nixos/other/intel
@@ -25,6 +26,12 @@ in {
     ];
   };
 
+  environment = {
+    variables = {
+      QT_AUTO_SCREEN_SCALE_FACTOR = dpiScale;
+    };
+  };
+
   fonts = {
     fontconfig = {
       antialias = false;
@@ -37,12 +44,6 @@ in {
     consoleFont = "latarcyrheb-sun32";
   };
 
-  programs = {
-    zsh = {
-      shellAliases = {
-        "google-musicmanager" = "QT_AUTO_SCREEN_SCALE_FACTOR=2 google-musicmanager";
-      };
-    };
   };
 
   services = {

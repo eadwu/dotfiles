@@ -117,7 +117,6 @@ in with settings; {
     ];
 
     variables = {
-      # General
       EDITOR = "vim";
       VISUAL = "vim";
       DOCKER_ID_USER = DOCKER_ID_USER;

@@ -1,13 +1,15 @@
 let
-  hostname = "nixos";
   user = "yin";
-
+  dpiScale = "2";
+  hostname = "nixos";
   # jp, nl, us
   protonRegion = "jp";
+
   DOCKER_ID_USER = "tianxian";
 in {
-  hostname = hostname;
   user = user;
+  dpiScale = dpiScale;
+  hostname = hostname;
   protonRegion = protonRegion;
 
   protonFile = /etc/nixos/credentials/protonvpn;
