@@ -3,8 +3,8 @@
 {
   imports =
     [
-      /etc/nixos/other/nvidia/bumblebee.nix
-      # /etc/nixos/other/nvidia/disable.nix
+      # /etc/nixos/other/nvidia/bumblebee.nix
+      /etc/nixos/other/nvidia/disable.nix
       # /etc/nixos/other/nvidia/prime.nix
     ];
 
