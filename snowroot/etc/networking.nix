@@ -102,7 +102,9 @@ in with settings; {
             fast-io
 
             script-security 2
-            # dhcp-option DNS 1.0.0.1
+            up ${pkgs.update-resolv-conf}/libexec/openvpn/update-resolv-conf
+            down ${pkgs.update-resolv-conf}/libexec/openvpn/update-resolv-conf
+            down-pre
 
             <ca>
             -----BEGIN CERTIFICATE-----
