@@ -4,12 +4,6 @@ let
   settings = import /etc/nixos/settings.nix;
 in with settings; {
   environment = {
-    interactiveShellInit = ''
-      export fpath=( "${HOME}/.zsh" $fpath )
-
-      setopt histignorespace
-    '';
-
     shells = [
       "${pkgs.zsh}/bin/zsh"
     ];

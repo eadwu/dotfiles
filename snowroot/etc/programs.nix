@@ -1,7 +1,30 @@
 { config, pkgs, ... }:
 
+with import <nixpkgs> { };
+
 let
   settings = import /etc/nixos/settings.nix;
+
+  spaceship-prompt = stdenv.mkDerivation rec {
+    name = "spaceship-prompt-${version}";
+    version = "2018-08-26";
+
+    src = pkgs.fetchgit {
+      url = https://github.com/denysdovhan/spaceship-prompt;
+      rev = "63a3611e4bd863f042113459752b365070f0c131";
+      sha256 = "0h1l78jcr4v23vz1alb0p2iki2hmx2ndz8xjgsa7q1zgv9jxgxv6";
+    };
+
+    dontBuild = true;
+
+    installPhase = ''
+      mkdir -p $out
+
+      cp -r lib $out
+      cp -r sections $out
+      cp spaceship.zsh $out/prompt_spaceship_setup
+    '';
+  };
 in with settings; {
   programs = {
     oblogout = {
@@ -25,6 +48,9 @@ in with settings; {
     zsh = {
       enable = true;
       interactiveShellInit = ''
+        fpath+=(${spaceship-prompt})
+        setopt histignorespace
+
         bios-upgrade () {
           ${pkgs.fwupd}/bin/fwupdmgr get-devices
           ${pkgs.fwupd}/bin/fwupdmgr get-updates
@@ -46,7 +72,9 @@ in with settings; {
         xprop () { nix-shell -p xorg.xprop --run "xprop "$@""; }
       '';
       promptInit = ''
-        autoload -U promptinit && promptinit && prompt spaceship
+        autoload -U promptinit
+        promptinit
+        prompt spaceship
       '';
       shellAliases = {
         "download-audio" = "youtube-dl --extract-audio --audio-format mp3";
