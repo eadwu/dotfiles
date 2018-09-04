@@ -1,5 +1,5 @@
 let
-  user = "yin";
+  user = "xps";
   dpiScale = "2";
   hostname = "nixos";
   # jp, nl, us

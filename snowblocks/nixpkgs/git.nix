@@ -26,7 +26,7 @@ in {
       userEmail = "fangkazuto@gmail.com";
 
       signing = {
-        key = "44AB01A633AE0F06";
+        key = "43C9E53FFCF51DEC";
         signByDefault = true;
       };
 
