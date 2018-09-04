@@ -77,7 +77,7 @@ in with settings; {
         prompt spaceship
       '';
       shellAliases = {
-        "download-audio" = "youtube-dl --extract-audio --audio-format mp3";
+        "download-audio" = "${pkgs.youtube-dl}/bin/youtube-dl --extract-audio --audio-format mp3";
         "emacs-nox" = "${pkgs.emacs}/bin/emacs --no-window-system";
         "nixos-rebuild-local" = "nixos-rebuild -I nixpkgs=${HOME}/Downloads/nixpkgs";
         "nixos-generate-iso" = ''nix-build "<nixpkgs/nixos>" -A config.system.build.isoImage -I nixos-config="${HOME}/Downloads/dotfiles/snowroot/etc/iso.nix" -I nixpkgs="${HOME}/Downloads/nixpkgs"'';
