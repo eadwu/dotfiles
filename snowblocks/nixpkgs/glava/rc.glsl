@@ -52,7 +52,8 @@
 
 /* Window geometry (x, y, width, height) */
 // #request setgeometry 0 0 800 600
-#request setgeometry 0 0 1440 900
+// #request setgeometry 0 0 1440 900
+#request setgeometry 0 0 3840 2160
 
 /* Window background color (RGB format).
    Does not work with `setopacity "xroot"` */

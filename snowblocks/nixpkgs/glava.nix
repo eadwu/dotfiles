@@ -3,8 +3,8 @@
 {
   xdg = {
     configFile = {
-      "mpv/config" = {
-        source = mpv/config;
+      "glava" = {
+        source = ./glava;
       };
     };
   };

@@ -26,8 +26,10 @@ let
   };
 in {
   home = {
-    packages = [
-      vivaldi-ffmpeg-codecs
-    ];
+    file = {
+      ".local/lib/vivaldi/libffmpeg.so" = {
+        source = "${lib.makeLibraryPath [ vivaldi-ffmpeg-codecs ]}/libffmpeg.so";
+      };
+    };
   };
 }
