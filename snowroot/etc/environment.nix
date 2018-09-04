@@ -9,42 +9,13 @@ in with settings; {
     ];
 
     systemPackages = with pkgs; [
-      # Core
       openssl
       wget
 
-      # Environment
-      nitrogen
-      xfceUnstable.thunar
-      xfceUnstable.xfce4-notifyd
-      xfceUnstable.xfce4-screenshooter
-      xfceUnstable.xfce4-taskmanager
-      ## Theme
-      capitaine-cursors
-      gnome3.adwaita-icon-theme
-      gtk-engine-murrine
-      papirus-icon-theme
-
-      # Other
-      ## Applications
-      ark
-      blender
-      discord
-      emacs
-      gimp
-      gnome3.gnome-disk-utility
-      gnome3.pomodoro
-      google-musicmanager
-      st
-      vivaldi
-      winusb
-      xfce.mousepad
-      ### Disk
       gptfdisk
-      ### Emacs
-      wakatime
       ## Console
       feh
+      home-manager
       htop
       libarchive
       pass
@@ -81,7 +52,6 @@ in with settings; {
       llvmPackages.clang-unwrapped
       docker
       ffmpeg
-      glava
       gnupg
       i3lock-color
       imagemagick7
@@ -93,6 +63,7 @@ in with settings; {
       scrot
       stack
       texlive.combined.scheme-full
+      wallama-paper
       watchman
       xclip
       xorg.xsetroot
