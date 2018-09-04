@@ -7,5 +7,6 @@
       /etc/nixos/hardware-configuration.nix
       # /etc/nixos/machines/darwin.nix
       /etc/nixos/machines/windows.nix
+      # /etc/nixos/machines/usb.nix
     ];
 }
