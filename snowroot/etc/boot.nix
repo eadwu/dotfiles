@@ -25,6 +25,9 @@ in with settings; {
     };
 
     kernelParams = [
+      # Use acpi-cpufreq as the CPU scaling governor
+      "intel_pstate=passive"
+
       # https://wiki.archlinux.org/index.php/Improving_performance#Watchdogs
       "nowatchdog"
 
