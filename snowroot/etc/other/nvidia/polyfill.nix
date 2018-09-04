@@ -1,20 +1,20 @@
 { config, pkgs, lib, ... }:
 
 let
-  inherit (config.boot.kernelPackages) nvidia_x11_beta;
+  inherit (config.boot.kernelPackages) nvidia_x11;
 in {
   boot = {
     extraModulePackages = [
-      nvidia_x11_beta.bin
+      nvidia_x11.bin
     ];
   };
 
   environment = {
     systemPackages = [
-      nvidia_x11_beta.bin
-      nvidia_x11_beta.settings
+      nvidia_x11.bin
+      nvidia_x11.settings
     ] ++ lib.filter (p: p != null) [
-      nvidia_x11_beta.persistenced
+      nvidia_x11.persistenced
     ];
   };
 

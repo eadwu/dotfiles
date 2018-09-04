@@ -44,7 +44,6 @@ in with settings; {
   hardware = {
     bumblebee = {
       enable = true;
-      package = nvidia_x11_beta;
       pmMethod = "none";
     };
   };
