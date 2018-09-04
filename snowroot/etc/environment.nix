@@ -9,11 +9,13 @@ in with settings; {
     ];
 
     systemPackages = with pkgs; [
+      emacs
+      gptfdisk
       openssl
       wget
+      ### Emacs
+      wakatime
 
-      gptfdisk
-      ## Console
       feh
       home-manager
       htop
@@ -30,9 +32,8 @@ in with settings; {
       unzip
       youtube-dl
       zip
-      ### Applications
       vim
-      ### Version Control
+      ## Version Control
       gitlab
       gitAndTools.hub
       ## Languages / SDKs
@@ -45,7 +46,7 @@ in with settings; {
       python3
       rustup
       sass
-      ### Build Tools
+      ## Build Tools
       cmake
       ## Misc
       bfg-repo-cleaner
@@ -56,23 +57,12 @@ in with settings; {
       i3lock-color
       imagemagick7
       mono
-      mpv
       oblogout
-      pscircle
-      rclone
       scrot
       stack
       texlive.combined.scheme-full
-      wallama-paper
       watchman
-      xclip
-      xorg.xsetroot
-      xwinwrap
       yarn
-
-      # Benchmarks
-      mprime
-      unigine-valley
 
       # Debug / Utils
       lsof

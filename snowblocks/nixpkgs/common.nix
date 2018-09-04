@@ -34,7 +34,6 @@
       ark
       blender
       discord
-      emacs
       gimp
       gnome3.gnome-disk-utility
       gnome3.pomodoro
@@ -43,8 +42,16 @@
       vivaldi
       winusb
       xfce.mousepad
-      ### Emacs
-      wakatime
+      ## Console
+      mpv
+      rclone
+      xclip
+      xorg.xsetroot
+      xwinwrap
+
+      # Benchmarks
+      mprime
+      unigine-valley
     ];
   };
 
