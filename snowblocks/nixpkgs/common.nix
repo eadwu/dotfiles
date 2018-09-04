@@ -4,6 +4,7 @@
   imports =
     [
       ./atom.nix
+      ./emacs.nix
       ./glava.nix
       ./git.nix
       ./gtk.nix
