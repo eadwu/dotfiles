@@ -1,3 +1,5 @@
 .vscode/tags
 
+*.el~
+*.elc
 github.token
