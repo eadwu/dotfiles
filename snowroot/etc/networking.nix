@@ -3,35 +3,11 @@
 let
   settings = import /etc/nixos/settings.nix;
 in with settings; {
-  environment = {
-    etc = {
-      "resolv.conf".text = ''
-        search lan1 example.com
-        nameserver 1.1.1.1
-        nameserver 1.0.0.1
-        options edns0
-      '';
-    };
-  };
-
   networking = {
     hostName = hostname;
 
     nameservers = [
-      # IPv6
-      ## 1.1.1.1
-      "2606:4700:4700::1111"
-      "2606:4700:4700::1001"
-      ## Google Public DNS
-      "2001:4860:4860::8888"
-      "2001:4860:4860::8844"
-      # IPv4
-      ## 1.1.1.1
-      "1.1.1.1"
-      "1.0.0.1"
-      ## Google Public DNS
-      "8.8.8.8"
-      "8.8.4.4"
+      "127.0.0.1"
     ];
 
     networkmanager = {
@@ -40,6 +16,26 @@ in with settings; {
   };
 
   services = {
+    kresd = {
+      enable = true;
+      extraConfig = ''
+        modules = {
+          'policy'
+        }
+
+        policy.add(policy.all(policy.TLS_FORWARD({
+          { '1.1.1.1', hostname = 'cloudflare-dns.com', ca_file = '/etc/ssl/certs/ca-bundle.crt' },
+          { '1.0.0.1', hostname = 'cloudflare-dns.com', ca_file = '/etc/ssl/certs/ca-bundle.crt' },
+          { '2606:4700:4700::1111', hostname = 'cloudflare-dns.com', ca_file = '/etc/ssl/certs/ca-bundle.crt' },
+          { '2606:4700:4700::1001', hostname = 'cloudflare-dns.com', ca_file = '/etc/ssl/certs/ca-bundle.crt' },
+          { '9.9.9.9', hostname = 'dns.quad9.net', ca_file = '/etc/ssl/certs/ca-bundle.crt' },
+          { '149.112.112.112', hostname = 'dns.quad9.net', ca_file = '/etc/ssl/certs/ca-bundle.crt' },
+          { '2620:fe::fe', hostname = 'dns.quad9.net', ca_file = '/etc/ssl/certs/ca-bundle.crt' },
+          { '2620:fe::9', hostname = 'dns.quad9.net', ca_file = '/etc/ssl/certs/ca-bundle.crt' }
+        })))
+      '';
+    };
+
     openvpn = {
       servers = {
         protonvpn = {
