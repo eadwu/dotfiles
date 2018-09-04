@@ -81,7 +81,6 @@ in with settings; {
         "emacs-nox" = "${pkgs.emacs}/bin/emacs --no-window-system";
         "nixos-rebuild-local" = "nixos-rebuild -I nixpkgs=${HOME}/Downloads/nixpkgs";
         "nixos-generate-iso" = ''nix-build "<nixpkgs/nixos>" -A config.system.build.isoImage -I nixos-config="${HOME}/Downloads/dotfiles/snowroot/etc/iso.nix" -I nixpkgs="${HOME}/Downloads/nixpkgs"'';
-        "passhash" = "${pkgs.mkpasswd}/bin/mkpasswd -m sha-512";
       };
     };
   };
