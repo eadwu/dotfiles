@@ -38,14 +38,18 @@
       gnome3.gnome-disk-utility
       gnome3.pomodoro
       google-musicmanager
-      st
       vivaldi
       winusb
       xfce.mousepad
       ## Console
+      file
+      ldns
+      lm_sensors
       mpv
+      pipes
       rclone
       xclip
+      xorg.xprop
       xorg.xsetroot
       xwinwrap
 

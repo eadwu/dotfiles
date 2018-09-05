@@ -65,11 +65,6 @@ in with settings; {
           for link in /nix/var/nix/gcroots/auto/*; do rm $(readlink "$link"); done
           nix-collect-garbage -d
         }
-
-        drill () { nix-shell -p ldns --run "drill "$@""; }
-        file () { nix-shell -p file --run "file "$@""; }
-        sensors () { nix-shell -p lm_sensors --run "sensors "$@""; }
-        xprop () { nix-shell -p xorg.xprop --run "xprop "$@""; }
       '';
       promptInit = ''
         autoload -U promptinit

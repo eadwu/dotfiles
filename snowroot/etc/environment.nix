@@ -16,14 +16,12 @@ in with settings; {
       ### Emacs
       wakatime
 
+      st
       feh
       home-manager
       htop
       libarchive
       pass
-      pipes
-      powerstat
-      pwgen
       pywal
       ranger
       rofi
