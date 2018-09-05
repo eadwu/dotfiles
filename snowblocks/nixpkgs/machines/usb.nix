@@ -4,7 +4,7 @@
   home = {
     packages = with pkgs; [
       eclipses.eclipse-platform
-      (lib.lowPrior jdk)
+      (lib.lowPrio jdk)
       jetbrains.idea-community
     ];
   };
