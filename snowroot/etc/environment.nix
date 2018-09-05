@@ -50,6 +50,7 @@ in with settings; {
       cmake
       ## Misc
       bfg-repo-cleaner
+      cachix
       llvmPackages.clang-unwrapped
       docker
       ffmpeg
