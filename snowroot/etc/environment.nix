@@ -38,6 +38,8 @@ in with settings; {
       fsharp
       gcc
       git
+      mongodb
+      mysql57
       nodejs
       openjdk10
       python
