@@ -48,7 +48,6 @@
       mpv
       pipes
       rclone
-      xclip
       xorg.xprop
       xorg.xsetroot
       xwinwrap

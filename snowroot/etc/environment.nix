@@ -28,6 +28,7 @@ in with settings; {
       tree
       unrar
       unzip
+      xclip
       youtube-dl
       zip
       vim
