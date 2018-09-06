@@ -24,10 +24,11 @@ in {
     };
 
     printing = {
-      drivers = [
-        pkgs.hplip
-      ];
       enable = true;
+
+      drivers = with pkgs; [
+        hplip
+      ];
     };
 
     redshift = {
