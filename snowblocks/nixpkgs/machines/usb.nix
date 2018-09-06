@@ -6,6 +6,7 @@
       eclipses.eclipse-platform
       (lib.lowPrio jdk)
       jetbrains.idea-community
+      rstudioWrapper
     ];
   };
 

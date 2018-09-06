@@ -46,6 +46,7 @@ in with settings; {
       python
       python3
       rustup
+      rWrapper
       sass
       ## Build Tools
       cmake
