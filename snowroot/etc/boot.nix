@@ -31,9 +31,6 @@ in with settings; {
       # https://wiki.archlinux.org/index.php/Improving_performance#Watchdogs
       "nowatchdog"
 
-      # https://ivanvojtko.blogspot.com/2016/04/how-to-get-longer-battery-life-on-linux.html
-      "i915.enable_fbc=1"
-
       # https://wiki.archlinux.org/index.php/Power_management
       # Debugging feature to catch hardware hangs that cause a kernel panic
       # Disabling may cause decrease in power usage

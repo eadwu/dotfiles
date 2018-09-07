@@ -8,6 +8,7 @@ in with settings; {
     [
       /etc/nixos/other/intel
       /etc/nixos/other/nvidia
+      /etc/nixos/machines/laptop.nix
     ];
 
   boot = {

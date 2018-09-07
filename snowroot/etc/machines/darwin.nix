@@ -4,6 +4,7 @@
   imports =
     [
       /etc/nixos/other/intel
+      /etc/nixos/machines/laptop.nix
     ];
 
   services = {
