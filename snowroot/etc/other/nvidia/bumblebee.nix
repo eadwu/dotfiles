@@ -7,26 +7,15 @@ let
   naps = pkgs.writeShellScriptBin "naps" ''
     ## NAPS (Not A Prime Select)
 
-    nvidiaModules=$(lsmod | grep "nvidia ")
-
     case "$1" in
       "init")
         echo "auto" > /sys/bus/pci/devices/0000:01:00.0/power/control
-        ;;
-      "intel")
-        echo "unloading nvidia drivers"
-        modprobe -r nvidia_uvm nvidia_drm nvidia_modeset nvidia
-        ;;
-      "nvidia")
-        echo "loading nvidia drivers"
-        modprobe -a nvidia nvidia_modeset nvidia_drm nvidia_uvm
         ;;
       "status")
         cat "/sys/bus/pci/devices/0000:"$(lspci -vnn | grep 3D | awk '{print $1}')"/power/runtime_status"
         ;;
       *)
-        [ "$(printf "%s" "$nvidiaModules" | wc -w)" -gt 0 ] && $0 intel || $0 status
-        ;;
+        $0 status
     esac
   '';
 in with settings; {
@@ -62,6 +51,8 @@ in with settings; {
           };
 
           patchPhase = ''
+            patch -p1 -i ${./983.patch}
+            patch -p1 -i ${./module-unload.patch}
             patch -p1 -i ${./bumblebee.patch}
           '';
 
