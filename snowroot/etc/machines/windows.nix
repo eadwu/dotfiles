@@ -45,30 +45,6 @@ in with settings; {
     consoleFont = "latarcyrheb-sun32";
   };
 
-  nixpkgs = {
-    overlays = [
-      (self: super: with self.pkgs; {
-        linuxPackages = super.linuxPackages.extend (current: last: {
-          nvidia_x11 = last.nvidia_x11_beta.overrideAttrs(oldAttrs: {
-            kernel = config.boot.kernelPackages.kernel;
-          });
-        });
-
-        linuxPackages_latest = super.linuxPackages_latest.extend (current: last: {
-          nvidia_x11 = last.nvidia_x11_beta.overrideAttrs(oldAttrs: {
-            kernel = config.boot.kernelPackages.kernel;
-          });
-        });
-
-        linuxPackages_testing = super.linuxPackages_testing.extend (current: last: {
-          nvidia_x11 = last.nvidia_x11_beta.overrideAttrs(oldAttrs: {
-            kernel = config.boot.kernelPackages.kernel;
-          });
-        });
-      })
-    ];
-  };
-
   services = {
     fwupd = {
       enable = true;
