@@ -10,7 +10,7 @@ let
     withGTK3 = true;
   }).overrideAttrs (oldAttrs: {
     src = fetchgit {
-      url = https://git.savannah.gnu.org/git/emacs.git;
+      url = "https://git.savannah.gnu.org/git/emacs.git";
       rev = "21637d5e5b29d5ec8fb966c0ddfbfba3eb33da38";
       sha256 = "1cgilqgw78bq0gxqfivnpvfwlg1b5h38fcsnw78hd4266gnxn3nl";
     };

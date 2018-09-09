@@ -2,7 +2,7 @@
 
 let
   backgrounds = pkgs.fetchgit {
-    url = https://gitlab.com/eadwu/backgrounds;
+    url = "https://gitlab.com/eadwu/backgrounds";
     rev = "eb2ee548f9deeaab5b3865dd2e21f945604e7120";
     sha256 = "1s2kc6zlqzf8frh8ga4xzaixp4lnv9q358qim1wz15dql7rzw3ri";
   };

@@ -45,7 +45,7 @@ in with settings; {
           nvidia_x11 = nvidia_x11_beta;
         }).overrideAttrs (oldAttrs: {
           src = fetchgit {
-            url = https://github.com/Bumblebee-Project/Bumblebee;
+            url = "https://github.com/Bumblebee-Project/Bumblebee";
             rev = "9695e227756de45249ba98fce7103e446bd10d88";
             sha256 = "0cdcpx6mg51hw4in3vcwx8hjny4s8y20irpqzlrk53x83s52pz9y";
           };

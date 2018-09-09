@@ -8,7 +8,7 @@ let
     version = "2018-08-30";
 
     src = pkgs.fetchgit {
-      url = https://github.com/addy-dclxvi/gtk-theme-collections;
+      url = "https://github.com/addy-dclxvi/gtk-theme-collections";
       rev = "3e42534725b23feb63f5940aecfc6eccaf00d184";
       sha256 = "1illjld7mg7g6ws1pm9j3hzs216v1zmhh6b3yrmybkdlyzlq7czr";
     };
