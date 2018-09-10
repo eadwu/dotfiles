@@ -134,4 +134,8 @@ in with settings; {
       };
     };
   };
+
+  time = {
+    hardwareClockInLocalTime = true;
+  };
 }
