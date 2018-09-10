@@ -3,8 +3,8 @@
 let
   backgrounds = pkgs.fetchgit {
     url = "https://gitlab.com/eadwu/backgrounds";
-    rev = "eb2ee548f9deeaab5b3865dd2e21f945604e7120";
-    sha256 = "1s2kc6zlqzf8frh8ga4xzaixp4lnv9q358qim1wz15dql7rzw3ri";
+    rev = "c6ba272d72b161b2f7fca1a85398de724b7725b2";
+    sha256 = "1s8j7fpyxps5gprqxk6zf7cjhv2gkaxpndgdbkcxp8r7i908y362";
   };
 in {
   imports =
@@ -85,7 +85,7 @@ in {
       displayManager = {
         lightdm = {
           enable = true;
-          background = "${backgrounds}/Prinz-Eugen_Admiral.jpg";
+          background = "${backgrounds}/963246ae-c25d-4a69-bfa8-29b51f08eebb.png";
 
           greeters = {
             enso = {
