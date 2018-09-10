@@ -22,7 +22,8 @@
 (setq-default buffer-file-coding-system 'utf-8-unix
               display-line-numbers 'relative
               indent-tabs-mode nil
-              initial-major-mode 'fundamental-mode)
+              initial-major-mode 'fundamental-mode
+              line-spacing 10)
 
 (defvaralias 'c-basic-offset 'tab-width)
 (defvaralias 'cperl-indent-level 'tab-width)
