@@ -38,6 +38,9 @@ in {
 
         [init]
           templatedir = ~/git
+
+        [protocol]
+          version = 2
       '';
     };
   };
