@@ -42,6 +42,7 @@
       winusb
       xfce.mousepad
       ## Console
+      bfg-repo-cleaner
       file
       ldns
       lm_sensors
@@ -49,8 +50,9 @@
       pipes
       rclone
       xorg.xprop
-      xorg.xsetroot
       xwinwrap
+      yarn
+      youtube-dl
 
       # Benchmarks
       mprime

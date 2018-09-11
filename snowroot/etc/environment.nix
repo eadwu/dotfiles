@@ -9,29 +9,31 @@ in with settings; {
     ];
 
     systemPackages = with pkgs; [
+      # Applications
       emacs
-      gptfdisk
-      openssl
-      wget
+      rofi
+      st
       ### Emacs
       wakatime
-
-      st
-      feh
+      # Console
+      cachix
       home-manager
+
+      feh
+      gptfdisk
       htop
       libarchive
+      openssl
       pass
       pywal
       ranger
-      rofi
       tree
       unrar
       unzip
-      xclip
-      youtube-dl
-      zip
       vim
+      wget
+      xclip
+      zip
       ## Version Control
       gitlab
       gitAndTools.hub
@@ -39,6 +41,7 @@ in with settings; {
       fsharp
       gcc
       git
+      llvmPackages.clang-unwrapped
       mongodb
       mysql57
       nodejs
@@ -48,12 +51,12 @@ in with settings; {
       rustup
       rWrapper
       sass
+      texlive.combined.scheme-full
+      ### Haskell
+      stack
       ## Build Tools
       cmake
       ## Misc
-      bfg-repo-cleaner
-      cachix
-      llvmPackages.clang-unwrapped
       docker
       ffmpeg
       gnupg
@@ -62,10 +65,8 @@ in with settings; {
       mono
       oblogout
       scrot
-      stack
-      texlive.combined.scheme-full
       watchman
-      yarn
+      xorg.xsetroot
 
       # Debug / Utils
       lsof
