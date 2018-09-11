@@ -1,11 +1,8 @@
 { config, pkgs, lib, ... }:
 
 let
-  inherit (pkgs) linux_latest linuxPackages_latest linuxPackages_testing;
-
   settings = import /etc/nixos/settings.nix;
-  linux_testing = linuxPackages_testing.kernel;
-in with settings; {
+in with pkgs; with settings; {
   boot = {
     cleanTmpDir = true;
     kernelPackages = if linux_latest.meta.branch == linux_testing.meta.branch
