@@ -13,8 +13,8 @@ in {
   dwm = super.dwm.overrideAttrs (oldAttrs: {
     src = fetchgit {
       url = "https://gitlab.com/eadwu/dwm";
-      rev = "e4c4a29f8f7139308b114dd3485cd5ae94238f52";
-      sha256 = "0vjb1jrbplz9lrfhx7nwmpm2irj3qp688k8kjpardiakfbvmzx1a";
+      rev = "fe87b6e6dd4eb59c8553c499191519b53134e427";
+      sha256 = "04njisajh86593m2mfgy6ygsmvgr500kdwrmcaxlpd2mb08k2gh0";
     };
   });
   st = super.st.overrideAttrs (oldAttrs: {
