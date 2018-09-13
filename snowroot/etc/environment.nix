@@ -10,7 +10,6 @@ in with settings; {
 
     systemPackages = with pkgs; [
       # Applications
-      emacs
       rofi
       st
       ### Emacs

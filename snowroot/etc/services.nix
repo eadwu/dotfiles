@@ -19,6 +19,10 @@ in {
       nssmdns = true;
     };
 
+    emacs = {
+      enable = true;
+    };
+
     logind = {
       extraConfig = import /etc/nixos/services/logind/logind.conf.nix { };
     };
