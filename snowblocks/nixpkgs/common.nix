@@ -38,6 +38,7 @@
       gnome3.gnome-disk-utility
       gnome3.pomodoro
       google-musicmanager
+      jetbrains.idea-community
       vivaldi
       winusb
       xfce.mousepad

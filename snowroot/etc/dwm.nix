@@ -5,6 +5,10 @@
     systemPackages = with pkgs; [
       polybar
     ];
+
+    variables = {
+      _JAVA_AWT_WM_NONREPARENTING = "1";
+    };
   };
 
   services = {
