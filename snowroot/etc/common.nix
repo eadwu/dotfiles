@@ -98,6 +98,13 @@ in with settings; {
       "texlive.cachix.org-1:OWd0kb4Wkw8F7T0+sSAPzyOo/pH+NEqIhAWty25oCLk="
       "wu.cachix.org-1:cHow32fFlXna8uBQA6yoo+505O5eImitDtdXu2JYd0Y="
     ];
+
+    nixPath = [
+      "nixos-config=/etc/nixos/configuration.nix"
+      "nixpkgs=${HOME}/Downloads/nixpkgs"
+      "nixpkgs=https://nixos.org/channels/nixos-18.09-small/nixexprs.tar.xz"
+      "/etc/nixos"
+    ];
   };
 
   nixpkgs = {
