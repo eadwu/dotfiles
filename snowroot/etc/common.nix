@@ -84,6 +84,7 @@ in with settings; {
       # Cachix
       "https://emacs.cachix.org"
       "https://linux.cachix.org"
+      "https://qt5.cachix.org"
       "https://texlive.cachix.org"
       "https://wu.cachix.org"
     ];
@@ -93,6 +94,7 @@ in with settings; {
 
       "emacs.cachix.org-1:BgvmrJ8yBNHewnYF2wsp+yrPz+Rx7zrLSsevcVrL3Lg="
       "linux.cachix.org-1:FgNkZq0e26bKnTHgvxT0Tz4bJxIuvbXY62bSyJbPxbc="
+      "qt5.cachix.org-1:Ka/DtafK6EmdVWthzRpYo+N0j0X6j7gUOIfenczmV7s="
       "texlive.cachix.org-1:OWd0kb4Wkw8F7T0+sSAPzyOo/pH+NEqIhAWty25oCLk="
       "wu.cachix.org-1:cHow32fFlXna8uBQA6yoo+505O5eImitDtdXu2JYd0Y="
     ];
