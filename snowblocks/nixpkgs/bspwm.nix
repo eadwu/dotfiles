@@ -9,18 +9,9 @@ let
 in {
   home = {
     file = {
-      ".bspwm/bspwmrc" = {
-        executable = true;
-        source = bspwm/bspwmrc;
-      };
-
       ".bspwm/external_rules" = {
         executable = true;
         source = bspwm/external_rules;
-      };
-
-      ".bspwm/sxhkdrc" = {
-        source = bspwm/sxhkdrc;
       };
 
       ".bspwm/weather_icons" = {
