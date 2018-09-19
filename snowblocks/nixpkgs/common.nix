@@ -26,7 +26,6 @@
       xfceUnstable.xfce4-screenshooter
       xfceUnstable.xfce4-taskmanager
       ## Theme
-      gnome3.adwaita-icon-theme
       gtk-engine-murrine
 
       # Other
@@ -39,7 +38,8 @@
       gnome3.gnome-disk-utility
       gnome3.pomodoro
       google-musicmanager
-      jetbrains.idea-community
+      jetbrains.idea-ultimate
+      virtualbox
       vivaldi
       winusb
       xfce.mousepad
