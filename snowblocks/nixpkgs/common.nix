@@ -39,7 +39,7 @@
       gnome3.pomodoro
       google-musicmanager
       jetbrains.idea-ultimate
-      virtualbox
+      rstudioWrapper
       vivaldi
       winusb
       xfce.mousepad
