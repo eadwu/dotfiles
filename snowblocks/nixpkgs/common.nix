@@ -4,6 +4,7 @@
   imports =
     [
       ./atom.nix
+      ./dunst.nix
       ./emacs.nix
       ./glava.nix
       ./git.nix
@@ -22,7 +23,6 @@
       # Environment
       nitrogen
       xfce.thunar
-      xfce.xfce4-notifyd
       xfce.xfce4-screenshooter
       xfce.xfce4-taskmanager
       ## Theme
