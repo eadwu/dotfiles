@@ -1,0 +1,30 @@
+diff --git a/snowblocks/nixpkgs/git.nix b/snowblocks/nixpkgs/git.nix
+index 31825f1..e800f7c 100644
+--- a/snowblocks/nixpkgs/git.nix
++++ b/snowblocks/nixpkgs/git.nix
+@@ -29,10 +29,10 @@ in {
+       enable = true;
+       package = pkgs.gitAndTools.gitFull;
+       userName = "Edmund Wu";
+-      userEmail = "fangkazuto@gmail.com";
++      userEmail = "ewu1985@bths.edu";
+ 
+       signing = {
+-        key = "43C9E53FFCF51DEC";
++        key = "EFEE1B450EAB3B21";
+         signByDefault = true;
+       };
+ 
+diff --git a/snowblocks/nixpkgs/home.nix b/snowblocks/nixpkgs/home.nix
+index bd7aa05..49fb766 100644
+--- a/snowblocks/nixpkgs/home.nix
++++ b/snowblocks/nixpkgs/home.nix
+@@ -5,7 +5,7 @@
+     [
+       ./common.nix
+       # Machines
+-      # ./machines/usb.nix
++      ./machines/usb.nix
+       # Window Manager
+       # ./bspwm.nix
+       ./dwm.nix

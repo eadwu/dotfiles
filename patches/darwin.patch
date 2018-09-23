@@ -1,0 +1,13 @@
+diff --git a/snowblocks/nixpkgs/git.nix b/snowblocks/nixpkgs/git.nix
+index 31825f1..6ef1bda 100644
+--- a/snowblocks/nixpkgs/git.nix
++++ b/snowblocks/nixpkgs/git.nix
+@@ -32,7 +32,7 @@ in {
+       userEmail = "fangkazuto@gmail.com";
+ 
+       signing = {
+-        key = "43C9E53FFCF51DEC";
++        key = "16E9A04ECE9E739B";
+         signByDefault = true;
+       };
+ 
