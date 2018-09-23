@@ -72,6 +72,6 @@
   nixpkgs = {
     config = import ./config.nix;
 
-    overlays = import <overlays>;
+    overlays = [ (import <nixpkgs-overlays>) ];
   };
 }
