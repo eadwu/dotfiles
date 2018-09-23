@@ -30,8 +30,8 @@ in {
     };
 
     iconTheme = {
-      name = "Papirus-Dark";
-      package = pkgs.papirus-icon-theme;
+      name = "Paper";
+      package = pkgs.paper-icon-theme;
     };
 
     theme = {

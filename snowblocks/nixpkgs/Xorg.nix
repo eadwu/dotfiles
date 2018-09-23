@@ -31,8 +31,8 @@
     enable = true;
 
     pointerCursor = {
-      name = "capitaine-cursors";
-      package = pkgs.capitaine-cursors;
+      name = "Paper";
+      package = pkgs.paper-icon-theme;
       size = 64;
     };
 
