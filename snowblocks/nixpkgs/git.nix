@@ -1,6 +1,12 @@
 { pkgs, ... }:
 
 let
+  gitignore = pkgs.fetchurl rec {
+    name = "gitignore";
+    url = "https://www.gitignore.io/api/r,git,java,elisp,emacs,latex,linux,macos,intellij,database,visualstudiocode";
+    sha256 = "0fypkg761aysi9ri5lp7dy6i4v21hkrksd5i8a1hdm5dgan13w23";
+  };
+
   queryWatchman = pkgs.fetchurl {
     url = "https://raw.githubusercontent.com/git/git/1fff303fc2b31d5005f38f55f38c4e8521da5a93/t/t7519/fsmonitor-watchman";
     sha256 = "0l1wbl3ba3nmlj9gpxphlpxg6pf9fimfamx10dw3m7v1idqgzh4p";
@@ -34,6 +40,7 @@ in {
         [core]
           autocrlf = input
           editor = vim
+          excludesfile = ${gitignore}
           fsmonitor = .git/hooks/query-watchman
 
         [init]
