@@ -8,8 +8,8 @@ let
   };
 
   queryWatchman = pkgs.fetchurl {
-    url = "https://raw.githubusercontent.com/git/git/1fff303fc2b31d5005f38f55f38c4e8521da5a93/t/t7519/fsmonitor-watchman";
-    sha256 = "0l1wbl3ba3nmlj9gpxphlpxg6pf9fimfamx10dw3m7v1idqgzh4p";
+    url = "https://raw.githubusercontent.com/git/git/1fff303fc2b31d5005f38f55f38c4e8521da5a93/templates/hooks--fsmonitor-watchman.sample";
+    sha256 = "0cqvm6s9aff8rd1hnfgi24m9lnm5a6wp2qd7zamr3xy8yzqsr73z";
     postFetch = ''
       ${pkgs.gnused}/bin/sed -i 's@/usr@${pkgs.perl}@' $downloadedFile
     '';
