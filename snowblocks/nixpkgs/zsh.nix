@@ -2,6 +2,10 @@
 
 {
   programs = {
+    command-not-found = {
+      enable = true;
+    };
+
     zsh = {
       enable = false;
 
