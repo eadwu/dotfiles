@@ -9,9 +9,9 @@ let
 
   queryWatchman = pkgs.fetchurl {
     url = "https://raw.githubusercontent.com/git/git/1fff303fc2b31d5005f38f55f38c4e8521da5a93/templates/hooks--fsmonitor-watchman.sample";
-    sha256 = "0cqvm6s9aff8rd1hnfgi24m9lnm5a6wp2qd7zamr3xy8yzqsr73z";
+    sha256 = "0jmpcqw8k3gfis4bwrn9hrd5kkpq0mzx9dmayqdfnj2krmg7apxw";
     postFetch = ''
-      ${pkgs.gnused}/bin/sed -i 's@/usr@${pkgs.perl}@' $downloadedFile
+      ${pkgs.gnused}/bin/sed -i 's@/usr@${pkgs.perl}@' $out
     '';
   };
 in {
