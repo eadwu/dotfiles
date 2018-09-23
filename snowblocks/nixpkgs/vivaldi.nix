@@ -1,15 +1,15 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 
 with import <nixpkgs> { };
 
 let
   vivaldi-ffmpeg-codecs = stdenv.mkDerivation rec {
     name = "vivaldi-ffmpeg-codecs-${version}";
-    version = "68.0.3440.106";
+    version = "69.0.3497.81";
 
-    src = fetchurl {
+    src = pkgs.fetchurl {
       url = "http://security.ubuntu.com/ubuntu/pool/universe/c/chromium-browser/chromium-codecs-ffmpeg-extra_${version}-0ubuntu0.16.04.1_amd64.deb";
-      sha256 = "18pi0aacd48vnwxfib7asi1r99ihbzjh3c651jn0wvq836zxcavi";
+      sha256 = "0ajmdapsxdkhs720jghk565q2k8x774w6z84nk49kq2mw3y1z92p";
     };
 
     unpackPhase = ''
