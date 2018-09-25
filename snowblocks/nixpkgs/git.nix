@@ -37,14 +37,23 @@ in {
       };
 
       extraConfig = ''
+        [alias]
+          plfs = !git -c filter.lfs.smudge= -c filter.lfs.required=false pull && git lfs pull
+
         [core]
           autocrlf = input
           editor = vim
           excludesfile = ${gitignore}
           fsmonitor = .git/hooks/query-watchman
 
+        [credential]
+          helper = cache --timeout=3600
+
         [init]
           templatedir = ~/git
+
+        [lfs]
+          pruneverifyremotealways = true
 
         [protocol]
           version = 2
