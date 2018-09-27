@@ -22,9 +22,9 @@
     packages = with pkgs; [
       # Environment
       nitrogen
-      xfce.thunar
-      xfce.xfce4-screenshooter
-      xfce.xfce4-taskmanager
+      xfceUnstable.thunar
+      xfceUnstable.xfce4-screenshooter
+      xfceUnstable.xfce4-taskmanager
       ## Theme
       gtk-engine-murrine
 
