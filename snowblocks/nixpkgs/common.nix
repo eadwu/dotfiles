@@ -4,6 +4,7 @@
   imports =
     [
       ./atom.nix
+      ./code.nix
       ./dunst.nix
       ./emacs.nix
       ./glava.nix
@@ -41,6 +42,7 @@
       jetbrains.idea-ultimate
       rstudioWrapper
       vivaldi
+      vscode
       winusb
       xfce.mousepad
       ## Console
