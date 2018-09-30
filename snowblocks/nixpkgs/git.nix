@@ -21,6 +21,9 @@ in {
         executable = true;
         source = queryWatchman;
       };
+      "git/info/exclude" = {
+        source = gitignore;
+      };
     };
   };
 
@@ -43,7 +46,6 @@ in {
         [core]
           autocrlf = input
           editor = vim
-          excludesfile = ${gitignore}
           fsmonitor = .git/hooks/query-watchman
 
         [credential]
