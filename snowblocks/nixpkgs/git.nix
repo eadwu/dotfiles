@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
 let
-  gitignore = pkgs.fetchurl rec {
+  gitignore = pkgs.fetchurl {
     name = "gitignore";
     url = "https://www.gitignore.io/api/r,git,java,elisp,emacs,latex,linux,macos,intellij,database,visualstudiocode";
     sha256 = "0fypkg761aysi9ri5lp7dy6i4v21hkrksd5i8a1hdm5dgan13w23";
@@ -9,7 +9,7 @@ let
 
   queryWatchman = pkgs.fetchurl {
     url = "https://raw.githubusercontent.com/git/git/1fff303fc2b31d5005f38f55f38c4e8521da5a93/templates/hooks--fsmonitor-watchman.sample";
-    sha256 = "0jmpcqw8k3gfis4bwrn9hrd5kkpq0mzx9dmayqdfnj2krmg7apxw";
+    sha256 = "18q1s7zdyvn378l2l1s7cvd9mnxbhq10mniwxxnrn4v1r6lxsqz3";
     postFetch = ''
       ${pkgs.gnused}/bin/sed -i 's@/usr@${pkgs.perl}@' $out
     '';
