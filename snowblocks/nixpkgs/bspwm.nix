@@ -325,17 +325,17 @@ in {
 
         "module/temperature0" = {
           "inherit" = "section/temperature";
-          hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon0/temp1_input;
+          hwmon-path = "/sys/devices/platform/coretemp.0/hwmon/hwmon0/temp1_input";
         };
 
         "module/temperature1" = {
           "inherit" = "section/temperature";
-          hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon1/temp1_input;
+          hwmon-path = "/sys/devices/platform/coretemp.0/hwmon/hwmon1/temp1_input";
         };
 
         "module/temperature2" = {
           "inherit" = "section/temperature";
-          hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon2/temp1_input;
+          hwmon-path = "/sys/devices/platform/coretemp.0/hwmon/hwmon2/temp1_input";
         };
 
         "module/cpu" = {
