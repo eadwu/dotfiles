@@ -12,6 +12,7 @@
       ./gtk.nix
       ./mpv.nix
       ./ncmpcpp.nix
+      ./oblogout.nix
       ./rofi.nix
       ./vim.nix
       ./vivaldi.nix
