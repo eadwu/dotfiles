@@ -7,7 +7,8 @@
     };
 
     zsh = {
-      enable = false;
+      enable = true;
+      enableCompletion = false;
 
       initExtra = ''
         docker-build () {
