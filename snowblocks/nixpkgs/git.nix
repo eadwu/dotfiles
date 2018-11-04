@@ -3,8 +3,8 @@
 let
   gitignore = pkgs.fetchurl {
     name = "gitignore";
-    url = "https://www.gitignore.io/api/r,git,java,elisp,emacs,latex,linux,macos,intellij,database,visualstudiocode";
-    sha256 = "0fypkg761aysi9ri5lp7dy6i4v21hkrksd5i8a1hdm5dgan13w23";
+    url = "https://www.gitignore.io/api/c,r,git,c++,java,macos,linux,latex,elisp,emacs,cmake,intellij,database,visualstudiocode";
+    sha256 = "1l61m21dqy99g9136r98ayjml9z6bh8w4a2ylgy16zavphjn338q";
   };
 
   queryWatchman = pkgs.fetchurl {
