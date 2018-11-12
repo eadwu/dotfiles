@@ -16,18 +16,6 @@ let
     '';
   };
 in {
-  home = {
-    file = {
-      "git/hooks/query-watchman" = {
-        executable = true;
-        source = queryWatchman;
-      };
-      "git/info/exclude" = {
-        source = gitignore;
-      };
-    };
-  };
-
   programs = {
     git = {
       enable = true;
@@ -47,6 +35,7 @@ in {
         [core]
           autocrlf = input
           editor = vim
+          excludesfile = ${gitignore}
           fsmonitor = ${queryWatchman}
 
         [credential]
