@@ -9,7 +9,8 @@ let
 
   queryWatchman = pkgs.fetchurl {
     url = "https://raw.githubusercontent.com/git/git/1fff303fc2b31d5005f38f55f38c4e8521da5a93/templates/hooks--fsmonitor-watchman.sample";
-    sha256 = "0bd7jgq118wsq9k2c472lgrihbyh25bg09m950kgnvlyza5vp0k8";
+    sha256 = "1afzvaa9m52v8jdpaz9rm2zd09wf5dnyff0nvyp3dandnz5zzwyl";
+    executable = true;
     postFetch = ''
       ${pkgs.gnused}/bin/sed -i 's@/usr@${pkgs.perl}@' $out
     '';
@@ -46,7 +47,7 @@ in {
         [core]
           autocrlf = input
           editor = vim
-          fsmonitor = .git/hooks/query-watchman
+          fsmonitor = ${queryWatchman}
 
         [credential]
           helper = cache --timeout=3600
