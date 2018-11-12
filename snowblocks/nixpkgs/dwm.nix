@@ -8,7 +8,7 @@
       config = {
         "bar/data" = {
           enable-ipc = true;
-          modules-right = "temperature0 temperature1 temperature2 cpu memory seperator filesystem network0 network1 network2 battery backlight volume date";
+          modules-right = "temperature0 temperature1 temperature2 cpu memory seperator filesystem network0 network1 network2 battery backlight volume date time";
         };
 
         "module/seperator" = {
@@ -22,11 +22,8 @@
           thermal-zone = 0;
           warn-temperature = 80;
 
-          label-padding = 1;
-          label-warn-padding = 1;
-
-          format = "<ramp><label>";
-          format-warn = "<ramp><label-warn>";
+          format = "[ <ramp> <label> ]";
+          format-warn = "[ <ramp> <label-warn> ]";
 
           ramp-0 = "";
           ramp-1 = "";
@@ -56,8 +53,7 @@
 
           label = "%percentage%%";
 
-          format = " [<label>] <ramp-coreload>";
-          format-padding = 1;
+          format = "[  <label> <ramp-coreload> ]";
 
           ramp-coreload-0 = "▁";
           ramp-coreload-1 = "▂";
@@ -75,8 +71,7 @@
 
           label = "%percentage_used%%";
 
-          format = " [<label>] <bar-used>";
-          format-padding = 1;
+          format = "[  <label> <bar-used> ]";
 
           bar-used-width = 30;
           bar-used-indicator = "|";
@@ -90,10 +85,8 @@
           interval = 1;
           fixed-values = true;
 
-          label-mounted = " [%mountpoint%: %used%, %total%]";
-          label-mounted-padding = 1;
-          label-unmounted = " [N/A]";
-          label-unmounted-padding = 1;
+          label-mounted = "[  %free% ]";
+          label-unmounted = "[  N/A ]";
 
           format-mounted = "<label-mounted>";
           format-unmounted = "<label-unmounted>";
@@ -103,10 +96,8 @@
           type = "internal/network";
           interval = 1;
 
-          label-connected = " [%essid% - %local_ip%]";
-          label-connected-padding = 1;
-          label-disconnected = " [N/A]";
-          label-disconnected-padding = 1;
+          label-connected = "[  %essid% - %local_ip% ]";
+          label-disconnected = "[  N/A ]";
 
           format-connected = "<label-connected>";
           format-disconnected = "<label-disconnected>";
@@ -137,16 +128,13 @@
           time-format = "%H:%M";
           poll-interval = 1;
 
-          label-full = " [%percentage%%]";
-          label-full-padding = 1;
-          label-charging = "[%percentage%% - %time%]";
-          label-discharging = "[%percentage%% - %consumption%W, %time%]";
+          label-full = " %percentage%%";
+          label-charging = "%percentage%% - %time%";
+          label-discharging = "%percentage%% - %consumption%W, %time%";
 
-          format-full = "<label-full>";
-          format-charging = "<animation-charging> <label-charging>";
-          format-charging-padding = 1;
-          format-discharging = "<ramp-capacity> <label-discharging>";
-          format-discharging-padding = 1;
+          format-full = "[ <label-full> ]";
+          format-charging = "[ <animation-charging> <label-charging> ]";
+          format-discharging = "[ <ramp-capacity> <label-discharging> ]";
 
           ramp-capacity-0 = "";
           ramp-capacity-1 = "";
@@ -168,8 +156,7 @@
 
           label = "%percentage%%";
 
-          format = "<ramp> [<label>] <bar>";
-          format-padding = 1;
+          format = "[ <ramp> <label> <bar> ]";
 
           bar-empty = "━";
           bar-fill = "━";
@@ -186,13 +173,11 @@
         "module/volume" = {
           type = "internal/pulseaudio";
 
-          label-muted = " [muted]";
+          label-muted = " muted";
           label-volume = "%percentage%%";
 
-          format-muted = "<label-muted>";
-          format-muted-padding = 1;
-          format-volume = "<ramp-volume> [<label-volume>] <bar-volume>";
-          format-volume-padding = 1;
+          format-muted = " [ <label-muted> ]";
+          format-volume = " [ <ramp-volume> <label-volume> <bar-volume> ]";
 
           bar-volume-empty = "━";
           bar-volume-fill = "━";
@@ -208,10 +193,16 @@
           type = "internal/date";
           interval = 1;
           date = "%a %b %d";
+
+          label = "[  %date% ]";
+        };
+
+        "module/time" = {
+          type = "internal/date";
+          interval = 1;
           time = "%I:%M %p";
 
-          label = " %date%  %time%";
-          label-padding = 1;
+          label = "[  %time% ]";
         };
       };
 
@@ -220,8 +211,7 @@
           while IFS= read -r line;
           do
             ${pkgs.xorg.xsetroot}/bin/xsetroot -name "$(printf "%s" "$line" | \
-              ${pkgs.coreutils}/bin/cut -c 5- | \
-              ${pkgs.perl}/bin/perl -pe 's/\s+%\{.+?\}\s+/ /g')";
+              ${pkgs.perl}/bin/perl -pe 's/%\{.+?\}//g')";
           done &
       '';
     };
