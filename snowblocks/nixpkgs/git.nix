@@ -41,9 +41,6 @@ in {
         [credential]
           helper = cache --timeout=3600
 
-        [init]
-          templatedir = ~/git
-
         [lfs]
           pruneverifyremotealways = true
 
