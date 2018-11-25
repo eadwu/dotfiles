@@ -6,6 +6,7 @@
       ./atom.nix
       ./code.nix
       ./dunst.nix
+      ./edex-ui.nix
       ./emacs.nix
       ./glava.nix
       ./git.nix
