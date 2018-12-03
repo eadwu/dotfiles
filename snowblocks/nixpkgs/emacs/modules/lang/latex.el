@@ -3,7 +3,7 @@
   :custom
   (TeX-PDF-mode t)
   (TeX-auto-save t)
-  (TeX-byte-compile t)
+  ;; (TeX-byte-compile t)
   (TeX-clean-confirm nil)
   (TeX-parse-self t))
 
