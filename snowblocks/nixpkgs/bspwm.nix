@@ -403,7 +403,7 @@ in {
 
         "module/filesystem" = {
           type = "internal/fs";
-          mount-0 = /.;
+          mount-0 = "/";
           interval = 10;
           fixed-values = true;
 

@@ -81,7 +81,7 @@
 
         "module/filesystem" = {
           type = "internal/fs";
-          mount-0 = /.;
+          mount-0 = "/";
           interval = 1;
           fixed-values = true;
 
