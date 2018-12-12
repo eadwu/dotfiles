@@ -4,7 +4,7 @@
   programs = {
     rofi = {
       enable = true;
-      font = "Ubuntu Mono 10";
+      font = "Optician Sans 10";
       lines = 30;
       location = "left";
       padding = 28;
