@@ -8,7 +8,7 @@
 
   programs = {
     edex-ui = {
-      enable = true;
+      enable = false;
       shell = "${pkgs.zsh}/bin/zsh";
       cwd = config.home.homeDirectory;
       theme = "chalkboard";
