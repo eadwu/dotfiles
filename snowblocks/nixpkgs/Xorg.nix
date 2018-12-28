@@ -1,6 +1,10 @@
 { pkgs, ... }:
 
-{
+let
+  system-config = (import <nixpkgs/nixos/lib/eval-config.nix> {
+    modules = [ <nixos-config> ];
+  }).config.nixos.custom.settings;
+in {
   xresources = {
     properties = {
       "*foreground" = "#d9c5c8";
@@ -33,7 +37,7 @@
     pointerCursor = {
       name = "Paper";
       package = pkgs.paper-icon-theme;
-      size = 64;
+      size = 32 * system-config.xserver.dpiScale;
     };
 
     profileExtra = ''
