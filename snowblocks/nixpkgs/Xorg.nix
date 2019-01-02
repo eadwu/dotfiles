@@ -3,7 +3,7 @@
 let
   system-config = (import <nixpkgs/nixos/lib/eval-config.nix> {
     modules = [ <nixos-config> ];
-  }).config.nixos.custom.settings;
+  }).config.nixos.settings;
 in {
   xresources = {
     properties = {
