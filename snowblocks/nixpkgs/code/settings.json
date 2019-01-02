@@ -41,10 +41,11 @@
     "notificationLink.foreground": "#616161",
     "editorWidget.border": "#616161"
   },
-  "workbench.colorTheme": "Horizon Italic",
+  "workbench.colorTheme": "Material Theme Ocean",
   "workbench.iconTheme": "eq-material-theme-icons-darker",
   "workbench.sideBar.location": "right",
   "window.menuBarVisibility": "toggle",
+  "window.titleBarStyle": "custom",
   "files.associations": {
     "bspwmrc": "shellscript",
     "sxhkdrc": "shellscript",

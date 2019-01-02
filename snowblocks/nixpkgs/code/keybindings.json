@@ -92,15 +92,11 @@
   },
   {
     "key": "alt+x",
-    "command": "workbench.action.showCommands"
+    "command": "editor.action.toggleWordWrap"
   },
   {
-    "key": "f1",
-    "command": "-workbench.action.showCommands"
-  },
-  {
-    "key": "ctrl+shift+p",
-    "command": "-workbench.action.showCommands"
+    "key": "alt+z",
+    "command": "-editor.action.toggleWordWrap"
   },
   {
     "key": "ctrl+x d",
@@ -162,7 +158,6 @@
     "key": "ctrl+x ctrl+c",
     "command": "workbench.action.quit"
   },
-
   // DISABLING
   {
     "key": "space",
