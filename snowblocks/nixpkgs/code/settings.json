@@ -3,7 +3,7 @@
     "source.organizeImports": true
   },
   "editor.cursorBlinking": "smooth",
-  "editor.fontFamily": "'IBM Plex Mono', 'Anonymous Pro'",
+  "editor.fontFamily": "'Anonymous Pro', 'IBM Plex Mono'",
   "editor.fontLigatures": true,
   "editor.fontSize": 12,
   "editor.fontWeight": "normal",
