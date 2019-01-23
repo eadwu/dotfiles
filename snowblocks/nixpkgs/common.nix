@@ -15,6 +15,7 @@
       ./ncmpcpp.nix
       ./oblogout.nix
       ./rofi.nix
+      ./ssh.nix
       ./vim.nix
       ./vivaldi.nix
       ./zsh.nix
