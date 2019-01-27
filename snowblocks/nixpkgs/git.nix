@@ -7,14 +7,13 @@ let
     sha256 = "1l61m21dqy99g9136r98ayjml9z6bh8w4a2ylgy16zavphjn338q";
   };
 
-  queryWatchman = pkgs.fetchurl {
-    url = "https://raw.githubusercontent.com/git/git/1fff303fc2b31d5005f38f55f38c4e8521da5a93/templates/hooks--fsmonitor-watchman.sample";
-    sha256 = "1afzvaa9m52v8jdpaz9rm2zd09wf5dnyff0nvyp3dandnz5zzwyl";
-    executable = true;
-    postFetch = ''
-      ${pkgs.gnused}/bin/sed -i 's@/usr@${pkgs.perl}@' $out
-    '';
-  };
+  queryWatchman = pkgs.runCommand "fsmonitor-watchman" {
+    src = "${pkgs.git}/share/git-core/templates/hooks/fsmonitor-watchman.sample";
+    buildInputs = [ pkgs.gnused ];
+  } ''
+    sed 's@/usr@${pkgs.perl}@' $src > $out
+    chmod +x $out
+  '';
 in {
   programs = {
     git = {
