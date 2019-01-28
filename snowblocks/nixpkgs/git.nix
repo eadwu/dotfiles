@@ -1,10 +1,20 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 
 let
-  gitignore = pkgs.fetchurl {
+  gitignore = pkgs.stdenv.mkDerivation {
     name = "gitignore";
-    url = "https://www.gitignore.io/api/c,r,git,c++,java,macos,linux,latex,elisp,emacs,cmake,intellij,database,visualstudiocode";
-    sha256 = "1l61m21dqy99g9136r98ayjml9z6bh8w4a2ylgy16zavphjn338q";
+
+    outputHash = "3401wmbz1xa7pn5g3ym71s17jpd2xix57bmg1lh2sv7pdpfv074z3rfw1zl7sj7ipx4mdvrsz231i2g19q42akraj1n51rr7mhnc332";
+    outputHashAlgo = "sha512";
+    outputHashMode = "flat";
+
+    buildInputs = lib.singleton pkgs.wget;
+
+    buildCommand = ''
+      wget "https://www.gitignore.io/api/c,r,git,c++,java,macos,linux,latex,elisp,emacs,cmake,intellij,database,visualstudiocode" \
+        --ca-certificate=${pkgs.cacert}/etc/ssl/certs/ca-bundle.crt \
+        -O $out
+    '';
   };
 
   queryWatchman = pkgs.runCommand "fsmonitor-watchman" {
