@@ -19,7 +19,7 @@ let
 
   queryWatchman = pkgs.runCommand "fsmonitor-watchman" {
     src = "${pkgs.git}/share/git-core/templates/hooks/fsmonitor-watchman.sample";
-    buildInputs = [ pkgs.gnused ];
+    buildInputs = lib.singleton pkgs.gnused;
   } ''
     sed 's@/usr@${pkgs.perl}@' $src > $out
     chmod +x $out
