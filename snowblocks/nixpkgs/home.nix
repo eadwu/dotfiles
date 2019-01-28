@@ -5,7 +5,7 @@
     [
       ./common.nix
       # Machines
-      # ./machines/usb.nix
+      # ./machines/virtual.nix
       # Window Manager
       # ./bspwm.nix
       ./dwm.nix
