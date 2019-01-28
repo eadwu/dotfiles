@@ -1,9 +1,7 @@
 { pkgs, ... }:
 
-with import <nixpkgs> { };
-
 let
-  gtk-theme-collections = stdenv.mkDerivation rec {
+  gtk-theme-collections = pkgs.stdenv.mkDerivation rec {
     name = "gtk-theme-collections-${version}";
     version = "2018-08-30";
 
