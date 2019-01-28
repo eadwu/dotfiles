@@ -1,11 +1,5 @@
 { ... }:
 
 {
-  xdg = {
-    configFile = {
-      "mpv/config" = {
-        source = mpv/config;
-      };
-    };
-  };
+  xdg.configFile."mpv/config".source = ./mpv/config;
 }

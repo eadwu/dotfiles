@@ -86,27 +86,19 @@ in {
   };
 
   config = mkIf cfg.enable {
-    home = {
-      packages = with pkgs; [
-        edex-ui
-      ];
-    };
+    home.packages = singleton pkgs.edex-ui;
 
-    xdg = {
-      configFile = {
-        "eDEX-UI/settings.json".text = ''
-          {
-            "shell": "${cfg.shell}",
-            "cwd": "${cfg.cwd}",
-            "keyboard": "${cfg.keyboard}",
-            "theme": "${cfg.theme}",
-            "port": "${toString cfg.port}",
-            ${optionalString (cfg.monitor != null) ''"monitor": "${toString cfg.monitor}",''}
-            "allowWindowed": "${toString cfg.allowWindowed}",
-            "experimentalFeatures": "${toString cfg.experimentalFeatures}"
-          }
-        '';
-      };
-    };
+    xdg.configFile."eDEX-UI/settings.json".text = ''
+      {
+        "shell": "${cfg.shell}",
+        "cwd": "${cfg.cwd}",
+        "keyboard": "${cfg.keyboard}",
+        "theme": "${cfg.theme}",
+        "port": "${toString cfg.port}",
+        ${optionalString (cfg.monitor != null) ''"monitor": "${toString cfg.monitor}",''}
+        "allowWindowed": "${toString cfg.allowWindowed}",
+        "experimentalFeatures": "${toString cfg.experimentalFeatures}"
+      }
+    '';
   };
 }

@@ -1,11 +1,5 @@
 { ... }:
 
 {
-  xdg = {
-    configFile = {
-      "glava" = {
-        source = ./glava;
-      };
-    };
-  };
+  xdg.configFile."glava".source = ./glava;
 }

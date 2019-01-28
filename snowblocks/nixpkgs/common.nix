@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 
 {
   imports =
@@ -22,62 +22,56 @@
       ./Xorg.nix
     ];
 
-  home = {
-    packages = with pkgs; [
-      # Environment
-      nitrogen
-      xfceUnstable.thunar
-      xfceUnstable.xfce4-screenshooter
-      xfceUnstable.xfce4-taskmanager
-      ## Theme
-      gtk-engine-murrine
+  home.packages = with pkgs; [
+    # Environment
+    nitrogen
+    xfceUnstable.thunar
+    xfceUnstable.xfce4-screenshooter
+    xfceUnstable.xfce4-taskmanager
+    ## Theme
+    gtk-engine-murrine
 
-      # Other
-      ## Applications
-      ark
-      blender
-      discord
-      evince
-      gimp
-      gnome3.gnome-disk-utility
-      gnome3.pomodoro
-      google-musicmanager
-      jetbrains.idea-ultimate
-      rstudioWrapper
-      vivaldi
-      vscode
-      winusb
-      xfce.mousepad
-      ## Console
-      bfg-repo-cleaner
-      file
-      ldns
-      lm_sensors
-      mpv
-      pipes
-      rclone
-      xorg.xprop
-      xwinwrap
-      yarn
-      youtube-dl
+    # Other
+    ## Applications
+    ark
+    blender
+    discord
+    evince
+    gimp
+    gnome3.gnome-disk-utility
+    gnome3.pomodoro
+    google-musicmanager
+    jetbrains.idea-ultimate
+    rstudioWrapper
+    vivaldi
+    vscode
+    winusb
+    xfce.mousepad
+    ## Console
+    bfg-repo-cleaner
+    file
+    ldns
+    lm_sensors
+    mpv
+    pipes
+    rclone
+    xorg.xprop
+    xwinwrap
+    yarn
+    youtube-dl
 
-      # Benchmarks
-      mprime
-      unigine-valley
-    ];
-  };
+    # Benchmarks
+    mprime
+    unigine-valley
+  ];
 
-  programs = {
-    home-manager = {
-      enable = true;
-      path = "https://github.com/rycee/home-manager/archive/master.tar.gz";
-    };
+  programs.home-manager = {
+    enable = true;
+    path = "https://github.com/rycee/home-manager/archive/master.tar.gz";
   };
 
   nixpkgs = {
     config = import ./config.nix;
-    overlays = [
-      (import <nixpkgs-overlays>)
-    ];
+    overlays = lib.singleton (import <nixpkgs-overlays>);
   };
 }

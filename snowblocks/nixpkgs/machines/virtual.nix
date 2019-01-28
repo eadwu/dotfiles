@@ -1,7 +1,5 @@
 { lib, ... }:
 
 {
-  xsession = {
-    profileExtra = lib.mkForce "";
-  };
+  xsession.profileExtra = lib.mkForce "";
 }

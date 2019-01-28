@@ -11,44 +11,35 @@ let
     sha256 = "0livirsczgwsh0267fanp1axcx8swzha5wpdgi3ikaxps6pdvgn9";
   };
 in {
-  home = {
-    file = {
-      ".vim/colors/faded_material.vim" = {
-        source = fadedMaterial;
-      };
-
-      ".vim/autoload/airline/themes/wal.vim" = {
-        source = walAirline;
-      };
-    };
+  home.file = {
+    ".vim/colors/faded_material.vim".source = fadedMaterial;
+    ".vim/autoload/airline/themes/wal.vim".source = walAirline;
   };
 
-  programs = {
-    vim = {
-      enable = true;
+  programs.vim = {
+    enable = true;
 
-      extraConfig = ''
-        set expandtab
-        set relativenumber
-        set number
-        set softtabstop=2
-        set timeoutlen=1000
-        set ttimeoutlen=0
+    extraConfig = ''
+      set expandtab
+      set relativenumber
+      set number
+      set softtabstop=2
+      set timeoutlen=1000
+      set ttimeoutlen=0
 
-        let g:airline_theme='wal'
-        colorscheme faded_material
-      '';
+      let g:airline_theme='wal'
+      colorscheme faded_material
+    '';
 
-      plugins = [
-        "vim-nix"
-        "vim-airline"
-      ];
+    plugins = [
+      "vim-nix"
+      "vim-airline"
+    ];
 
-      settings = {
-        background = "dark";
-        shiftwidth = 2;
-        tabstop = 2;
-      };
+    settings = {
+      background = "dark";
+      shiftwidth = 2;
+      tabstop = 2;
     };
   };
 }

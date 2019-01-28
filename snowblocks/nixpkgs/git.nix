@@ -25,43 +25,41 @@ let
     chmod +x $out
   '';
 in {
-  programs = {
-    git = {
-      enable = true;
-      package = pkgs.gitAndTools.gitFull;
-      userName = "Edmund Wu";
-      userEmail = "fangkazuto@gmail.com";
+  programs.git = {
+    enable = true;
+    package = pkgs.gitAndTools.gitFull;
+    userName = "Edmund Wu";
+    userEmail = "fangkazuto@gmail.com";
 
-      signing = {
-        key = "9C0561D4193A3AFE";
-        signByDefault = true;
-      };
-
-      extraConfig = ''
-        [alias]
-          plfs = !git -c filter.lfs.smudge= -c filter.lfs.required=false pull && git lfs pull
-
-        [core]
-          autocrlf = input
-          editor = vim
-          excludesfile = ${gitignore}
-          fsmonitor = ${queryWatchman}
-
-        [credential]
-          helper = cache --timeout=3600
-
-        [lfs]
-          pruneverifyremotealways = true
-
-        [protocol]
-          version = 2
-
-        [filter "lfs"]
-          clean = git-lfs clean -- %f
-          smudge = git-lfs smudge -- %f
-          process = git-lfs filter-process
-          required = true
-      '';
+    signing = {
+      key = "9C0561D4193A3AFE";
+      signByDefault = true;
     };
+
+    extraConfig = ''
+      [alias]
+        plfs = !git -c filter.lfs.smudge= -c filter.lfs.required=false pull && git lfs pull
+
+      [core]
+        autocrlf = input
+        editor = vim
+        excludesfile = ${gitignore}
+        fsmonitor = ${queryWatchman}
+
+      [credential]
+        helper = cache --timeout=3600
+
+      [lfs]
+        pruneverifyremotealways = true
+
+      [protocol]
+        version = 2
+
+      [filter "lfs"]
+        clean = git-lfs clean -- %f
+        smudge = git-lfs smudge -- %f
+        process = git-lfs filter-process
+        required = true
+    '';
   };
 }

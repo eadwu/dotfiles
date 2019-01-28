@@ -1,9 +1,7 @@
 { ... }:
 
 {
-  xsession = {
-    profileExtra = ''
-      sudo naps init
-    '';
-  };
+  xsession.profileExtra = ''
+    sudo naps init
+  '';
 }

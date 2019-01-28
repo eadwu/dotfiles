@@ -16,27 +16,11 @@ let
     sha256 = "1r7jmgilqn54yg4p4mjnlngzi485qqj9k6cf52ayn0d8hrp1a2rk";
   };
 in {
-  home = {
-    file = {
-      ".atom/config.cson" = {
-        source = atom/config.cson;
-      };
-
-      ".atom/init.coffee" = {
-        source = init;
-      };
-
-      ".atom/keymap.cson" = {
-        source = keymap;
-      };
-
-      ".atom/snippets.cson" = {
-        source = snippets;
-      };
-
-      ".atom/styles.less" = {
-        source = atom/styles.less;
-      };
-    };
+  home.file = {
+    ".atom/config.cson".source = ./atom/config.cson;
+    ".atom/init.coffee".source = init;
+    ".atom/keymap.cson".source = keymap;
+    ".atom/snippets.cson".source = snippets;
+    ".atom/styles.less".source = ./atom/styles.less;
   };
 }

@@ -1,11 +1,5 @@
 { pkgs, lib, ... }:
 
 {
-  home = {
-    file = {
-      ".local/lib/vivaldi/libffmpeg.so" = {
-        source = "${lib.makeLibraryPath [ pkgs.vivaldi-ffmpeg-codecs ]}/libffmpeg.so";
-      };
-    };
-  };
+  home.file.".local/lib/vivaldi/libffmpeg.so".source = "${lib.getLib pkgs.vivaldi-ffmpeg-codecs}/lib/libffmpeg.so";
 }

@@ -1,11 +1,5 @@
 { ... }:
 
 {
-  home = {
-    file = {
-      ".ncmpcpp/config" = {
-        source = ncmpcpp/config;
-      };
-    };
-  };
+  home.file.".ncmpcpp/config".source = ./ncmpcpp/config;
 }
