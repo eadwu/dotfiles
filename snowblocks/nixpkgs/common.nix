@@ -72,6 +72,6 @@
 
   nixpkgs = {
     config = import ./config.nix;
-    overlays = lib.singleton (import <nixpkgs-overlays>);
+    overlays = lib.optional (builtins.pathExists <nixpkgs-overlays>) (import <nixpkgs-overlays>);
   };
 }
