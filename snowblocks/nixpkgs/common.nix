@@ -44,7 +44,7 @@
     jetbrains.idea-ultimate
     rstudioWrapper
     vivaldi
-    vscode
+    vscode-with-extensions
     winusb
     xfce.mousepad
     ## Console
