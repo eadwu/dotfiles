@@ -87,9 +87,11 @@
   "typescript.tsc.autoDetect": "watch",
   "extensions.autoUpdate": false,
   "git.autofetch": true,
+  "git.allowForcePush": true,
   "git.confirmSync": false,
   "git.enableCommitSigning": true,
   "git.enableSmartCommit": true,
+  "git.showPushSuccessNotification": true,
   "azure.resourceFilter": [
     "1058e020-f627-455f-ad47-64c8e6f99abf/375098e1-715e-41c8-b623-a5ff11033edc"
   ],
@@ -105,7 +107,6 @@
     "javascriptreact"
   ],
   "filesize.use24HourFormat": false,
-  "FSharp.codeOutline": false,
   "FSharp.fsiFilePath": "/run/current-system/sw/bin/fsharpi",
   "FSharp.logLanguageServiceRequests": "both",
   "FSharp.logLanguageServiceRequestsOutputWindowLevel": "DEBUG",
@@ -127,15 +128,7 @@
     "containers",
     "blocks"
   ],
-  "gitlens.historyExplorer.enabled": true,
   "gitlens.keymap": "alternate",
-  "java.completion.importOrder": [
-    "extra",
-    "java",
-    "javax",
-    "com",
-    "org"
-  ],
   "java.home": "/run/current-system/sw",
   "java.implementationsCodeLens.enabled": true,
   "java.referencesCodeLens.enabled": true,
@@ -188,17 +181,11 @@
   "python.linting.pep8Path": "/run/current-system/sw/bin/autopep8",
   "python.linting.pylintPath": "/run/current-system/sw/bin/pylint",
   "python.pythonPath": "/run/current-system/sw/bin/python3",
-  "rust-client.rustupPath": "/run/current-system/sw/bin/rustup",
-  "rust-client.updateOnStartup": true,
+  "rust.rustfmt_path": "/run/current-system/sw/bin/rustfmt",
+  "rust-client.channel": "nightly",
+  "rust-client.disableRustup": true,
+  "rust-client.rlsPath": "/run/current-system/sw/bin/rls",
   "sqlite.sqlite3": "/run/current-system/sw/bin/sqlite3",
-  "sync.autoDownload": false,
-  "sync.autoUpload": false,
-  "sync.askGistName": false,
-  "sync.forceDownload": false,
-  "sync.gist": "a2d589678ad127b1351ec7f8f0019298",
-  "sync.quietSync": true,
-  "sync.removeExtensions": true,
-  "sync.syncExtensions": false,
   "tslint.packageManager": "yarn",
   "tslint.validateWithDefaultConfig": true
 }
