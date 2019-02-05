@@ -4,6 +4,7 @@
   imports =
     [
       ./atom.nix
+      ./blender.nix
       ./code.nix
       ./dunst.nix
       ./edex-ui.nix
@@ -34,7 +35,6 @@
     # Other
     ## Applications
     ark
-    blender
     discord
     evince
     gimp
