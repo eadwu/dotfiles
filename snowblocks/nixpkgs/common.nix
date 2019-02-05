@@ -43,8 +43,6 @@
     google-musicmanager
     jetbrains.idea-ultimate
     rstudioWrapper
-    vivaldi
-    vscode-with-extensions
     winusb
     xfce.mousepad
     ## Console
@@ -52,7 +50,6 @@
     file
     ldns
     lm_sensors
-    mpv
     pipes
     rclone
     xorg.xprop
