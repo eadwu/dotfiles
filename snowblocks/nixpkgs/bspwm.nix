@@ -1,10 +1,8 @@
 { pkgs, ... }:
 
 let
-  gmail = pkgs.fetchgit {
+  gmail = builtins.fetchGit {
     url = "https://github.com/vyachkonovalov/polybar-gmail";
-    rev = "a5c299123ba6a0d748ae044958ddc165dcbb14df";
-    sha256 = "1z6h1zzp0kllk0v3djs3axmbl5b7d6h7xk99mchyzgmn6xkhdm8s";
   };
 in {
   home.file = {
