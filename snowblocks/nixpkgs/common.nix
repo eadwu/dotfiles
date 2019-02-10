@@ -62,11 +62,6 @@
     unigine-valley
   ];
 
-  programs.home-manager = {
-    enable = true;
-    path = "https://github.com/rycee/home-manager/archive/master.tar.gz";
-  };
-
   nixpkgs = {
     config = import ./config.nix;
     overlays = lib.optional (builtins.pathExists <nixpkgs-overlays>) (import <nixpkgs-overlays>);
