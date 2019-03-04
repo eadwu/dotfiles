@@ -51,6 +51,7 @@
     "bspwmrc": "shellscript",
     "sxhkdrc": "shellscript",
     "*.pug": "jade",
+    "*.toml": "ini",
     "*.conkyrc": "lua",
     "*.xmobarrc": "haskell",
     ".Xresources": "shellscript"
@@ -69,7 +70,7 @@
   "explorer.decorations.badges": false,
   "explorer.decorations.colors": true,
   "terminal.external.linuxExec": "st",
-  "update.channel": "none",
+  "update.mode": "none",
   "html.format.contentUnformatted": "pre,code,style,textarea",
   "html.format.extraLiners": "",
   "html.format.wrapLineLength": 0,
@@ -138,7 +139,7 @@
   "jupyter.appendResults": false,
   "latex-workshop.chktex.enabled": true,
   "latex-workshop.chktex.path": "/run/current-system/sw/bin/chktex",
-  "latex-workshop.latex.clean.enabled": true,
+  "latex-workshop.latex.autoClean.run": "onBuilt",
   "latex-workshop.latex.tools": [
     {
       "name": "latexmk",
