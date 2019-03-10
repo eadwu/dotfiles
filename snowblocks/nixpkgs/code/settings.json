@@ -46,7 +46,7 @@
   "workbench.sideBar.location": "right",
   "breadcrumbs.enabled": true,
   "window.menuBarVisibility": "toggle",
-  "window.titleBarStyle": "custom",
+  "window.titleBarStyle": "native",
   "files.associations": {
     "bspwmrc": "shellscript",
     "sxhkdrc": "shellscript",
