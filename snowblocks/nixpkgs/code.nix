@@ -2,10 +2,10 @@
 
 {
   xdg.configFile = {
-    "Code/User/keybindings.json".source = ./code/keybindings.json;
-    "Code/User/settings.json".source = ./code/settings.json;
-    "Code - Insiders/User/keybindings.json".source = ./code/keybindings.json;
-    "Code - Insiders/User/settings.json".source = ./code/settings.json;
+    "Code/User/keybindings.json".text = builtins.toJSON (import ./code/keybindings.nix);
+    "Code/User/settings.json".text = builtins.toJSON (import ./code/settings.nix);
+    "Code - Insiders/User/keybindings.json".text = builtins.toJSON (import ./code/keybindings.nix);
+    "Code - Insiders/User/settings.json".text = builtins.toJSON (import ./code/settings.nix);
   };
 
   home.packages = with pkgs; [
