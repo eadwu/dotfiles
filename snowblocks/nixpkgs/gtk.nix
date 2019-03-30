@@ -3,10 +3,11 @@
 let
   gtk-theme-collections = pkgs.stdenv.mkDerivation rec {
     pname = "gtk-theme-collections";
-    version = "latest";
+    version = "master";
 
     src = builtins.fetchGit {
       url = "https://github.com/addy-dclxvi/gtk-theme-collections";
+      ref = version;
     };
 
     dontBuild = true;
