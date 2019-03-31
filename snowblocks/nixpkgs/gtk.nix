@@ -32,7 +32,7 @@ in {
     };
 
     theme = {
-      name = "Fantome";
+      name = "Noita";
       package = gtk-theme-collections;
     };
 
