@@ -64,7 +64,7 @@ in {
 
         modules-left = "bspwm LSeperator0 weather LSeperator1 backlight LSeperator3 LSeperator4";
         # modules-center = "RSeperator4 RSeperator3 mpdInfo LSeperator2 LSeperator5";
-        modules-right = "RSeperator RSeperator2 temperature0 temperature1 temperature2 cpu RSeperator0 memory";
+        modules-right = "RSeperator RSeperator2 temperature0 temperature1 temperature2 temperature3 cpu RSeperator0 memory";
       };
 
       "bar/stat" = {
@@ -331,6 +331,11 @@ in {
       "module/temperature2" = {
         "inherit" = "section/temperature";
         hwmon-path = "/sys/devices/platform/coretemp.0/hwmon/hwmon2/temp1_input";
+      };
+
+      "module/temperature3" = {
+        "inherit" = "section/temperature";
+        hwmon-path = "/sys/devices/platform/coretemp.0/hwmon/hwmon3/temp1_input";
       };
 
       "module/cpu" = {
