@@ -39,7 +39,6 @@
     evince
     gimp
     gnome3.gnome-disk-utility
-    gnome3.pomodoro
     google-musicmanager
     jetbrains.idea-ultimate
     rstudioWrapper
