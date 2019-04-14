@@ -41,8 +41,8 @@
     "notificationLink.foreground" = "#616161";
     "editorWidget.border" = "#616161";
   };
-  "workbench.colorTheme" = "Material Theme Ocean";
-  "workbench.iconTheme" = "eq-material-theme-icons-darker";
+  "workbench.colorTheme" = "Monokai Pro (Filter Spectrum)";
+  "workbench.iconTheme" = "eq-material-theme-icons-ocean";
   "workbench.sideBar.location" = "right";
   "breadcrumbs.enabled" = true;
   "window.menuBarVisibility" = "toggle";
@@ -155,7 +155,7 @@
         "-file-line-error"
         "-synctex=1"
         "-interaction=nonstopmode"
-        "-outdir=../"
+        "-outdir=./"
         "-xelatex"
         "%DOC%"
       ];
