@@ -46,9 +46,6 @@ in {
         excludesfile = ${gitignore}
         fsmonitor = ${queryWatchman}
 
-      [credential]
-        helper = cache --timeout=3600
-
       [lfs]
         pruneverifyremotealways = true
 
