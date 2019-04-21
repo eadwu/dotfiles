@@ -2,15 +2,11 @@
   <p>Dotfile home</p>
 
   <p>
-    <img src="https://assets-cdn.github.com/favicon.ico" width=24 height=24 />
-    <a href="https://github.com/eadwu/dotfiles/releases/latest">
-      <img src="https://img.shields.io/github/release/eadwu/dotfiles.svg" />
-    </a>
-    <a href="https://github.com/arcticicestudio/snowsaw/tree/develop">
-      <img src="https://img.shields.io/badge/snowsaw-prerelease-88C0D0.svg" />
-    </a>
     <a href="https://www.archlinux.org">
-      <img src="https://img.shields.io/badge/OS-Arch_Linux-1793D1.svg" />
+      <img src="https://img.shields.io/badge/OS-NixOS-1793D1.svg" />
+    </a>
+    <a href="https://github.com/arcticicestudio/snowsaw/releases/latest">
+      <img src="https://img.shields.io/github/release/arcticicestudio/snowsaw.svg" />
     </a>
   </p>
 
@@ -25,7 +21,7 @@
 ---
 
 <div align="center">
-  <p>Copyright &copy; 2018 Edmund Wu</p>
+  <p>Copyright &copy; 2018-2019 Edmund Wu</p>
 
   <p>
     <a href="https://gitlab.com/eadwu/dotfiles/blob/master/LICENSE">
