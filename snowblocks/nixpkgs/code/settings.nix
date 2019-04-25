@@ -56,6 +56,7 @@
     "*.xmobarrc" = "haskell";
     ".Xresources" = "shellscript";
   };
+  "files.enableTrash" = false;
   "files.exclude" = {
     "**/.git" = false;
     "**/.svn" = true;
@@ -65,7 +66,6 @@
   };
   "files.insertFinalNewline" = true;
   "files.trimTrailingWhitespace" = true;
-  "explorer.confirmDelete" = false;
   "explorer.confirmDragAndDrop" = false;
   "explorer.decorations.badges" = false;
   "explorer.decorations.colors" = true;
@@ -94,9 +94,6 @@
   "git.enableCommitSigning" = true;
   "git.enableSmartCommit" = true;
   "git.showPushSuccessNotification" = true;
-  "azure.resourceFilter" = [
-    "1058e020-f627-455f-ad47-64c8e6f99abf/375098e1-715e-41c8-b623-a5ff11033edc"
-  ];
   "C_Cpp.clang_format_path" = "/run/current-system/sw/bin/clang-format";
   "C_Cpp.clang_format_fallbackStyle" = "LLVM";
   "C_Cpp.formatting" = "Disabled";
@@ -136,7 +133,6 @@
   "java.implementationsCodeLens.enabled" = true;
   "java.referencesCodeLens.enabled" = true;
   "java.saveActions.organizeImports" = true;
-  "jupyter.appendResults" = false;
   "languageServerHaskell.enableHIE" = false;
   "languageServerHaskell.formattingProvider" = "none";
   "languageServerHaskell.useCustomHieWrapper" = true;
