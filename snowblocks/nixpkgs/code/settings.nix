@@ -133,7 +133,6 @@
   "java.implementationsCodeLens.enabled" = true;
   "java.referencesCodeLens.enabled" = true;
   "java.saveActions.organizeImports" = true;
-  "languageServerHaskell.enableHIE" = false;
   "languageServerHaskell.formattingProvider" = "none";
   "languageServerHaskell.useCustomHieWrapper" = true;
   "languageServerHaskell.useCustomHieWrapperPath" = "\${workspaceFolder}/hie-wrapper.sh";
