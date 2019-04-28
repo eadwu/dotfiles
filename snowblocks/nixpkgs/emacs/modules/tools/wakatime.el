@@ -1,7 +1,7 @@
 (use-package wakatime-mode
   :diminish
   :custom
-  (wakatime-api-key "297f24cc-5a6d-40fa-aded-1822cb51047e")
+  (wakatime-api-key "83e9edbb-e265-4cdd-b39b-5442e77c806b")
   (wakatime-cli-path "wakatime")
   (wakatime-python-bin "")
   :init (global-wakatime-mode)
