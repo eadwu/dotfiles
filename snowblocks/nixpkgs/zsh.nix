@@ -36,7 +36,7 @@
               --argstr confPath "$HOME/.config/nixpkgs/home.nix" \
               -A activationPackage \
               --no-out-link;
-          } | cachix push machine
+          } | cachix push config
         }
       '';
     };
