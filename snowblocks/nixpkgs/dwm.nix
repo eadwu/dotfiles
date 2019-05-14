@@ -7,7 +7,7 @@
     config = {
       "bar/data" = {
         enable-ipc = true;
-        modules-right = "temperature0 temperature1 temperature2 temperature3 cpu memory seperator filesystem network0 network1 network2 battery backlight volume date time";
+        modules-right = "temperature0 temperature1 temperature2 temperature3 cpu memory seperator filesystem network0 network1 network2 network3 battery backlight volume date time";
       };
 
       "module/seperator" = {
@@ -111,15 +111,20 @@
 
       "module/network0" = {
         "inherit" = "section/network";
-        interface = "wlp2s0";
+        interface = "wlan0";
       };
 
       "module/network1" = {
         "inherit" = "section/network";
-        interface = "wlp59s0";
+        interface = "wlp2s0";
       };
 
       "module/network2" = {
+        "inherit" = "section/network";
+        interface = "wlp59s0";
+      };
+
+      "module/network3" = {
         "inherit" = "section/network";
         interface = "enp0";
       };
