@@ -3,7 +3,7 @@
 {
   programs.rofi = {
     enable = true;
-    font = "Optician Sans 10";
+    font = "Optician Sans 8";
     lines = 30;
     location = "left";
     padding = 28;
@@ -16,7 +16,7 @@
 
     extraConfig = ''
       rofi.columns: 1
-      rofi.dpi: 0
+      rofi.dpi: 1
       rofi.modi: drun,run,window,ssh
       rofi.show-icons: true
     '';
