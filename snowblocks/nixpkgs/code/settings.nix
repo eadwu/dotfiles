@@ -198,9 +198,9 @@
   "python.linting.pylamaPath" = "~/.nix-profile/bin/pylama";
   "python.linting.pylintPath" = "~/.nix-profile/bin/pylint";
   "python.pythonPath" = "/run/current-system/sw/bin/python3";
-  "python.unitTest.pyTestEnabled" = false;
-  "python.unitTest.pyTestPath" = "~/.nix-profile/bin/pytest";
-  "python.unitTest.unittestEnabled" = true;
+  "python.testing.pyTestEnabled" = false;
+  "python.testing.pyTestPath" = "~/.nix-profile/bin/pytest";
+  "python.testing.unittestEnabled" = true;
   "rust.rustfmt_path" = "/run/current-system/sw/bin/rustfmt";
   "rust-client.channel" = "nightly";
   "rust-client.disableRustup" = true;
