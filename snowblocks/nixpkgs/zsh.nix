@@ -25,18 +25,16 @@
         }
 
         nix-upload-system () {
-          {
-            nix-build "<nixpkgs/nixos>" \
+          cachix push config \
+            $(nix-derive-output $(nix-build "<nixpkgs/nixos>" \
               -A config.system.build.toplevel \
-              --no-out-link;
-
-            nix-build "<home-manager/home-manager/home-manager.nix>" \
+              --no-out-link)) \
+            $(nix-derive-output $(nix-build "<home-manager/home-manager/home-manager.nix>" \
               -I home-manager=https://github.com/rycee/home-manager/archive/master.tar.gz \
               --argstr confAttr "" \
               --argstr confPath "$HOME/.config/nixpkgs/home.nix" \
               -A activationPackage \
-              --no-out-link;
-          } | cachix push config
+              --no-out-link))
         }
       '';
     };
